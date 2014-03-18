@@ -1,2 +1,1 @@
-homepagevinify
-==============
+BoilerPlate HTML5 to kickstart front-end Website developement with Bootstrap, LESS & Grunt + Bower
