@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TITLE</title>
-
+        <title>Vinify | des vins de qualité, adaptés à vos goûts, toujours à portée de main</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- social media tags -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@felixlc">
-        <meta name="twitter:title" content="Boilerplate">
-        <meta name="twitter:description" content="Kickstart your front end dev work">
-        <meta name="twitter:creator" content="@felixLC">
-        <meta name="twitter:image:src" content="">
-        <meta property="og:title" content="BoilerplateHTML5" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="" />
-        <meta property="og:description" content="Kickstart your front end dev work">
 
-        <!-- font awesome from BootstrapCDN -->
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <meta name="description" content="Ayez toujours à portée de main du vin sélectionné pour vous, selon vos goûts et votre budget">
+        <link rel="publisher" href="https://plus.google.com/100061614021617374779"/>
+        <meta property="og:title" content="Vinify, du vin de qualité sélectionné pour moi !"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="http://www.vinify.co/img/LogoVinifyMini2.png"/>
+        <meta property="og:description" content="Ayez toujours à portée de main du vin sélectionné pour vous, selon vos goûts et votre budget"/>
+        <meta name="twitter:title" content="Vinify, du vin de qualité sélectionné pour moi !">
+        <meta name="twitter:description" content="Ayez toujours à portée de main du vin sélectionné pour vous, selon vos goûts et votre budget">
+        <meta name="twitter:image" content="http://vinify.co/img/LogoVinifyCo.png">
+        <meta name="keywords" content="vin, goût, goûts, petit ballon, box, abonnement, cadeau">
+
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 
         <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
         <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
@@ -32,45 +31,229 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
-            </div>
+<div class="header-image hidden-xs">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a>
-                    </li>
-                    <li><a href="#services">Services</a>
-                    </li>
-                    <li><a href="#contact">Contact</a>
-                    </li>
-                </ul>
+      <nav class="navbar navbar-inverse" role="navigation">
+
+          <div class="navbar-header">
+             <a href="#top"><img alt="" src="assets/img/LogoVinifyCo.png" style="height:45px" id="mf2"/></a>
+          </div>
+
+          <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="http://app.vinify.co" class="btn btn-primary btn-login" id="">
+                    <i class="fa fa-user"></i>  Login
+                </a>
+              </li>
+          </ul>
+      </nav>
+
+        <div class="headline col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="row headers">
+                <h2>Découvrez vos goûts en vin sans efforts</h2>
+                <h3>Notez des vins et recevez au rythme de votre consommation une sélection qui s'adapte à vos goûts</h3>
             </div>
-            <!-- /.navbar-collapse -->
+            <div class="row cta">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 pull-right">
+                  <a href="http://eepurl.com/Mgtcb" class="btn btn-primary btn-lg landing-btn-strong">
+                    <i class="fa fa-shopping-cart"></i> Je commande
+                  </a>
+                </div>
+            </div>
         </div>
-        <!-- /.container -->
-    </nav>
+    </div>
 
-    <div class="container">
+    <div class="header-xs visible-xs">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>A better Bootstrap starter template.</h1>
-                <p>Complete with pre-defined file paths that you won't have to change!</p>
+      <nav class="navbar navbar-inverse" role="navigation">
+
+          <div class="navbar-header">
+             <a href="#top"><img alt="" src="assets/img/LogoVinifyINV.png" style="height:45px" id="mf2"/></a>
+          </div>
+
+      </nav>
+
+        <div class="headline-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 tagline-xs">
+                <p>des vins de qualité, adaptés à vos goûts, toujours à portée de main</p>
+              </div>
             </div>
+            <div class="mini-loginbtn-container">
+              <div class="row miniloginbutton">
+                  <a href="http://vinify.co/inscription.html" class="btn mini-loginbtn"> <i class="fa fa-shopping-cart"></i> Je commande </a>
+              </div>
+              <div class="row miniloginbutton">
+                  <a href="http://app.vinify.co" class="btn mini-loginbtn" id=""><i class="fa fa-user"></i>  Login</a>
+              </div>
+            </div>
+          </div>
         </div>
 
     </div>
-    <!-- /.container -->
+
+     <div class="section">
+      <div class="container">
+        <div class="row propval">
+          <div class="col-lg-4 col-md-4 propcontent">
+            <div class="row tnp">
+              <img src="assets/img/matching-icon.svg" height="60vh">
+              <h3>J'ai toujours chez moi des bouteilles qui correspondent à mes goûts et à l'occasion</h3>
+            </div>
+            <p>Grâce au questionnaire <b>Vinify</b> je crée mon <b>Vinibar</b> sur-mesure et je reçois 9 bouteilles qui correspondent à mes goûts et aux occasions de dégustation. Le <b>Vinibar</b> est également un support qui accueille ma sélection de vins.</p>
+          </div>
+          <div class="col-lg-4 col-md-4 propcontent">
+            <div class="row tnp">
+              <img src="assets/img/livreur-icon.svg" height="60vh">
+               <h3>Je reçois mes vins au rythme de ma consommation et je les note</h3>
+            </div>
+
+            <p>Je consomme les vins dont j'ai envie quand j'en ai envie et je les note.  Dès 3 bouteilles notées, je reçois une proposition de nouvelles bouteilles adaptées à mes retours. Je paie uniquement au rythme de ma consommation.</p>
+
+          </div>
+          <div class="col-lg-4 col-md-4 propcontent">
+            <div class="row tnp">
+              <img src="assets/img/data-icon.svg" height="60vh">
+               <h3>Je comprends mes goûts grâce à des statistiques sur les vins que j'aime</h3>
+            </div>
+            <p>Avec <b>Vinify</b>, je découvre mes goûts et les vins que j'aime.  Mon profil de consommation m'aide à comprendre mes goûts, mieux choisir les vins qui me plaisent et mieux les déguster. Je n'oublie plus les vins que j'ai aimés.</p>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.section -->
+    <!-- /header-image -->
+
+
+    <span class="borderline"></span>
+
+
+    <div class="section commentcamarche">
+        <div class="container">
+          <div class="row comment">
+             <div class="col-lg-7 col-md-7 pull-left cell" id="selection">
+              <h2 class="featurette-heading"><span class="text-muted">Une sélection</span> sur mesure</h2>
+                <p>Contrairement aux abonnements en vin qui envoient les même bouteilles à tous leurs clients, la sélection de votre <b>Vinibar</b> est sur-mesure. <br><br>A chaque envoi, les vins sont choisis en fonction de vos goûts et des feedbacks que vous avez envoyés sur les bouteilles précédentes.<p>
+             </div>
+             <div class="col-lg-4 col-md-4 cell pull-right">
+                <img class="img img-responsive pull-right hidden-xs hidden-sm dessins" src="assets/img/vinify-tailleur.png" id="img-contact">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+          <hr class="featurette-divider">
+      </div>
+
+       <div class="section commentcamarche">
+            <div class="container">
+             <div class="row">
+                  <div class="col-lg-4 col-md-4 pull-left visible-lg visible-md">
+                    <img class="img img-responsive pull-left dessins" src="assets/img/vinify-caviste.jpg">
+                  </div>
+                  <div class="col-lg-7 col-md-7" id="main">
+                  <h2 class="featurette-heading"><span class="text-muted">Du vin toujours</span> à portée de main</h2>
+
+                    <p>Vous partez chez des amis mais votre supermarché est fermé ? <br> Il n'y a plus de vin au milieu d'un dîner chez vous? <br><br>
+                    Avec le <b>Vinibar</b>, la bonne bouteille est toujours à portée de main. Le bar n'est jamais vide, nous l'approvisionnons en vins sur-mesure au rythme de votre consommation.</p>
+                  </div>
+
+              </div>
+            </div>
+      </div>
+
+       <div class="container">
+          <hr class="featurette-divider">
+      </div>
+
+      <div class="section commentcamarchefin">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-7 col-md-7" id="contact">
+                <h2 class="featurette-heading"><span class="text-muted">Comprendre ses goûts,</span> savoir choisir son vin</h2>
+
+                <p>Avec un langage simple, <b>Vinify</b> vous propose de comprendre vos goûts et d'apprendre à choisir votre vin. <br><br>
+                A chaque dégustation, vous donnez une note au vin qui est alors ajouté à votre profil. <b>Vinify</b> analyse ces notes et trouve les points communs des vins qui vous plaisent. Vous découvrez vos goûts et apprenez à mieux choisir vos vins.</p>
+              </div>
+              <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1">
+                <img class="img img-responsive dessins" src="assets/img/vinify-supermarket.png" id="img-contact">
+              </div>
+            </div>
+        </div>
+      </div>
+
+    <div class="footer-image hidden-xs">
+      <div class="footline">
+        <div class="container" style="text-align:center">
+
+        </div>
+
+      </div>
+    </div>
+
+
+     <hr class="featurette-divider visible-xs" id="lastdivider">
+
+
+
+    <div class="section">
+
+      <div class="container">
+
+        <div class="row social">
+
+            <div class="row">
+              <div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2">
+                <div class="line"></div>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <h1>Contactez-nous !</h1>
+              </div>
+              <div class="col-lg-2 col-md-2">
+               <div class="line"></div>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-2 col-lg-offset-3 col-md-2 col-md-offset-3 socbuttons">
+              <a href="http://facebook.com/vinify.co" target="_blank"><img alt="" src="assets/img/fb-icon.png"></a>
+              <h3>Facebook</h3><a href="http://facebook.com/vinify.co" "_blank">vinify</a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 socbuttons">
+              <a href="http://twitter.com/vinifyco" target="_blank"><img alt="" src="assets/img/twitter-icon.png"></a>
+              <h3>Twitter</h3><a href="http://twitter.com/vinifyco" "_blank">@vinifyco</a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 socbuttons">
+              <a href="mailto:founders@vinify.co" target="_blank"><img alt="" src="assets/img/mail-icon.png"></a>
+              <h3>Mail</h3><a href="mailto:founders@vinify.co" "_blank">founders@vinify.co</a>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+
+    </div>
+
+  <div class="section irritant" id="footer">
+    <div class="container">
+
+      <!-- FOOTER -->
+      <footer>
+        <p>
+          Merci à <a href="http://amelie-caudron.tumblr.com/">Amélie</a> pour ses supers dessins.
+        </p>
+        <p>
+          Copyright &copy; <b>Vinify</b> 2013 &middot; L'abus d'alcool est dangereux pour la santé, à consommer avec modération.
+        </p>
+      </footer>
+      <!-- /END OF FOOTER -->
+
+    </div><!-- /container -->
+  </div>
+  <!-- javascript -->
 
 </body>
 
