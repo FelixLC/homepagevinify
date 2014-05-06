@@ -20,6 +20,7 @@
 @import '../../vendor/bootstrap/less/navs.less';
 @import '../../vendor/bootstrap/less/tables.less';
 @import '../../vendor/bootstrap/less/glyphicons.less';
+@import '../../vendor/bootstrap/less/badges.less';
 @import '../../vendor/bootstrap/less/navbar.less';
 @import '../../vendor/bootstrap/less/buttons.less';
 @import '../../vendor/bootstrap/less/wells.less';
@@ -27,6 +28,7 @@
 @import '../../vendor/bootstrap/less/responsive-utilities.less';
 @import '../../vendor/bootstrap/less/progress-bars.less';
 @import '../../vendor/bootstrap/less/input-groups.less';
+@import '../../vendor/bootstrap/less/dropdowns.less';
 
 
 
@@ -50,6 +52,31 @@
   color: #fff !important;
   font-family: 'quicksand', Helvetica;
   font-size: 25px;
+}
+
+.overlay {
+  color: #fff;
+  background: rgba(0,0,0,0);
+  overflow: auto;
+  height: 100%;
+  z-index: 2;
+}
+
+.menu-padding {
+  padding-top: 60px;
+}
+
+.badge-custom {
+  display: inline-block;
+  padding: 3px 7px;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  color: #fff;
+  background-color: @main;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
 }
 
 /**
@@ -79,10 +106,22 @@ html, body {
 
 /* ---------------- NAVBAR ---------------- */
 
-.navbar-inverse {
+#navbar-first {
   padding: 5px 0 0 6.25px;
   background-color: transparent;
   border-color: transparent;
+}
+
+#navbar-second {
+  padding: 5px 0 0 6.25px;
+  background-color: white;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 1px 1px, rgba(0, 0, 0, 0.05) 0 0 1px inset;
+  a {  color: @brand-primary;}
+
+  .btn-navbar-second {
+    color: @main;
+  }
 }
 
 .loginbtn {
@@ -90,7 +129,6 @@ html, body {
   color: #ffffff;
   padding: 10px;
   margin-right: 15px;
-  border-radius: 50px;
 }
 
 .mini-loginbtn {
@@ -119,11 +157,12 @@ html, body {
 
 .btn-login {
   .btn-primary;
-  background-color: #3276b1;
-  border-color: #285e8e;
+  background-color: transparent;
   margin-right: 30px;
+  border-radius: 50;
         &:hover {
           background-color: transparent;
+          border-color: transparent;
         }
 
 /*  padding-top: 16px;*/
@@ -166,41 +205,44 @@ color: #fff;
   padding-left: 25px;
   padding-right: 25px;
   margin-left: 15px;
-  position: relative;
-  top: 40%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-
-  h3 {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 300;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    /*text-shadow: 0 2px 20px #000000;*/
-  }
 
   h2 {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 30px;
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
-    /*text-shadow: 0 2px 20px #000000;*/
+    padding: 2px;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
+  }
+
+  h3 {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
+  }
+
+  .highlight {
+    // background-color: @main;
   }
 
     .landing-btn-strong {
+      font-family: 'Montserrat', Helvetica, Arial, sans-serif;
       color: #ffffff;
-      background-color: #3276b1;
-      border-color: #285e8e;
+      background-color: @main;
+      border-color: @main;
       padding: 10px 20px;
-      margin-right: 15px;
       border-radius: 50px;
+      font-size: 1.6em;
         &:hover {
           background-color: transparent;
+          color: @main;
+          font-weight: 700;
         }
     }
 
@@ -216,6 +258,10 @@ color: #fff;
 
     .headers {
       margin-bottom: 40px;
+    }
+
+    .cta {
+      text-align: center;
     }
 
 }
@@ -265,11 +311,24 @@ color: #fff;
       width: 100%;
       background:
 
-      url(img/background-vinibar-terrasse.jpg) no-repeat center center fixed;
+      url(img/background-tonio-carafe.jpg) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+}
+
+.know-more {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 20px;
+  a {
+    color: @main;
+    font-size: 30px;
+  }
 }
 
 
@@ -291,6 +350,11 @@ color: #fff;
 
 /* ---------------- PROPVAL ---------------- */
 
+.getstarted {
+  .section;
+  margin-top: 30px;
+}
+
 .dessins {
   max-height: 300px;
 }
@@ -306,32 +370,28 @@ color: #fff;
 
 .propval {
   text-align: center;
+  padding: 10px 0px 5px 0px;
+    p {
+      height: 100%;
+      line-height: 100%;
+    }
+
+    h1 {
+      color: @color-blue;
+    }
+
 }
 
-.propval > p {
-  height: 100%;
-  line-height: 100%
-}
+
 
 .tnp{
   text-align: center;
   padding: 0px 15px 5px;
 }
 
-.propval, .irritant {
-  text-align: center;
-  padding: 10px 0px 5px 0px;
-}
-
 .tnp > h3 {
   text-align: center;
   font-size: 16px;
-}
-
-.irritants{
-  text-align: justify;
-  padding-bottom: 20px;
-  background-color: #EBEBE8;
 }
 
 .irritant{
@@ -480,6 +540,9 @@ section{
 
 footer {
   margin: 20px 0;
+  background-color: #EBEBE8;
+  text-align: center;
+  padding: 10px 0px 5px 0px;
 }
 
 

@@ -2750,6 +2750,45 @@ table th[class*="col-"] {
 .glyphicon-tree-deciduous:before {
   content: "\e200";
 }
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #999999;
+  border-radius: 10px;
+}
+.badge:empty {
+  display: none;
+}
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+.btn-xs .badge {
+  top: 0;
+  padding: 1px 5px;
+}
+a.badge:hover,
+a.badge:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.list-group-item.active > .badge,
+.nav-pills > .active > a > .badge {
+  color: #34495e;
+  background-color: #ffffff;
+}
+.nav-pills > li > a > .badge {
+  margin-left: 3px;
+}
 .navbar {
   position: relative;
   min-height: 50px;
@@ -4111,6 +4150,143 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle:focus {
+  outline: 0;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #34495e;
+}
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #999999;
+}
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+.open > a {
+  outline: 0;
+}
+.dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+.dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #999999;
+}
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px solid;
+  content: "";
+}
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+@media (min-width: 768px) {
+  .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto;
+  }
+}
 /**
  * This is our main variables file. It in turn imports the `variables` file from
  * Twitter Bootstrap. We must include it last so we can overwrite any variable
@@ -4141,6 +4317,28 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-family: 'quicksand', Helvetica;
   font-size: 25px;
 }
+.overlay {
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  overflow: auto;
+  height: 100%;
+  z-index: 2;
+}
+.menu-padding {
+  padding-top: 60px;
+}
+.badge-custom {
+  display: inline-block;
+  padding: 3px 7px;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  color: #fff;
+  background-color: #3276b1;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
 /**
  * Typography
  */
@@ -4161,17 +4359,28 @@ body {
   height: 100%;
 }
 /* ---------------- NAVBAR ---------------- */
-.navbar-inverse {
+#navbar-first {
   padding: 5px 0 0 6.25px;
   background-color: transparent;
   border-color: transparent;
+}
+#navbar-second {
+  padding: 5px 0 0 6.25px;
+  background-color: white;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 1px 1px, rgba(0, 0, 0, 0.05) 0 0 1px inset;
+}
+#navbar-second a {
+  color: #34495e;
+}
+#navbar-second .btn-navbar-second {
+  color: #3276b1;
 }
 .loginbtn {
   background-color: transparent;
   color: #ffffff;
   padding: 10px;
   margin-right: 15px;
-  border-radius: 50px;
 }
 .mini-loginbtn {
   color: #800000;
@@ -4204,9 +4413,9 @@ body {
   margin-right: 15px;
   border-radius: 50px;
   /*  padding-top: 16px;*/
-  background-color: #3276b1;
-  border-color: #285e8e;
+  background-color: transparent;
   margin-right: 30px;
+  border-radius: 50;
   /*  padding-top: 16px;*/
 }
 .btn-login:hover,
@@ -4247,6 +4456,7 @@ fieldset[disabled] .btn-login.active {
 }
 .btn-login:hover {
   background-color: transparent;
+  border-color: transparent;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #fff;
@@ -4277,40 +4487,39 @@ fieldset[disabled] .btn-login.active {
   padding-left: 25px;
   padding-right: 25px;
   margin-left: 15px;
-  position: relative;
-  top: 40%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.headline h3 {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 300;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  /*text-shadow: 0 2px 20px #000000;*/
 }
 .headline h2 {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-size: 30px;
   font-weight: 400;
   margin-top: 15px;
   margin-bottom: 10px;
-  /*text-shadow: 0 2px 20px #000000;*/
+  padding: 2px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+}
+.headline h3 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
 }
 .headline .landing-btn-strong {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   color: #ffffff;
   background-color: #3276b1;
-  border-color: #285e8e;
+  border-color: #3276b1;
   padding: 10px 20px;
-  margin-right: 15px;
   border-radius: 50px;
+  font-size: 1.6em;
 }
 .headline .landing-btn-strong:hover {
   background-color: transparent;
+  color: #3276b1;
+  font-weight: 700;
 }
 .headline .landing-btn {
   color: #ffffff;
@@ -4323,6 +4532,9 @@ fieldset[disabled] .btn-login.active {
 }
 .headline .headers {
   margin-bottom: 40px;
+}
+.headline .cta {
+  text-align: center;
 }
 .footline {
   padding-left: 25px;
@@ -4358,11 +4570,23 @@ fieldset[disabled] .btn-login.active {
   margin: 0;
   height: 100%;
   width: 100%;
-  background: url(img/background-vinibar-terrasse.jpg) no-repeat center center fixed;
+  background: url(img/background-tonio-carafe.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+.know-more {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 20px;
+}
+.know-more a {
+  color: #3276b1;
+  font-size: 30px;
 }
 .header-xs {
   margin: 0;
@@ -4378,6 +4602,11 @@ fieldset[disabled] .btn-login.active {
   height: 45px;
 }
 /* ---------------- PROPVAL ---------------- */
+.getstarted {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 30px;
+}
 .dessins {
   max-height: 300px;
 }
@@ -4390,28 +4619,22 @@ fieldset[disabled] .btn-login.active {
 }
 .propval {
   text-align: center;
+  padding: 10px 0px 5px 0px;
 }
-.propval > p {
+.propval p {
   height: 100%;
   line-height: 100%;
+}
+.propval h1 {
+  color: #3276b1;
 }
 .tnp {
   text-align: center;
   padding: 0px 15px 5px;
 }
-.propval,
-.irritant {
-  text-align: center;
-  padding: 10px 0px 5px 0px;
-}
 .tnp > h3 {
   text-align: center;
   font-size: 16px;
-}
-.irritants {
-  text-align: justify;
-  padding-bottom: 20px;
-  background-color: #EBEBE8;
 }
 .irritant {
   background-color: #EBEBE8;
@@ -4519,6 +4742,9 @@ section {
 }
 footer {
   margin: 20px 0;
+  background-color: #EBEBE8;
+  text-align: center;
+  padding: 10px 0px 5px 0px;
 }
 /* RESPONSIVE CSS */
 @media (max-width: 1200px) {

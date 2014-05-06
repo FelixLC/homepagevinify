@@ -62,12 +62,13 @@ module.exports = {
    */
   vendor_files: {
     js: [
-
+      'vendor/bootstrap/js/dropdown.js',
+      'vendor/jQuery-Flex-Vertical-Center.js'
     ],
     css: [
     ],
     assets: [
-      'vendor/bootstrap/fonts/*.*',
+      'vendor/bootstrap/fonts/*.*'
 
     ]
   },
