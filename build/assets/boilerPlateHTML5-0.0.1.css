@@ -4302,20 +4302,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /**
  * Color
  */
-/**
- * Color FlatUI
- */
 .vertical-align {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-.brand-vinify {
-  color: #fff !important;
-  font-family: 'quicksand', Helvetica;
-  font-size: 25px;
 }
 .overlay {
   color: #fff;
@@ -4327,29 +4319,31 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .menu-padding {
   padding-top: 60px;
 }
-.badge-custom {
-  display: inline-block;
-  padding: 3px 7px;
-  vertical-align: baseline;
-  white-space: nowrap;
-  text-align: center;
-  color: #fff;
-  background-color: #3276b1;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-}
 /**
  * Typography
  */
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 h1,
 h2,
 h3 {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 .title {
   text-align: center;
@@ -4360,21 +4354,38 @@ body {
 }
 /* ---------------- NAVBAR ---------------- */
 #navbar-first {
-  padding: 5px 0 0 6.25px;
+  padding: 5px 5px 5px 6.25px;
   background-color: transparent;
   border-color: transparent;
 }
 #navbar-second {
-  padding: 5px 0 0 6.25px;
+  padding: 5px 5px 5px 6.25px;
   background-color: white;
-  border-color: white;
-  box-shadow: rgba(0, 0, 0, 0.05) 0 1px 1px, rgba(0, 0, 0, 0.05) 0 0 1px inset;
+  border: 0 solid #ebebeb;
+  border-bottom-width: 1px;
+  border-radius: 0;
 }
-#navbar-second a {
-  color: #34495e;
+#navbar-second li > a:hover,
+#navbar-second li > a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  color: #1f89cb;
 }
-#navbar-second .btn-navbar-second {
-  color: #3276b1;
+#navbar-second li > a:hover .bn-primary,
+#navbar-second li > a:focus .bn-primary {
+  border-color: #1f89cb;
+}
+#navbar-first li > a:hover,
+#navbar-first li > a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #1f89cb;
+  color: #FFF;
+}
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 5px;
+  border-color: #ebebeb;
 }
 .loginbtn {
   background-color: transparent;
@@ -4394,72 +4405,73 @@ body {
 }
 .btn-primary {
   color: #ffffff;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  border-color: transparent;
-  padding: 10px 20px;
-  margin-right: 15px;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  border-color: #1f89cb;
+  background-color: #1f89cb;
   border-radius: 50px;
-  /*  padding-top: 16px;*/
 }
-.btn-login {
+.btn-primary:hover {
+  background-color: transparent;
+  color: #3276b1;
+  border-color: #1f89cb;
+  border-width: 1px;
+}
+.btn-primary-outline {
   background-color: #34495e;
   border-color: #2b3c4e;
   color: #ffffff;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  border-color: transparent;
-  padding: 10px 20px;
-  margin-right: 15px;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  background-color: #1f89cb;
   border-radius: 50px;
-  /*  padding-top: 16px;*/
+  color: #1f89cb;
+  border-color: #1f89cb;
   background-color: transparent;
-  margin-right: 30px;
-  border-radius: 50;
-  /*  padding-top: 16px;*/
 }
-.btn-login:hover,
-.btn-login:focus,
-.btn-login:active,
-.btn-login.active,
-.open .dropdown-toggle.btn-login {
+.btn-primary-outline:hover,
+.btn-primary-outline:focus,
+.btn-primary-outline:active,
+.btn-primary-outline.active,
+.open .dropdown-toggle.btn-primary-outline {
   color: #ffffff;
   background-color: #253544;
   border-color: #151e26;
 }
-.btn-login:active,
-.btn-login.active,
-.open .dropdown-toggle.btn-login {
+.btn-primary-outline:active,
+.btn-primary-outline.active,
+.open .dropdown-toggle.btn-primary-outline {
   background-image: none;
 }
-.btn-login.disabled,
-.btn-login[disabled],
-fieldset[disabled] .btn-login,
-.btn-login.disabled:hover,
-.btn-login[disabled]:hover,
-fieldset[disabled] .btn-login:hover,
-.btn-login.disabled:focus,
-.btn-login[disabled]:focus,
-fieldset[disabled] .btn-login:focus,
-.btn-login.disabled:active,
-.btn-login[disabled]:active,
-fieldset[disabled] .btn-login:active,
-.btn-login.disabled.active,
-.btn-login[disabled].active,
-fieldset[disabled] .btn-login.active {
+.btn-primary-outline.disabled,
+.btn-primary-outline[disabled],
+fieldset[disabled] .btn-primary-outline,
+.btn-primary-outline.disabled:hover,
+.btn-primary-outline[disabled]:hover,
+fieldset[disabled] .btn-primary-outline:hover,
+.btn-primary-outline.disabled:focus,
+.btn-primary-outline[disabled]:focus,
+fieldset[disabled] .btn-primary-outline:focus,
+.btn-primary-outline.disabled:active,
+.btn-primary-outline[disabled]:active,
+fieldset[disabled] .btn-primary-outline:active,
+.btn-primary-outline.disabled.active,
+.btn-primary-outline[disabled].active,
+fieldset[disabled] .btn-primary-outline.active {
   background-color: #34495e;
   border-color: #2b3c4e;
 }
-.btn-login .badge {
+.btn-primary-outline .badge {
   color: #34495e;
   background-color: #ffffff;
 }
-.btn-login:hover {
+.btn-primary-outline:hover {
   background-color: transparent;
-  border-color: transparent;
+  color: #3276b1;
+  border-color: #1f89cb;
+  border-width: 1px;
 }
-.navbar-inverse .navbar-nav > li > a {
-  color: #fff;
+.btn-primary-outline:hover {
+  background-color: #1f89cb;
+  color: #FFF;
 }
 #centervini {
   test-align: center;
@@ -4510,16 +4522,15 @@ fieldset[disabled] .btn-login.active {
 .headline .landing-btn-strong {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   color: #ffffff;
-  background-color: #3276b1;
-  border-color: #3276b1;
+  background-color: #1f89cb;
+  border-color: #1f89cb;
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 1.6em;
 }
 .headline .landing-btn-strong:hover {
   background-color: transparent;
-  color: #3276b1;
-  font-weight: 700;
+  color: #1f89cb;
 }
 .headline .landing-btn {
   color: #ffffff;
@@ -4576,6 +4587,16 @@ fieldset[disabled] .btn-login.active {
   -o-background-size: cover;
   background-size: cover;
 }
+.header-image2 {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: url(img/background-fraise-vin.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .know-more {
   position: absolute;
   text-align: center;
@@ -4602,6 +4623,18 @@ fieldset[disabled] .btn-login.active {
   height: 45px;
 }
 /* ---------------- PROPVAL ---------------- */
+.badge-custom {
+  display: inline-block;
+  padding: 3px 7px;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  color: #fff;
+  background-color: #3276b1;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
 .getstarted {
   padding-left: 40px;
   padding-right: 40px;

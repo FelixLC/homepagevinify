@@ -48,12 +48,6 @@
   transform: translateY(-50%);
 }
 
-.brand-vinify {
-  color: #fff !important;
-  font-family: 'quicksand', Helvetica;
-  font-size: 25px;
-}
-
 .overlay {
   color: #fff;
   background: rgba(0,0,0,0);
@@ -62,22 +56,11 @@
   z-index: 2;
 }
 
+// ADD PADDING WHEN NAVBARISHERE
 .menu-padding {
   padding-top: 60px;
 }
 
-.badge-custom {
-  display: inline-block;
-  padding: 3px 7px;
-  vertical-align: baseline;
-  white-space: nowrap;
-  text-align: center;
-  color: #fff;
-  background-color: @main;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-}
 
 /**
  * Typography
@@ -86,13 +69,25 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
 
 
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+
+
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1, h2, h3 {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 .title{
@@ -107,21 +102,39 @@ html, body {
 /* ---------------- NAVBAR ---------------- */
 
 #navbar-first {
-  padding: 5px 0 0 6.25px;
+  padding: 5px 5px 5px 6.25px;
   background-color: transparent;
   border-color: transparent;
 }
 
 #navbar-second {
-  padding: 5px 0 0 6.25px;
+  padding: 5px 5px 5px 6.25px;
   background-color: white;
-  border-color: white;
-  box-shadow: rgba(0, 0, 0, 0.05) 0 1px 1px, rgba(0, 0, 0, 0.05) 0 0 1px inset;
-  a {  color: @brand-primary;}
+  border: 0 solid @color-grey;
+  border-bottom-width: 1px;
+  border-radius: 0;
+}
 
-  .btn-navbar-second {
-    color: @main;
+#navbar-second li > a:hover, #navbar-second li > a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  color: @color-support;
+  .bn-primary {
+    border-color: @color-support;
   }
+}
+
+#navbar-first li > a:hover, #navbar-first li > a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: @color-support;
+  color: #FFF;
+}
+
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 5px;
+  border-color: @color-grey;
 }
 
 .loginbtn {
@@ -145,31 +158,30 @@ html, body {
 
 .btn-primary {
   color: #ffffff;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  border-color: transparent;
-      padding: 10px 20px;
-      margin-right: 15px;
-      border-radius: 50px;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  border-color: @color-support;
+  background-color: @color-support;
+  border-radius: 50px;
 
-/*  padding-top: 16px;*/
+      &:hover {
+        background-color: transparent;
+        color: @main;
+        border-color: @color-support;
+        border-width: 1px;
+      }
 }
 
-.btn-login {
+.btn-primary-outline {
   .btn-primary;
+  color: @color-support;
+  border-color: @color-support;
   background-color: transparent;
-  margin-right: 30px;
-  border-radius: 50;
-        &:hover {
-          background-color: transparent;
-          border-color: transparent;
-        }
 
-/*  padding-top: 16px;*/
-}
+      &:hover {
+        background-color: @color-support;
+        color: #FFF;
+      }
 
-.navbar-inverse .navbar-nav > li > a {
-color: #fff;
 }
 
 #centervini{
@@ -234,15 +246,14 @@ color: #fff;
     .landing-btn-strong {
       font-family: 'Montserrat', Helvetica, Arial, sans-serif;
       color: #ffffff;
-      background-color: @main;
-      border-color: @main;
+      background-color: @color-support;
+      border-color: @color-support;
       padding: 10px 20px;
       border-radius: 50px;
       font-size: 1.6em;
         &:hover {
           background-color: transparent;
-          color: @main;
-          font-weight: 700;
+          color: @color-support;
         }
     }
 
@@ -318,6 +329,19 @@ color: #fff;
             background-size: cover;
 }
 
+.header-image2 {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      background:
+
+      url(img/background-fraise-vin.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+}
+
 .know-more {
   position: absolute;
   text-align: center;
@@ -349,6 +373,20 @@ color: #fff;
 }
 
 /* ---------------- PROPVAL ---------------- */
+
+.badge-custom {
+  display: inline-block;
+  padding: 3px 7px;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  color: #fff;
+  background-color: @main;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
 
 .getstarted {
   .section;
