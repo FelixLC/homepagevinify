@@ -48,9 +48,17 @@
   transform: translateY(-50%);
 }
 
+.right-padded-text {
+  padding-right: 50px;
+}
+
+.background-colored-text {
+    background-color: rgba(0,0,0, 0.4);
+}
+
 .overlay {
   color: #fff;
-  background: rgba(0,0,0,0);
+  background: rgba(0,0,0,0.1);
   overflow: auto;
   height: 100%;
   z-index: 2;
@@ -59,6 +67,25 @@
 // ADD PADDING WHEN NAVBARISHERE
 .menu-padding {
   padding-top: 60px;
+}
+.centered {
+  text-align: center;
+}
+// HOVER EFFECT
+
+.grow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.grow:hover, .grow:focus, .grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 
@@ -82,7 +109,7 @@ html {
 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1, h2, h3 {
@@ -94,10 +121,41 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.strong {
+  font-weight: 400;
+}
+
 html, body {
   height: 100%;
 }
 
+.btn-primary {
+  color: #ffffff;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  border-color: @color-support;
+  background-color: @color-support;
+  border-radius: 50px;
+
+      // &:hover {
+      //   background-color: transparent;
+      //   color: @main;
+      //   border-color: @color-support;
+      //   border-width: 1px;
+      // }
+}
+
+.btn-primary-outline {
+  .btn-primary;
+  color: @color-support;
+  border-color: @color-support;
+  background-color: transparent;
+
+      &:hover {
+        background-color: @color-support;
+        color: #FFF;
+      }
+
+}
 
 /* ---------------- NAVBAR ---------------- */
 
@@ -156,58 +214,11 @@ html, body {
   text-align: center;
 }
 
-.btn-primary {
-  color: #ffffff;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  border-color: @color-support;
-  background-color: @color-support;
-  border-radius: 50px;
-
-      &:hover {
-        background-color: transparent;
-        color: @main;
-        border-color: @color-support;
-        border-width: 1px;
-      }
-}
-
-.btn-primary-outline {
-  .btn-primary;
-  color: @color-support;
-  border-color: @color-support;
-  background-color: transparent;
-
-      &:hover {
-        background-color: @color-support;
-        color: #FFF;
-      }
-
-}
-
-#centervini{
-  test-align:center;
-}
-
-.logo{
-  height: 50px;
-  background-color: transparent;
-  margin: auto;
-  padding-left: 60px;
-}
-
-.logo > p {
-  height: 50px;
-  line-height: 50px;
-  font-family: Open Sans;
-  color: #fff;
-  font-size: 45px;
-  text-shadow: 2px 2px 20px #000000;
-}
-
-
 .section{
   padding-left: 40px;
   padding-right: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 
@@ -226,7 +237,7 @@ html, body {
     margin-top: 15px;
     margin-bottom: 10px;
     padding: 2px;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
+    // text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
   }
 
   h3 {
@@ -236,11 +247,7 @@ html, body {
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
-  }
-
-  .highlight {
-    // background-color: @main;
+    // text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
   }
 
     .landing-btn-strong {
@@ -251,20 +258,10 @@ html, body {
       padding: 10px 20px;
       border-radius: 50px;
       font-size: 1.6em;
-        &:hover {
-          background-color: transparent;
-          color: @color-support;
-        }
-    }
-
-    .landing-btn {
-      color: #ffffff;
-      background-color: transparent;
-      border-color: transparent;
-      border-width: 2px;
-      padding: 10px 20px;
-      margin-right: 15px;
-      border-radius: 50px;
+        // &:hover {
+        //   background-color: transparent;
+        //   color: @color-support;
+        // }
     }
 
     .headers {
@@ -276,30 +273,9 @@ html, body {
     }
 
 }
-
-.footline {
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: 15px;
-  margin-bottom: 15px;
-  position: absolute;
-  bottom: 0;
-}
-
-.landing-buttons {
-  text-align: center;
-}
-
 .headline-xs {
   padding: 10px 0px 10px;
   margin-bottom: 10px;
-}
-
-.tagline{
-  padding-left: 25px;
-  padding-right: 25px;
-  margin: 15px;
-  color: #fff;
 }
 
 .tagline-xs{
@@ -307,11 +283,6 @@ html, body {
   margin: 5px;
   text-align: center;
   padding-bottom: 20px;
-}
-
-.button {
-  padding: 30px 15px 0px;
-
 }
 
 
@@ -362,12 +333,6 @@ html, body {
       background-color: rgb(128, 0, 0);
 }
 
-.headerbeta {
-  padding: 0;
-  margin: -40.5px 15px 40px;
-  text-align: center;
-}
-
 .brand > img {
   height: 45px;
 }
@@ -389,21 +354,8 @@ html, body {
 
 
 .getstarted {
-  .section;
-  margin-top: 30px;
-}
-
-.dessins {
-  max-height: 300px;
-}
-
-.comment{
-  display:table;
-}
-
-.cell{
-  display:table-cell;
-    vertical-align:middle;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .propval {
@@ -432,14 +384,6 @@ html, body {
   font-size: 16px;
 }
 
-.irritant{
-  background-color: #EBEBE8;
-}
-
-.savoirplus{
-  text-align: center;
-}
-
 .propcontent{
   padding-bottom: 15px;
 }
@@ -448,7 +392,89 @@ html, body {
   text-align: center;
 }
 
+
+
+/* ---------------- WHATDOIGET ---------------- */
+#whatdoiget {
+
+    p {
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    background-color: @color-support-strong;
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 70px;
+    padding: 50px;
+
+
+    .highlight {
+      color: @color-brand;
+      font-weight: 700;
+    }
+    .v-align-text {
+      position: relative;
+      top: 130px;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+}
+
+.svg-yellow {
+  fill: RGB(71, 173, 104);
+}
+
+.svg-red {
+  fill: @color-brand;
+}
+
+.svg-blue {
+  fill: @color-support-strong;
+}
+
+/* ---------------- VINIBAR-FEATURE ---------------- */
+
+#vinibar-feature {
+      margin-top: 0px;
+      background: url(img/bandeau-vinibar.jpg) no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+      height: 459px;
+      text-align: center;
+      p {
+        font-size: 24px;
+        color: #FFF;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+}
+
+
 /* ---------------- FEATURETTES ---------------- */
+
+.dessins {
+  max-height: 300px;
+}
+
+.comment{
+  display:table;
+}
+
+.cell{
+  display:table-cell;
+    vertical-align:middle;
+}
 
 section{
   display: inline-block;
@@ -479,7 +505,6 @@ section{
 
 .commentcamarche {
   padding: 40px;
-
 }
 
 .commentcamarchefin{
@@ -529,6 +554,14 @@ section{
 
 /* ---------------- FOOTER ---------------- */
 
+.footline {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  position: absolute;
+  bottom: 0;
+}
 
 .social {
   text-align: center;
@@ -539,6 +572,9 @@ section{
   padding: 10px;
 }
 
+.irritant{
+  background-color: #EBEBE8;
+}
 
 /*.line {
   background: #333;
