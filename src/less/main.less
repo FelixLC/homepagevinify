@@ -71,6 +71,11 @@
 .centered {
   text-align: center;
 }
+
+.highlight {
+  color: #FFFC26;
+  font-weight: 700;
+}
 // HOVER EFFECT
 
 .grow {
@@ -89,15 +94,17 @@
 }
 
 
+
 /**
  * Typography
  */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
+@import url(http://fonts.googleapis.com/css?family=Actor);
+@import url(http://fonts.googleapis.com/css?family=Amaranth:400,700);
 
-
-html {
-  font-size: 17px;
+html, body {
+  font-size: 16px;
 }
 @media (max-width: 900px) {
   html { font-size: 15px; }
@@ -108,12 +115,12 @@ html {
 
 
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Actor', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
 h1, h2, h3 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -131,27 +138,27 @@ html, body {
 
 .btn-primary {
   color: #ffffff;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  border-color: @color-support;
-  background-color: @color-support;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  border-color: @color-support-strong;
+  background-color: @color-support-strong;
   border-radius: 50px;
 
       // &:hover {
       //   background-color: transparent;
       //   color: @main;
-      //   border-color: @color-support;
+      //   border-color: @color-support-strong;
       //   border-width: 1px;
       // }
 }
 
 .btn-primary-outline {
   .btn-primary;
-  color: @color-support;
-  border-color: @color-support;
+  color: @color-support-strong;
+  border-color: @color-support-strong;
   background-color: transparent;
 
       &:hover {
-        background-color: @color-support;
+        background-color: @color-support-strong;
         color: #FFF;
       }
 
@@ -177,16 +184,16 @@ html, body {
   cursor: pointer;
   text-decoration: none;
   background-color: transparent;
-  color: @color-support;
+  color: @color-support-strong;
   .bn-primary {
-    border-color: @color-support;
+    border-color: @color-support-strong;
   }
 }
 
 #navbar-first li > a:hover, #navbar-first li > a:focus {
   cursor: pointer;
   text-decoration: none;
-  background-color: @color-support;
+  background-color: @color-support-strong;
   color: #FFF;
 }
 
@@ -230,18 +237,19 @@ html, body {
   margin-left: 15px;
 
   h2 {
-    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'Amaranth', Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 30px;
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
     padding: 2px;
+    text-transform: uppercase;
     // text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
   }
 
   h3 {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Actor', Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 22px;
     font-weight: 400;
@@ -251,16 +259,16 @@ html, body {
   }
 
     .landing-btn-strong {
-      font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+      font-family: 'Amaranth', Helvetica, Arial, sans-serif;
       color: #ffffff;
-      background-color: @color-support;
-      border-color: @color-support;
+      background-color: @color-support-strong;
+      border-color: @color-support-strong;
       padding: 10px 20px;
       border-radius: 50px;
       font-size: 1.6em;
         // &:hover {
         //   background-color: transparent;
-        //   color: @color-support;
+        //   color: @color-support-strong;
         // }
     }
 
@@ -272,7 +280,11 @@ html, body {
       text-align: center;
     }
 
+    .tagline {
+      text-transform: uppercase;
+    }
 }
+
 .headline-xs {
   padding: 10px 0px 10px;
   margin-bottom: 10px;
@@ -367,7 +379,11 @@ html, body {
     }
 
     h1 {
-      color: @color-blue;
+      color: @color-support-strong;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-transform: uppercase;
     }
 
 }
@@ -398,7 +414,7 @@ html, body {
 #whatdoiget {
 
     p {
-        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-family: 'Amaranth', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
     }
@@ -414,11 +430,6 @@ html, body {
     padding-bottom: 70px;
     padding: 50px;
 
-
-    .highlight {
-      color: @color-brand;
-      font-weight: 700;
-    }
     .v-align-text {
       position: relative;
       top: 130px;
@@ -454,9 +465,9 @@ html, body {
       p {
         font-size: 24px;
         color: #FFF;
-        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-family: 'Amaranth', Helvetica, Arial, sans-serif;
         font-weight: 400;
-        text-transform: uppercase;
+        // text-transform: uppercase;
       }
 }
 
@@ -501,14 +512,6 @@ section{
 
 .featurette-heading {
   font-size: 30px;
-}
-
-.commentcamarche {
-  padding: 40px;
-}
-
-.commentcamarchefin{
-  padding-top: 40px;
 }
 
 .comment{
@@ -573,7 +576,8 @@ section{
 }
 
 .irritant{
-  background-color: #EBEBE8;
+  background-color: @color-support-strong;
+  color: #FFF;
 }
 
 /*.line {
@@ -599,22 +603,10 @@ section{
 
 
 
-.footer-image {
-      margin-top: 40px;
-      background: url(img/bouchonsNB3) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-}
-
-
-
 
 
 footer {
   margin: 20px 0;
-  background-color: #EBEBE8;
   text-align: center;
   padding: 10px 0px 5px 0px;
 }
@@ -695,7 +687,7 @@ footer {
     transform: translate(0, -50%);
     color: #fff;
     font-weight: 400;
-    font-family: Open Sans;
+    font-family: Actor;
     font-size: 15px;
     padding-right: 20px;
     padding-left: 50%;
@@ -745,7 +737,7 @@ h3 {
 
 #main, #selection, #contact > p {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .commentcamarchefin h2 {

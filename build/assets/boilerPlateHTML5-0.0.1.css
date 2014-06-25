@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
+@import url(http://fonts.googleapis.com/css?family=Actor);
+@import url(http://fonts.googleapis.com/css?family=Amaranth:400,700);
 /**
  * This is the main application stylesheet. It should include or import all
  * stylesheets used throughout the application as this is the only stylesheet in
@@ -4328,6 +4330,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .centered {
   text-align: center;
 }
+.highlight {
+  color: #FFFC26;
+  font-weight: 700;
+}
 .grow {
   display: inline-block;
   -webkit-transition-duration: 0.3s;
@@ -4347,8 +4353,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /**
  * Typography
  */
-html {
-  font-size: 17px;
+html,
+body {
+  font-size: 16px;
 }
 @media (max-width: 900px) {
   html {
@@ -4361,13 +4368,13 @@ html {
   }
 }
 body {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Actor', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 h1,
 h2,
 h3 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 .title {
@@ -4382,20 +4389,20 @@ body {
 }
 .btn-primary {
   color: #ffffff;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  border-color: #1f89cb;
-  background-color: #1f89cb;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  border-color: #006db2;
+  background-color: #006db2;
   border-radius: 50px;
 }
 .btn-primary-outline {
   background-color: #34495e;
   border-color: #2b3c4e;
   color: #ffffff;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-  background-color: #1f89cb;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  background-color: #006db2;
   border-radius: 50px;
-  color: #1f89cb;
-  border-color: #1f89cb;
+  color: #006db2;
+  border-color: #006db2;
   background-color: transparent;
 }
 .btn-primary-outline:hover,
@@ -4435,7 +4442,7 @@ fieldset[disabled] .btn-primary-outline.active {
   background-color: #ffffff;
 }
 .btn-primary-outline:hover {
-  background-color: #1f89cb;
+  background-color: #006db2;
   color: #FFF;
 }
 /* ---------------- NAVBAR ---------------- */
@@ -4456,17 +4463,17 @@ fieldset[disabled] .btn-primary-outline.active {
   cursor: pointer;
   text-decoration: none;
   background-color: transparent;
-  color: #1f89cb;
+  color: #006db2;
 }
 #navbar-second li > a:hover .bn-primary,
 #navbar-second li > a:focus .bn-primary {
-  border-color: #1f89cb;
+  border-color: #006db2;
 }
 #navbar-first li > a:hover,
 #navbar-first li > a:focus {
   cursor: pointer;
   text-decoration: none;
-  background-color: #1f89cb;
+  background-color: #006db2;
   color: #FFF;
 }
 .navbar-nav > li > .dropdown-menu {
@@ -4502,16 +4509,17 @@ fieldset[disabled] .btn-primary-outline.active {
   margin-left: 15px;
 }
 .headline h2 {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-size: 30px;
   font-weight: 400;
   margin-top: 15px;
   margin-bottom: 10px;
   padding: 2px;
+  text-transform: uppercase;
 }
 .headline h3 {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Actor', Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-size: 22px;
   font-weight: 400;
@@ -4519,10 +4527,10 @@ fieldset[disabled] .btn-primary-outline.active {
   margin-bottom: 10px;
 }
 .headline .landing-btn-strong {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
   color: #ffffff;
-  background-color: #1f89cb;
-  border-color: #1f89cb;
+  background-color: #006db2;
+  border-color: #006db2;
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 1.6em;
@@ -4532,6 +4540,9 @@ fieldset[disabled] .btn-primary-outline.active {
 }
 .headline .cta {
   text-align: center;
+}
+.headline .tagline {
+  text-transform: uppercase;
 }
 .headline-xs {
   padding: 10px 0px 10px;
@@ -4609,7 +4620,11 @@ fieldset[disabled] .btn-primary-outline.active {
   line-height: 100%;
 }
 .propval h1 {
-  color: #3276b1;
+  color: #006db2;
+  text-transform: uppercase;
+}
+.propval h3 {
+  text-transform: uppercase;
 }
 .tnp {
   text-align: center;
@@ -4635,16 +4650,12 @@ fieldset[disabled] .btn-primary-outline.active {
   padding: 50px;
 }
 #whatdoiget p {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
 }
 #whatdoiget h2 {
   margin-bottom: 50px;
-}
-#whatdoiget .highlight {
-  color: #800000;
-  font-weight: 700;
 }
 #whatdoiget .v-align-text {
   position: relative;
@@ -4676,9 +4687,8 @@ fieldset[disabled] .btn-primary-outline.active {
 #vinibar-feature p {
   font-size: 24px;
   color: #FFF;
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
 }
 /* ---------------- FEATURETTES ---------------- */
 .dessins {
@@ -4712,12 +4722,6 @@ section {
 }
 .featurette-heading {
   font-size: 30px;
-}
-.commentcamarche {
-  padding: 40px;
-}
-.commentcamarchefin {
-  padding-top: 40px;
 }
 .comment {
   display: inline-block;
@@ -4768,7 +4772,8 @@ section {
   padding: 10px;
 }
 .irritant {
-  background-color: #EBEBE8;
+  background-color: #006db2;
+  color: #FFF;
 }
 /*.line {
   background: #333;
@@ -4785,17 +4790,8 @@ section {
 .separateur {
   height: 13vh;
 }
-.footer-image {
-  margin-top: 40px;
-  background: url(img/bouchonsNB3) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 footer {
   margin: 20px 0;
-  background-color: #EBEBE8;
   text-align: center;
   padding: 10px 0px 5px 0px;
 }
@@ -4888,7 +4884,7 @@ footer {
     transform: translate(0, -50%);
     color: #fff;
     font-weight: 400;
-    font-family: Open Sans;
+    font-family: Actor;
     font-size: 15px;
     padding-right: 20px;
     padding-left: 50%;
@@ -4930,7 +4926,7 @@ footer {
   #selection,
   #contact > p {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
   }
   .commentcamarchefin h2 {
     text-align: center;
