@@ -48,8 +48,8 @@
           <div class="headline">
               <div class="row headers">
                 <div class="col-lg-12 col-md-12 col-sm-6">
-                    <h2 id="tagline" class="centered"><span class="background-colored-text">Découvrez des vins à vos goûts sans efforts</span></h2>
-                    <h3 class="centered"><span id="tagline-caption" class="background-colored-text">Notez des vins et recevez au rythme de votre consommation<br> une sélection qui s'adapte à vos goûts</span></h3>
+                    <h2 id="tagline" class="centered"><span>Découvrez des vins à vos goûts sans efforts</span></h2>
+                    <h3 class="centered"><span id="tagline-caption">Notez des vins et recevez au rythme de votre consommation<br> une sélection qui s'adapte à vos goûts</span></h3>
                 </div>
               </div>
               <div class="row cta">
@@ -105,42 +105,50 @@
       <nav class="navbar" role="navigation" id="navbar-second">
         <div class="container-fluid">
           <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
              <a href="#splashscreen"><img alt="" src="assets/img/LogoVinify.svg" style="height:45px" id="mf2"/></a>
           </div>
 
-          <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a href="#exp-vinib" class="btn-navbar-second">
-                    L'expérience Vinibar
-                </a>
-              </li>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#exp-vinib" class="btn-navbar-second">
+                      L'expérience Vinibar
+                  </a>
+                </li>
 
-              <li>
-                <a href="http://app.vinify.co" class="btn-navbar-second">
-                    Comment ça marche ?
-                </a>
-              </li>
-              <li class="dropdown">
-                    <a class="btn-navbar-second dropdown-toggle" data-toggle="dropdown">
-                      Cadeau
-                      <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Offrir</a></li>
-                      <li><a href="#">Recevoir</a></li>
-                    </ul>
-              </li>
-              <li>
-                <a href="http://app.vinify.co" class="btn-navbar-second">
-                    Offre Découverte
-                </a>
-              </li>
-              <li>
-                <a href="http://app.vinify.co" class="btn-navbar-second btn-primary">
-                   Démarrer l'aventure
-                </a>
-              </li>
-          </ul>
+                <li>
+                  <a href="http://app.vinify.co" class="btn-navbar-second">
+                      Comment ça marche ?
+                  </a>
+                </li>
+                <li class="dropdown">
+                      <a class="btn-navbar-second dropdown-toggle" data-toggle="dropdown">
+                        Cadeau
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Offrir</a></li>
+                        <li><a href="#">Recevoir</a></li>
+                      </ul>
+                </li>
+                <li>
+                  <a href="http://app.vinify.co" class="btn-navbar-second">
+                      Offre Découverte
+                  </a>
+                </li>
+                <li>
+                  <a href="http://app.vinify.co" class="btn-navbar-second btn-primary">
+                     Démarrer l'aventure
+                  </a>
+                </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
@@ -185,26 +193,257 @@
           <div class="container">
             <h2 class="featurette-heading">Ce que je reçois dans mon Vinibar</h2>
             <div class="row comment">
-               <div class="col-lg-4 col-md-4 v-align-text">
-                <p>
-                 Une sélection sur-mesure <br>
-                 <span class="highlight">9 bouteilles pour 99€</span>
-                </p>
-                <p>
-                 Un rack en bois pour les ranger,<br>
-                 le <span class="highlight"> Vinibar.</span>
-                <p>
+               <div class="col-lg-4 col-md-4 v-align-text hidden-xs hidden-sm">
+                  <p>
+                   Une sélection sur-mesure <br>
+                   <span class="highlight">9 bouteilles pour 99€</span>
+                  </p>
+                  <p>
+                   Un rack en bois pour les ranger,<br>
+                   le <span class="highlight"> Vinibar.</span>
+                  <p>
+               </div>
+               <div class="col-lg-4 col-md-4 visible-xs visible-sm">
+                  <p>
+                   Une sélection sur-mesure <br>
+                   <span class="highlight">9 bouteilles pour 99€</span>
+                  </p>
+                  <p>
+                   Un rack en bois pour les ranger,<br>
+                   le <span class="highlight"> Vinibar.</span>
+                  <p>
                </div>
                <div class="col-lg-4 col-md-4 cell">
-                  <img class="img img-responsive hidden-xs hidden-sm dessins wobble-vertical" src="assets/img/hipstercadeau.png" id="img-contact">
+                  <img class="img img-responsive dessins wobble-vertical hipster-cadeau" src="assets/img/hipstercadeau.png" id="img-contact">
               </div>
-               <div class="col-lg-4 col-md-4 v-align-text">
+               <div class="col-lg-4 col-md-4 v-align-text hidden-xs hidden-sm">
                 <p>
                  L'accès à <span class="highlight">l'application Vinify</span> <br> pour les noter.
                 </p>
                 <p>
                  Des <span class="highlight">conseils et des accords mets-vins</span> pour les déguster.
                 <p>
+               </div>
+               <div class="col-lg-4 col-md-4 visible-xs visible-sm">
+                  <p>
+                   L'accès à <span class="highlight">l'application Vinify</span> <br> pour les noter.
+                  </p>
+                  <p>
+                   Des <span class="highlight">conseils et des accords mets-vins</span> pour les déguster.
+                  <p>
+               </div>
+            </div>
+          </div>
+        </div>
+
+      <div id="recharge">
+          <div class="container">
+            <h2 class="featurette-heading">La Recharge</h2>
+            <h3>Plus je déguste et je note, plus les vins me correspondent</h3>
+            <div class="row comment">
+               <div class="col-lg-6 col-md-6 v-align-text hidden-xs hidden-sm">
+                  <p>
+                   Une sélection sur-mesure <br>
+                   <span class="highlight">9 bouteilles pour 99€</span>
+                  </p>
+                  <p>
+                   Un rack en bois pour les ranger,<br>
+                   le <span class="highlight"> Vinibar.</span>
+                  <p>
+               </div>
+               <div class="svg-container">
+                  <p><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="288.146px" height="165.164px" viewBox="0 0 288.146 165.164" enable-background="new 0 0 288.146 165.164"
+                     xml:space="preserve">
+                  <g id="Layer_1">
+                    <g>
+                      <defs>
+                        <rect id="SVGID_1_" x="65.396" y="122.563" width="108.583" height="42.601"/>
+                      </defs>
+                      <clipPath id="SVGID_2_">
+                        <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                      </clipPath>
+                    </g>
+                    <g>
+                      <defs>
+                        <polyline id="SVGID_3_" points="176.646,26.933 207.367,26.933 207.367,57.664 176.646,57.664       "/>
+                      </defs>
+                      <clipPath id="SVGID_4_">
+                        <use xlink:href="#SVGID_3_"  overflow="visible"/>
+                      </clipPath>
+                      <g clip-path="url(#SVGID_4_)" enable-background="new    ">
+                        <g>
+                          <defs>
+                            <rect id="SVGID_5_" x="176.617" y="26.914" width="30.75" height="30.75"/>
+                          </defs>
+                          <clipPath id="SVGID_6_">
+                            <use xlink:href="#SVGID_5_"  overflow="visible"/>
+                          </clipPath>
+                          <g clip-path="url(#SVGID_6_)">
+                            <defs>
+                              <rect id="SVGID_7_" x="176.617" y="26.914" width="30.75" height="30.75"/>
+                            </defs>
+                            <clipPath id="SVGID_8_">
+                              <use xlink:href="#SVGID_7_"  overflow="visible"/>
+                            </clipPath>
+                            <path clip-path="url(#SVGID_8_)" fill="none" stroke="#FDFEFF" stroke-miterlimit="10" d="M200.63,40.849
+                              c-0.047-2.653-2.197-5.017-4.857-5.017c-1.535,0-2.891,0.804-3.781,1.984c-0.895-1.181-2.248-1.984-3.785-1.984
+                              c-2.658,0-4.811,2.363-4.855,5.017h-0.008c0,0.017,0.002,0.032,0.002,0.047c0,0.012-0.002,0.024-0.002,0.038
+                              c0,0.073,0.018,0.131,0.02,0.202c0.24,6.761,8.561,9.533,8.561,9.533s8.443-2.771,8.693-9.522
+                              c0.002-0.075,0.023-0.137,0.023-0.213c0-0.014-0.004-0.026-0.004-0.038c0-0.017,0.004-0.03,0.004-0.047H200.63"/>
+                          </g>
+                          <g clip-path="url(#SVGID_6_)">
+                            <defs>
+                              <path id="SVGID_9_" d="M191.992,26.914c-8.492,0-15.375,6.883-15.375,15.375c0,8.491,6.883,15.375,15.375,15.375
+                                c8.49,0,15.375-6.883,15.375-15.375C207.367,33.797,200.482,26.914,191.992,26.914z M200.64,40.934
+                                c0,0.076-0.021,0.138-0.023,0.213c-0.25,6.752-8.693,9.522-8.693,9.522s-8.32-2.772-8.561-9.533
+                                c-0.002-0.071-0.02-0.129-0.02-0.202c0-0.014,0.002-0.026,0.002-0.038c0-0.015-0.002-0.03-0.002-0.047h0.008
+                                c0.045-2.653,2.197-5.017,4.855-5.017c1.537,0,2.891,0.804,3.785,1.984c0.891-1.181,2.246-1.984,3.781-1.984
+                                c2.66,0,4.811,2.363,4.857,5.017h0.01c0,0.017-0.004,0.03-0.004,0.047C200.636,40.907,200.64,40.92,200.64,40.934z"/>
+                            </defs>
+                            <clipPath id="SVGID_10_">
+                              <use xlink:href="#SVGID_9_"  overflow="visible"/>
+                            </clipPath>
+                            <g clip-path="url(#SVGID_10_)">
+                              <defs>
+                                <rect id="SVGID_11_" x="176.617" y="26.914" width="30.75" height="30.75"/>
+                              </defs>
+                              <clipPath id="SVGID_12_">
+                                <use xlink:href="#SVGID_11_"  overflow="visible"/>
+                              </clipPath>
+
+                                <rect x="174.214" y="24.513" clip-path="url(#SVGID_12_)" fill-rule="evenodd" clip-rule="evenodd" fill="#076EB2" width="35.555" height="35.553"/>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                    <g>
+                      <path fill="none" stroke="#076EB2" stroke-miterlimit="10" d="M92.625,23.137c0,1.061,0.86,1.922,1.922,1.922h15.375
+                        c1.061,0,1.922-0.861,1.922-1.922V17.37H92.625V23.137z M108.96,21.215c0.531,0,0.961,0.429,0.961,0.961
+                        c0,0.53-0.43,0.961-0.961,0.961S108,22.706,108,22.176C108,21.644,108.429,21.215,108.96,21.215z M105.117,21.215
+                        c0.531,0,0.961,0.429,0.961,0.961c0,0.53-0.43,0.961-0.961,0.961s-0.961-0.431-0.961-0.961
+                        C104.156,21.644,104.585,21.215,105.117,21.215z M101.273,21.215c0.531,0,0.961,0.429,0.961,0.961c0,0.53-0.43,0.961-0.961,0.961
+                        s-0.961-0.431-0.961-0.961C100.312,21.644,100.742,21.215,101.273,21.215z"/>
+                      <g>
+                        <defs>
+                          <polyline id="SVGID_13_" points="86.888,2.495 117.609,2.495 117.609,33.227 86.888,33.227        "/>
+                        </defs>
+                        <clipPath id="SVGID_14_">
+                          <use xlink:href="#SVGID_13_"  overflow="visible"/>
+                        </clipPath>
+                        <g clip-path="url(#SVGID_14_)" enable-background="new    ">
+                          <g>
+                            <defs>
+                              <rect id="SVGID_15_" x="86.859" y="2.476" width="30.75" height="30.751"/>
+                            </defs>
+                            <clipPath id="SVGID_16_">
+                              <use xlink:href="#SVGID_15_"  overflow="visible"/>
+                            </clipPath>
+                            <g clip-path="url(#SVGID_16_)">
+                              <defs>
+                                <path id="SVGID_17_" d="M102.234,2.476c-8.491,0-15.375,6.885-15.375,15.375c0,8.491,6.884,15.376,15.375,15.376
+                                  s15.375-6.885,15.375-15.376C117.609,9.36,110.725,2.476,102.234,2.476z M111.843,23.137c0,1.061-0.861,1.922-1.922,1.922
+                                  H94.546c-1.062,0-1.922-0.861-1.922-1.922V17.37h19.219V23.137z M111.843,14.487H92.625v-0.961
+                                  c0-1.061,0.86-1.922,1.922-1.922h15.375c1.061,0,1.922,0.861,1.922,1.922V14.487z"/>
+                              </defs>
+                              <clipPath id="SVGID_18_">
+                                <use xlink:href="#SVGID_17_"  overflow="visible"/>
+                              </clipPath>
+                              <g clip-path="url(#SVGID_18_)">
+                                <defs>
+                                  <rect id="SVGID_19_" x="86.859" y="2.476" width="31.23" height="30.751"/>
+                                </defs>
+                                <clipPath id="SVGID_20_">
+                                  <use xlink:href="#SVGID_19_"  overflow="visible"/>
+                                </clipPath>
+
+                                  <rect x="84.457" y="0.073" clip-path="url(#SVGID_20_)" fill-rule="evenodd" clip-rule="evenodd" fill="#076EB2" width="35.555" height="35.556"/>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                      <path fill="none" stroke="#076EB2" stroke-miterlimit="10" d="M105.117,23.137c0.531,0,0.961-0.431,0.961-0.961
+                        c0-0.532-0.43-0.961-0.961-0.961s-0.961,0.429-0.961,0.961C104.156,22.706,104.585,23.137,105.117,23.137"/>
+                      <path fill="none" stroke="#076EB2" stroke-miterlimit="10" d="M108.96,23.137c0.531,0,0.961-0.431,0.961-0.961
+                        c0-0.532-0.43-0.961-0.961-0.961S108,21.644,108,22.176C108,22.706,108.429,23.137,108.96,23.137"/>
+                      <path fill="none" stroke="#076EB2" stroke-miterlimit="10" d="M101.273,23.137c0.531,0,0.961-0.431,0.961-0.961
+                        c0-0.532-0.43-0.961-0.961-0.961s-0.961,0.429-0.961,0.961C100.312,22.706,100.742,23.137,101.273,23.137"/>
+                    </g>
+                    <g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                      </g>
+                      <g>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path fill="none" stroke="#016EB2" stroke-width="2" stroke-miterlimit="10" d="M192.579,70.016c0,0-3.908,20.24-25.001,32.5"/>
+                        <g>
+                          <polygon fill="#016EB2" points="165.972,91.973 154.393,108.21 174.245,110.123         "/>
+                        </g>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path fill="none" stroke="#016EB2" stroke-width="2" stroke-miterlimit="10" d="M102.713,94.221c0,0-15.801-13.241-16.282-37.632
+                          "/>
+                        <g>
+                          <polygon fill="#016EB2" points="96.428,60.302 87.852,42.298 76.545,58.726         "/>
+                        </g>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path fill="none" stroke="#016EB2" stroke-width="2" stroke-miterlimit="10" d="M126.454,3.789c0,0,19.542-6.564,40.597,5.758"/>
+                        <g>
+                          <polygon fill="#016EB2" points="158.664,16.135 178.498,18.22 170.389,0        "/>
+                        </g>
+                      </g>
+                    </g>
+                    <text transform="matrix(1 0 0 1 3.7168 15.1587)"><tspan x="0" y="0" fill="#016EB2" font-family="'Amaranth-Bold'" font-size="9">JE COMMANDE</tspan><tspan x="-3.573" y="10.8" fill="#016EB2" font-family="'Amaranth-Bold'" font-size="9">A MON BUDGET</tspan></text>
+                    <text transform="matrix(1 0 0 1 224.0854 39.5957)"><tspan x="0" y="0" fill="#016EB2" font-family="'Amaranth-Bold'" font-size="9">JE DEGUSTE</tspan><tspan x="0" y="10.8" fill="#016EB2" font-family="'Amaranth-Bold'" font-size="9">A MON RYTHME</tspan></text>
+                    <text transform="matrix(1 0 0 1 110.8071 148.3765)"><tspan x="0" y="0" fill="#016EB2" font-family="'Amaranth-Bold'" font-size="9">JE NOTE</tspan><tspan x="-13.707" y="10.8" fill="#016EB2" font-family="'Amaranth-Bold'" font-size="9">MA SELECTION</tspan></text>
+                    <g>
+                      <path fill="#FFFFFF" d="M118.953,102.103h4.688v0.938h-4.688V102.103L118.953,102.103z M118.484,117.572h4.219h6.094
+                        c0.776,0,1.406-0.63,1.406-1.406v-2.832l-1.875,1.895h-5.977h-3.398v-0.938h3.595l0.116-0.557l0.17-0.85h-3.881v-0.938h4.068
+                        l0.281-1.406h-4.35v-0.938h4.537l0.057-0.288l1.119-1.118h-5.713v-0.938h6.65l1.406-1.406h-8.057v-0.938h8.994l2.256-2.256v-2.432
+                        c0-0.776-0.63-1.406-1.406-1.406h-4.219h-6.094c-0.776,0-1.406,0.63-1.406,1.406v11.719v4.219
+                        C117.078,116.942,117.708,117.572,118.484,117.572L118.484,117.572z"/>
+                      <path fill="#FFFFFF" d="M135.48,105.337l0.675,0.675l1.237-1.237c0.414-0.415,0.414-1.086,0-1.501l-2.501-2.501
+                        c-0.414-0.414-1.086-0.414-1.501,0l-1.237,1.237l0.675,0.675L135.48,105.337L135.48,105.337z"/>
+                      <g>
+                        <defs>
+                          <rect id="SVGID_21_" x="111.453" y="93.197" width="30" height="30"/>
+                        </defs>
+                        <clipPath id="SVGID_22_">
+                          <use xlink:href="#SVGID_21_"  overflow="visible"/>
+                        </clipPath>
+                        <polygon clip-path="url(#SVGID_22_)" fill="#FFFFFF" points="123.583,113.917 123.505,114.291 127.938,114.291 135.483,106.667
+                          134.817,106 132.166,103.348 131.503,102.685 124.411,109.777 123.583,113.917       "/>
+                        <path clip-path="url(#SVGID_22_)" fill="#016EB2" d="M117.078,111.947v-11.719c0-0.776,0.63-1.406,1.406-1.406h6.094h4.219
+                          c0.776,0,1.406,0.63,1.406,1.406v2.432l-2.256,2.256h-8.994v0.938h8.057l-1.406,1.406h-6.65v0.938h5.713l-1.119,1.118
+                          l-0.057,0.288h-4.537v0.938h4.35l-0.281,1.406h-4.068v0.938h3.881l-0.17,0.85l-0.116,0.557h-3.595v0.938h3.398h5.977l1.875-1.895
+                          v2.832c0,0.776-0.63,1.406-1.406,1.406h-6.094h-4.219c-0.776,0-1.406-0.63-1.406-1.406V111.947L117.078,111.947z
+                           M132.166,103.348l2.651,2.651l0.666,0.667l-7.546,7.624h-4.433l0.078-0.373l0.828-4.141l7.092-7.092L132.166,103.348
+                          L132.166,103.348z M133.391,100.773c0.415-0.414,1.087-0.414,1.501,0l2.501,2.501c0.414,0.415,0.414,1.086,0,1.501l-1.237,1.237
+                          l-0.675-0.675l-2.652-2.652l-0.675-0.675L133.391,100.773L133.391,100.773z M126.375,123.197c8.284,0,15-6.716,15-15
+                          s-6.716-15-15-15s-15,6.716-15,15S118.091,123.197,126.375,123.197L126.375,123.197z"/>
+                      </g>
+                      <polygon fill="#016EB2" points="123.641,102.103 118.953,102.103 118.953,103.041 123.641,103.041 123.641,102.103     "/>
+                    </g>
+                  </g>
+                  <g id="Layer_2">
+                  </g>
+                  </svg></p>
+
                </div>
             </div>
           </div>
@@ -232,7 +471,7 @@
                       c-35.58,0-64.527-28.947-64.527-64.527c0-35.584,28.947-64.531,64.527-64.531c35.582,0,64.529,28.947,64.529,64.531
                       C164.079,134.796,135.132,163.743,99.55,163.743z"/>
                   </g>
-                  <text transform="matrix(1 0 0 1 60.9033 99.082)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="27">SANS</tspan><tspan x="-20.911" y="19.2" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="16">ENGAGEMENT</tspan></text>
+                  <text transform="matrix(1 0 0 1 60.9033 99.082)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat'" font-size="27">SANS</tspan><tspan x="-20.911" y="19.2" fill="#FFFFFF" font-family="'Montserrat'" font-size="16">ENGAGEMENT</tspan></text>
                 </g>
                 </svg>
               </div>
@@ -257,7 +496,7 @@
                       c-35.58,0-64.527-28.947-64.527-64.527c0-35.584,28.947-64.531,64.527-64.531c35.582,0,64.529,28.947,64.529,64.531
                       C164.079,134.796,135.132,163.743,99.55,163.743z"/>
                   </g>
-                  <text transform="matrix(1 0 0 1 44.1963 95.0117)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="14">PRODUCTEURS</tspan><tspan x="-3.031" y="16.8" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="14">INDÉPENDANTS</tspan></text>
+                  <text transform="matrix(1 0 0 1 44.1963 95.0117)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat'" font-size="14">PRODUCTEURS</tspan><tspan x="-3.031" y="16.8" fill="#FFFFFF" font-family="'Montserrat'" font-size="14">INDÉPENDANTS</tspan></text>
                 </g>
                 </svg>
               </div>
@@ -284,7 +523,7 @@
                       c-35.58,0-64.527-28.947-64.527-64.527c0-35.584,28.947-64.531,64.527-64.531c35.582,0,64.529,28.947,64.529,64.531
                       C164.079,134.796,135.132,163.743,99.55,163.743z"/>
                   </g>
-                  <text transform="matrix(1 0 0 1 37.4668 97.1348)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="19">J’APPRENDS</tspan><tspan x="5.225" y="16.8" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="14">EN DÉGUSTANT</tspan></text>
+                  <text transform="matrix(1 0 0 1 37.4668 97.1348)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat'" font-size="19">J’APPRENDS</tspan><tspan x="5.225" y="16.8" fill="#FFFFFF" font-family="'Montserrat'" font-size="14">EN DÉGUSTANT</tspan></text>
                 </g>
                 </svg>
               </div>
@@ -309,7 +548,7 @@
                       c-35.58,0-64.527-28.947-64.527-64.527c0-35.584,28.947-64.531,64.527-64.531c35.582,0,64.529,28.947,64.529,64.531
                       C164.079,134.796,135.132,163.743,99.55,163.743z"/>
                   </g>
-                  <text transform="matrix(1 0 0 1 69.2119 91.709)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="26">-15%</tspan><tspan x="-18.821" y="16.8" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="14">SUR LES VINS</tspan><tspan x="-21.166" y="33.6" fill="#FFFFFF" font-family="'Montserrat-Bold'" font-size="14">QUE J’AI AIMÉ</tspan></text>
+                  <text transform="matrix(1 0 0 1 69.2119 91.709)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Montserrat'" font-size="26">-15%</tspan><tspan x="-18.821" y="16.8" fill="#FFFFFF" font-family="'Montserrat'" font-size="14">SUR LES VINS</tspan><tspan x="-21.166" y="33.6" fill="#FFFFFF" font-family="'Montserrat'" font-size="14">QUE J’AI AIMÉ</tspan></text>
                 </g>
                 </svg>
               </div>
@@ -320,82 +559,6 @@
       </div><!-- /.section -->
       <!-- /badges -->
 
-      <div class="vinibar-bandeau" id="vinibar-feature">
-
-          <p class="vertical-align"><span class="background-colored-text">Les conseils et l’offre d’un caviste qui vous connaît, à portée de main</span></p>
-
-      </div>
-
-      <div id="exp-vinib"></div>
-
-      <div class="section" id="experiencevinibar">
-          <div class="container">
-            <div class="row comment">
-               <div class="col-lg-7 col-md-7 pull-left cell" id="selection">
-                <h2 class="featurette-heading"><span class="text-muted">Une sélection</span> sur mesure</h2>
-                <br>
-                <p>
-                  Contrairement aux abonnements en vin qui envoient les même bouteilles à tous leurs clients, la sélection de votre Vinibar est sur-mesure.
-                </p>
-                <p>
-                  A chaque envoi, les vins sont choisis en fonction de vos goûts et des feedbacks que vous avez envoyés sur les bouteilles précédentes.
-                <p>
-               </div>
-               <div class="col-lg-4 col-md-4 cell pull-right">
-                  <img class="img img-responsive pull-right hidden-xs hidden-sm dessins" src="assets/img/vinify-tailleur.png" id="img-contact">
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="container">
-            <hr class="featurette-divider">
-        </div>
-
-         <div class="section">
-              <div class="container">
-               <div class="row">
-                    <div class="col-lg-4 col-md-4 pull-left visible-lg visible-md">
-                      <img class="img img-responsive pull-left dessins" src="assets/img/vinify-caviste.jpg">
-                    </div>
-                    <div class="col-lg-7 col-md-7" id="main">
-                      <h2 class="featurette-heading"><span class="text-muted">Du vin toujours</span> à portée de main</h2>
-                      <br>
-                      <p>
-                        Vous partez chez des amis mais votre supermarché est fermé ? <br> Il n'y a plus de vin au milieu d'un dîner chez vous?
-                      </p>
-                      <p>
-                        Avec le Vinibar, la bonne bouteille est toujours à portée de main. Le bar n'est jamais vide, nous l'approvisionnons en vins sur-mesure au rythme de votre consommation.
-                      </p>
-                    </div>
-                </div>
-              </div>
-        </div>
-
-         <div class="container">
-            <hr class="featurette-divider">
-        </div>
-
-        <div class="section">
-          <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-md-8" id="contact">
-                  <h2 class="featurette-heading"><span class="text-muted">Comprendre ses goûts,</span> savoir choisir son vin</h2>
-                  <br>
-                  <p class="right-padded-text">
-                    Avec un langage simple, Vinify vous propose de comprendre vos goûts et d'apprendre à choisir votre vin.
-                  </p>
-                  <p class="right-padded-text">
-                    A chaque dégustation, vous donnez une note au vin qui est alors ajouté à votre profil. Vinify analyse ces notes et trouve les points communs des vins qui vous plaisent. Vous découvrez vos goûts et apprenez à mieux choisir vos vins.
-                  </p>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                  <img class="img img-responsive dessins" src="assets/img/vinify-supermarket.png" id="img-contact">
-                </div>
-              </div>
-          </div>
-        </div>
 
     <div class="vinibar-bandeau hidden-xs" id="footer-image">
         <div class="vertical-align">
