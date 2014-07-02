@@ -4490,6 +4490,12 @@ h3 {
 .title {
   text-align: center;
 }
+.lead-section {
+  font-size: 1.2em;
+  color: #006db2;
+  font-weight: 400;
+  font-family: 'Amaranth';
+}
 .strong {
   font-weight: 400;
 }
@@ -4804,9 +4810,30 @@ fieldset[disabled] .btn-primary-outline.active {
   fill: #006db2;
 }
 /* ---------------- LA RECHARGE ---------------- */
-.svg-container svg {
-  height: 200%;
-  width: 200%;
+#recharge .par-end {
+  margin-bottom: 50px;
+}
+#recharge .know-more-link {
+  text-align: right;
+}
+#recharge p {
+  text-align: left;
+}
+#recharge h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#recharge .half {
+  width: 50%;
+  float: left;
+}
+#recharge .half-left {
+  padding-right: 60px;
+  padding-top: 60px;
+}
+#recharge .svg-container svg {
+  height: 90%;
+  width: 90%;
 }
 /* ---------------- VINIBAR-FEATURE ---------------- */
 .vinibar-bandeau {
