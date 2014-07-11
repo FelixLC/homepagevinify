@@ -16,6 +16,7 @@
 @import '../../vendor/bootstrap/less/normalize.less';
 @import '../../vendor/bootstrap/less/type.less';
 @import '../../vendor/bootstrap/less/grid.less';
+@import '../../vendor/bootstrap/less/carousel.less';
 @import '../../vendor/bootstrap/less/forms.less';
 @import '../../vendor/bootstrap/less/navs.less';
 @import '../../vendor/bootstrap/less/tables.less';
@@ -59,7 +60,7 @@
 
 .overlay {
   color: #fff;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.4);
   overflow: auto;
   height: 100%;
   z-index: 2;
@@ -349,6 +350,12 @@ border-color: @color-support-strong;
   padding-right: 40px;
   margin-top: 80px;
   margin-bottom: 80px;
+    @media (max-width: 768px) {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
 }
 
 
@@ -362,7 +369,7 @@ border-color: @color-support-strong;
   h2 {
     font-family: 'Amaranth', Helvetica, Arial, sans-serif;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -374,7 +381,7 @@ border-color: @color-support-strong;
   h3 {
     font-family: 'Actor', Helvetica, Arial, sans-serif;
     color: #ffffff;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -421,7 +428,61 @@ border-color: @color-support-strong;
   padding-bottom: 20px;
 }
 
+// SCROLL HEADER
 
+.scrollable {
+    display: inline-block;
+    padding-top: 5px;
+    height: 38.5px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+}
+.item {
+    height: 38.5px;
+    margin: 0 auto;
+    display: block;
+}
+.items {
+    float: left;
+    -webkit-animation: scroll 8s infinite;
+    -moz-animation: scroll 8s infinite;
+    -ms-animation: scroll 8s infinite;
+    -webkit-animation-direction: alternate; /* Safari and Chrome */
+    animation-direction: alternate;
+}
+
+.tagline_last {
+  display: inline-block;
+}
+
+@-webkit-keyframes scroll {
+  0%   { margin-top: 11px; }
+19%  { margin-top: 11px; }
+25%  { margin-top: -27.5px; }
+69% { margin-top: -27.5px; }
+75% { margin-top: -66px; }
+100% { margin-top: -66px; }
+}
+@-moz-keyframes scroll {
+  0%   { margin-top: 11px; }
+19%  { margin-top: 11px; }
+25%  { margin-top: -27.5px; }
+69% { margin-top: -27.5px; }
+75% { margin-top: -66px; }
+100% { margin-top: -66px; }
+}
+
+@-ms-keyframes scroll {
+  0%   { margin-top: 11px; }
+19%  { margin-top: 11px; }
+25%  { margin-top: -27.5px; }
+69% { margin-top: -27.5px; }
+75% { margin-top: -66px; }
+100% { margin-top: -66px; }
+}
 
 .header-image {
       margin: 0;
@@ -492,6 +553,10 @@ border-color: @color-support-strong;
 .getstarted {
   margin-top: 100px;
   margin-bottom: 100px;
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
 }
 
 .propval {
@@ -596,19 +661,29 @@ border-color: @color-support-strong;
     }
 
   .half {
+    padding-right: 20px;
     width: 50%;
     float: left;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-right: 0;
+    }
   }
 
   .half-left {
     padding-right: 60px;
+    @media (max-width: 768px) {
+      padding-right: 0;
+    }
     padding-top: 60px;
+
   }
 
   .svg-container {
     svg {
-      height: 90%;
-      width: 90%;
+      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -852,3 +927,189 @@ h3 {
   font-size: 19px;
 }
 }
+
+
+
+/* -------------------------------- EXPERIENCEVINIBAR -------------------------------- */
+
+/* ---------------- NAVABAR ---------------- */
+
+.navbar-nomargin {
+  margin-bottom: 0;
+}
+
+.know-cta-paragraph {
+  a { font-size: 1.2em; }
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.know-more-link {
+  margin-right: 20px;
+}
+
+/* -------------------------------- COMMENTCAMARCHE -------------------------------- */
+
+/* ---------------- NAVABAR ---------------- */
+
+.navbar-faq {
+  padding: 5px 5px 5px 6.25px;
+  background-color: white;
+  border: 0 solid #ebebeb;
+  border-bottom-width: 1px;
+  border-radius: 0;
+}
+
+.navbar-toggle {
+  border-color: #ebebeb;
+
+  .icon-bar {
+    background-color: #ebebeb;
+  }
+}
+
+#products {
+  margin-bottom: 100px;
+}
+
+#categories {
+  text-align: center;
+  margin: 0 auto;
+  h2 {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .category {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+}
+
+#categories-mobile {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+}
+
+#owl-example {
+  border:1px solid #2C3E50;
+}
+
+#owl-example .owl-item div{
+  padding:5px;
+}
+#owl-example .owl-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.arrow {
+  display: none;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+
+    .acc-container {
+      h1 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      width:90%;
+      margin:30px auto 0 auto;
+      -webkit-border-radius:8px;
+      -moz-border-radius:8px;
+      -o-border-radius:8px;
+      border-radius:8px;
+      overflow:hidden;
+    }
+
+    .acc-btn {
+      width:100%;
+      margin:0 auto;
+      padding:5px 25px;
+      cursor:pointer;
+      // background:#34495E;
+      // border-bottom:1px solid #2C3E50;
+    }
+
+    .acc-content {
+      height:0px;
+      width:100%;
+      margin:0 auto;
+      overflow:hidden;
+      // background:#2C3E50;
+    }
+
+    .acc-content-inner {
+      padding:30px;
+      // background-color: @color-support-strong;
+      // color: #fff;
+    }
+
+    .open {
+      height: auto;
+    }
+
+    .selected {
+      color: @color-support-strong;
+    }
+
+
+    // winemap
+
+    #winemap {
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+
+      .path {
+        cursor: pointer;
+        fill: #C8B7B7;
+        stroke:#C8B7B7;
+
+        &:hover {
+          fill: @color-support-strong;
+          stroke:@color-support-strong;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+      }
+
+    }
+
+    #regions {
+      .par_hidden {
+        display: none;
+      }
+      .par_visible {
+        display: inherit;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+      }
+      .par_visible_constant {
+        display: inherit;
+            -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+      }
+    }
