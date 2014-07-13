@@ -5128,6 +5128,180 @@ fieldset[disabled] .btn-primary-outline.active {
   height: 100%;
   width: 100%;
 }
+.panel {
+  border: 0;
+}
+.panel .panel-body {
+  padding: 20px;
+}
+.panel-heading .panel-toggle {
+  background: #f9fafa;
+}
+.panel-heading .panel-title {
+  font-size: 18px;
+}
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger,
+.bg-muted {
+  color: white;
+}
+.bg-primary .page-header,
+.bg-success .page-header,
+.bg-info .page-header,
+.bg-warning .page-header,
+.bg-danger .page-header,
+.bg-muted .page-header {
+  color: white;
+}
+.bg-primary {
+  background-color: #32b9b1;
+}
+.bg-success {
+  background-color: #51be38;
+}
+.bg-info {
+  background-color: #5bc0de;
+}
+.bg-warning {
+  background-color: #ef9544;
+}
+.bg-danger {
+  background-color: #f05a5b;
+}
+.bg-muted {
+  background-color: #bbbbbb;
+}
+.pricing-table {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.pricing-table [class^="col-"],
+.pricing-table [class*="col-"] {
+  padding-top: 30px;
+}
+.pricing-table [class^="col-"].featured,
+.pricing-table [class*="col-"].featured {
+  padding-top: 0;
+  z-index: 10;
+  position: relative;
+}
+.pricing-table [class^="col-"].featured .panel,
+.pricing-table [class*="col-"].featured .panel {
+  padding-bottom: 30px;
+}
+.pricing-table [class^="col-"].featured .panel .panel-heading,
+.pricing-table [class*="col-"].featured .panel .panel-heading {
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-table [class^="col-"].featured .panel .panel-heading .popular,
+.pricing-table [class*="col-"].featured .panel .panel-heading .popular {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.pricing-table [class^="col-"] .panel,
+.pricing-table [class*="col-"] .panel {
+  margin: 0 -10px;
+}
+.pricing-table [class^="col-"] .panel h2,
+.pricing-table [class*="col-"] .panel h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+.pricing-table [class^="col-"] .panel h3,
+.pricing-table [class*="col-"] .panel h3 {
+  font-size: 75px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 15px 0 10px;
+}
+.pricing-table [class^="col-"] .panel h3 sup,
+.pricing-table [class*="col-"] .panel h3 sup {
+  font-size: 40%;
+  top: -0.85em;
+  letter-spacing: 0;
+}
+.pricing-table [class^="col-"] .panel h3 span,
+.pricing-table [class*="col-"] .panel h3 span {
+  font-size: 25%;
+  letter-spacing: 0;
+}
+.pricing-table [class^="col-"] .panel ul,
+.pricing-table [class*="col-"] .panel ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
+.pricing-table [class^="col-"] .panel ul li,
+.pricing-table [class*="col-"] .panel ul li {
+  margin: 15px 0;
+}
+.pricing-table [class^="col-"] table,
+.pricing-table [class*="col-"] table {
+  background-color: transparent;
+}
+.pricing-table [class^="col-"] table th,
+.pricing-table [class*="col-"] table th {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  height: 50px;
+}
+.pricing-table [class^="col-"] table td,
+.pricing-table [class*="col-"] table td {
+  text-align: center;
+  height: 40px;
+}
+.pricing-table [class^="col-"] table td .fa,
+.pricing-table [class*="col-"] table td .fa {
+  color: #60c560;
+  font-size: 22px;
+}
+.pricing-table .pricing-categories {
+  padding-top: 80px;
+}
+.pricing-table .pricing-categories .table {
+  box-shadow: none;
+}
+.pricing-table .pricing-categories .table tbody {
+  background-color: transparent;
+}
+.pricing-table .pricing-categories .table tbody td {
+  height: 40px;
+  font-weight: 600;
+  text-align: right !important;
+}
+@media (max-width: 768px) {
+  .pricing-table [class^="col-"],
+  .pricing-table [class*="col-"] {
+    padding-top: 0px;
+  }
+  .pricing-table [class^="col-"].featured .panel,
+  .pricing-table [class*="col-"].featured .panel {
+    padding-bottom: 0;
+  }
+  .pricing-table [class^="col-"].featured .panel .panel-heading,
+  .pricing-table [class*="col-"].featured .panel .panel-heading {
+    padding-top: 10px;
+  }
+  .pricing-table [class^="col-"] .panel,
+  .pricing-table [class*="col-"] .panel {
+    margin: 0 0 15px;
+  }
+}
 /* ---------------- VINIBAR-FEATURE ---------------- */
 .vinibar-bandeau {
   margin-top: 0px;
