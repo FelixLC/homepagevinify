@@ -5553,31 +5553,3 @@ footer {
 .selected {
   color: #006db2;
 }
-#winemap svg {
-  height: 100%;
-  width: 100%;
-}
-#winemap .path {
-  cursor: pointer;
-  fill: #C8B7B7;
-  stroke: #C8B7B7;
-}
-#winemap .path:hover {
-  fill: #006db2;
-  stroke: #006db2;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-#regions .par_hidden {
-  display: none;
-}
-#regions .par_visible {
-  display: inherit;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-}
-#regions .par_visible_constant {
-  display: inherit;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-}
