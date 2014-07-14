@@ -257,20 +257,23 @@ html, body {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-color: #ffffff;
-background-color: @color-support-strong;
-border-color: @color-support-strong;
+  color: #ffffff;
+  background-color: @color-support-strong;
+  border-color: @color-support-strong;
 }
 
 .btn-primary-outline {
-  .btn-primary;
-  color: @color-support-strong;
-  border-color: @color-support-strong;
+  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  border-radius: 50px;
   background-color: transparent;
+}
 
+.btn-outline-white {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
       &:hover {
-        background-color: @color-support-strong;
-        color: #FFF;
+        background-color: #FFFFFF;
+        color: @color-support-strong;
       }
 }
 
@@ -318,6 +321,7 @@ border-color: @color-support-strong;
   cursor: pointer;
   text-decoration: none;
   background-color: @color-support-strong;
+  border-color: @color-support-strong;
   color: #FFF;
 }
 
@@ -432,7 +436,7 @@ border-color: @color-support-strong;
 
 .scrollable {
     display: inline-block;
-    padding-top: 5px;
+    padding-top: 8px;
     height: 38.5px;
     margin: 0 auto;
     padding: 0;
@@ -812,7 +816,9 @@ border-color: @color-support-strong;
 .slider-handle {
   background: url(logos/bottles.svg) no-repeat center center;
 }
-
+.slider-selection {
+  background-color: @color-support-strong;
+}
 .panel-selected {
   border: 1px solid @color-support-strong;
   border-radius: 10px;

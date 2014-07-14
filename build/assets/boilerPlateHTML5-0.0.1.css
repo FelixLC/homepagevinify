@@ -4700,55 +4700,17 @@ body {
   border-color: #006db2;
 }
 .btn-primary-outline {
-  background-color: #34495e;
-  border-color: #2b3c4e;
-  color: #ffffff;
   font-family: 'Amaranth', Helvetica, Arial, sans-serif;
-  background-color: #006db2;
   border-radius: 50px;
-  color: #006db2;
-  border-color: #006db2;
   background-color: transparent;
 }
-.btn-primary-outline:hover,
-.btn-primary-outline:focus,
-.btn-primary-outline:active,
-.btn-primary-outline.active,
-.open .dropdown-toggle.btn-primary-outline {
-  color: #ffffff;
-  background-color: #253544;
-  border-color: #151e26;
+.btn-outline-white {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
-.btn-primary-outline:active,
-.btn-primary-outline.active,
-.open .dropdown-toggle.btn-primary-outline {
-  background-image: none;
-}
-.btn-primary-outline.disabled,
-.btn-primary-outline[disabled],
-fieldset[disabled] .btn-primary-outline,
-.btn-primary-outline.disabled:hover,
-.btn-primary-outline[disabled]:hover,
-fieldset[disabled] .btn-primary-outline:hover,
-.btn-primary-outline.disabled:focus,
-.btn-primary-outline[disabled]:focus,
-fieldset[disabled] .btn-primary-outline:focus,
-.btn-primary-outline.disabled:active,
-.btn-primary-outline[disabled]:active,
-fieldset[disabled] .btn-primary-outline:active,
-.btn-primary-outline.disabled.active,
-.btn-primary-outline[disabled].active,
-fieldset[disabled] .btn-primary-outline.active {
-  background-color: #34495e;
-  border-color: #2b3c4e;
-}
-.btn-primary-outline .badge {
-  color: #34495e;
-  background-color: #ffffff;
-}
-.btn-primary-outline:hover {
-  background-color: #006db2;
-  color: #FFF;
+.btn-outline-white:hover {
+  background-color: #FFFFFF;
+  color: #006db2;
 }
 .landing-btn-strong {
   font-family: 'Amaranth', Helvetica, Arial, sans-serif;
@@ -4788,6 +4750,7 @@ fieldset[disabled] .btn-primary-outline.active {
   cursor: pointer;
   text-decoration: none;
   background-color: #006db2;
+  border-color: #006db2;
   color: #FFF;
 }
 .navbar-nav > li > .dropdown-menu {
@@ -4879,7 +4842,7 @@ fieldset[disabled] .btn-primary-outline.active {
 }
 .scrollable {
   display: inline-block;
-  padding-top: 5px;
+  padding-top: 8px;
   height: 38.5px;
   margin: 0 auto;
   padding: 0;
@@ -5304,6 +5267,9 @@ fieldset[disabled] .btn-primary-outline.active {
 }
 .slider-handle {
   background: url(logos/bottles.svg) no-repeat center center;
+}
+.slider-selection {
+  background-color: #006db2;
 }
 .panel-selected {
   border: 1px solid #006db2;
