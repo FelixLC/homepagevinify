@@ -809,7 +809,30 @@ border-color: @color-support-strong;
       margin: 0 0 15px; }
 }
 
+.slider-handle {
+  background: url(logos/bottles.svg) no-repeat center center;
+}
 
+.panel-selected {
+  border: 1px solid @color-support-strong;
+  border-radius: 10px;
+  background-color: @color-support-strong;
+    -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+
+    .panel-heading {
+      h2, h3 {
+        color: #fff;
+      }
+    }
+
+    .panel-body {
+      background-color: #FFF;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border: 1px solid @color-support-strong;
+    }
+}
 /* ---------------- VINIBAR-FEATURE ---------------- */
 
 .vinibar-bandeau {

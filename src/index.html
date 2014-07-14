@@ -250,7 +250,7 @@
                         Je déguste à mon rythme, et je recommande quand j'ai envie !
                       </p>
                  </div>
-                 <div class="col-lg-12 col-md-12 pricing-table">
+                 <!-- <div class="col-lg-12 col-md-12 pricing-table">
                     <div class="col-sm-4">
                       <div class="panel panel-default">
                         <div class="panel-heading">
@@ -328,8 +328,71 @@
                           <a class="btn btn-block btn-default btn-lg" href="#">Sign Up</a>
                         </div>
                       </div>
-                    </div><!-- col -->
+                    </div><! col -->
                   </div><!-- pricing table -->
+                  <div id="pricing-slider" class="pricing-table">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+                      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+                        <input id="price-slider" class="slider" data-slider-max="3" data-slider-min="1" data-slider-step="1" data-slider-value="2" data-slider-tooltip="hide" type="text">
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="panel panel-default" id="panel-decouverte">
+                          <div class="panel-heading">
+                            <h2 class="text-muted">
+                              Découverte
+                            </h2>
+                            <h3>
+                              29<sup>€90</sup>
+                            </h3>
+                          </div>
+                          <div class="panel-body">
+                            <ul>
+                              <li>
+                                Je découvre mes goûts sur toutes les régions française à prix mini.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div><!-- col -->
+                      <div class="col-sm-4">
+                        <div class="panel panel-default" id="panel-aventure">
+                          <div class="panel-heading">
+                            <h2 class="text-muted">
+                              Aventure
+                            </h2>
+                            <h3>
+                              39<sup>€90</sup>
+                            </h3>
+                          </div>
+                          <div class="panel-body">
+                            <ul>
+                              <li>
+                                J'explore les appellations et les cépages de France et d'ailleurs.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div><!-- col -->
+                      <div class="col-sm-4">
+                        <div class="panel panel-default" id="panel-exploration">
+                          <div class="panel-heading">
+                            <h2 class="text-muted">
+                              Exploration
+                            </h2>
+                            <h3>
+                              49<sup>€90</sup>
+                            </h3>
+                          </div>
+                          <div class="panel-body">
+                            <ul>
+                              <li>
+                                A moi les grandes appellations ! Des vins fins, élégants et racés.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div><!-- col -->
+                    </div><!-- pricing slider -->
              </div><!-- container -->
       </div><!-- recharge -->
 
@@ -746,6 +809,17 @@
     });
   </script>
 
+  <!-- slider -->
+
+<script>
+  (function() {
+      $(function() {
+        return $('.slider').slider();
+      });
+
+    }).call(this);
+</script>
+
   <script>
     $(document).ready(function () {
 
@@ -769,7 +843,25 @@
     });
   </script>
 
-    <script>
+<!-- SELECTED PANEL -->
+  <script>
+    // $(document).ready(function () {
+    //   console.log($('.slider').val());
+    //   $('.price-slider').change(function(){
+    //     var priceVal = $('.price-slider').val();
+    //     console.log(priceVal);
+    //     if (priceVal == 3)
+    //       {$('#panel-exploration').toggleClass("panel-selected");}
+    //     else if (priceVal == 2)
+    //       {$('#panel-aventure').toggleClass("panel-selected");}
+    //     else if (priceVal == 1)
+    //       {$('#panel-decouverte').toggleClass("panel-selected");}
+    //   });
+    // });
+  </script>
+
+<!-- WINE MAP -->
+  <script>
     $(document).ready(function () {
       $('#Bordeaux').hover(function(){
         console.log('hover');

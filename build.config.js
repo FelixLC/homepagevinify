@@ -65,9 +65,11 @@ module.exports = {
       'vendor/bootstrap/js/dropdown.js',
       'vendor/bootstrap/js/carousel.js',
       'vendor/bootstrap/js/collapse.js',
+      'vendor/sliders/js/plugin.js',
       'vendor/jQuery-Flex-Vertical-Center.js'
     ],
     css: [
+      'vendor/sliders/css/styles.css'
     ],
     assets: [
       'vendor/bootstrap/fonts/*.*'

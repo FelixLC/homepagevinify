@@ -5302,6 +5302,26 @@ fieldset[disabled] .btn-primary-outline.active {
     margin: 0 0 15px;
   }
 }
+.slider-handle {
+  background: url(logos/bottles.svg) no-repeat center center;
+}
+.panel-selected {
+  border: 1px solid #006db2;
+  border-radius: 10px;
+  background-color: #006db2;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.panel-selected .panel-heading h2,
+.panel-selected .panel-heading h3 {
+  color: #fff;
+}
+.panel-selected .panel-body {
+  background-color: #FFF;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #006db2;
+}
 /* ---------------- VINIBAR-FEATURE ---------------- */
 .vinibar-bandeau {
   margin-top: 0px;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sliders</title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all" rel="stylesheet">
+    <link href="css/styles.css" media="all" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h4>
+            Basic slider
+          </h4>
+          <input class="slider" data-slider-max="50" data-slider-min="0" data-slider-value="25" type="text">
+          <h4>
+            Slider with increments
+          </h4>
+          <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-step="10" data-slider-value="20" type="text">
+          <h4>
+            Range slider
+          </h4>
+          <input class="slider" data-slider-max="500" data-slider-min="0" data-slider-value="[250,450]" type="text">
+          <h4>
+            Slider with no tooltip
+          </h4>
+          <input class="slider" data-slider-max="100" data-slider-min="0" data-slider-tooltip="hide" data-slider-value="60" type="text">
+          <h4>
+            Vertical slider
+          </h4>
+          <input class="slider" data-slider-max="20" data-slider-min="-20" data-slider-orientation="vertical" data-slider-value="-10" type="text"><input class="slider" data-slider-max="20" data-slider-min="-20" data-slider-orientation="vertical" data-slider-value="12" type="text"><input class="slider" data-slider-max="20" data-slider-min="-20" data-slider-orientation="vertical" data-slider-value="-2" type="text">
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
