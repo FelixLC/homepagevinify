@@ -293,10 +293,20 @@ html, body {
 
 /* ---------------- NAVBAR ---------------- */
 
-#navbar-first {
+.navbar-splash {
   padding: 5px 5px 5px 6.25px;
   background-color: transparent;
   border-color: transparent;
+
+    .brand-image {
+      float: left;
+      display: inline-block;
+    }
+
+    .quick-links {
+      float: right;
+      display: inline-block;
+    }
 }
 
 #navbar-second {
@@ -306,6 +316,13 @@ html, body {
   border-bottom-width: 1px;
   border-radius: 0;
 }
+
+@media (max-width: 768px) {
+  #navbar-second > li > a {
+    display: inline-block;
+  }
+}
+
 
 #navbar-second li > a:hover, #navbar-second li > a:focus {
   cursor: pointer;
@@ -370,6 +387,11 @@ html, body {
   padding-right: 25px;
   margin-left: 15px;
 
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
   h2 {
     font-family: 'Amaranth', Helvetica, Arial, sans-serif;
     color: #ffffff;
@@ -420,29 +442,21 @@ html, body {
     }
 }
 
-.headline-xs {
-  padding: 10px 0px 10px;
-  margin-bottom: 10px;
-}
-
-.tagline-xs{
-  color: #fff;
-  margin: 5px;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
 // SCROLL HEADER
 
 .scrollable {
     display: inline-block;
-    padding-top: 8px;
     height: 38.5px;
     margin: 0 auto;
     padding: 0;
     position: relative;
     overflow: hidden;
     text-align: right;
+          @media (max-width: 768px) {
+            text-align: center;
+          }
+
+
 }
 .item {
     height: 38.5px;
@@ -490,15 +504,16 @@ html, body {
 
 .header-image {
       margin: 0;
-      height: 100%;
-      width: 100%;
-      background:
-
-      url(img/background-tonio-carafe.jpg) no-repeat center center fixed;
+      @media (min-width: 768px) {
+        height: 100%;
+        width: 100%;
+      }
+      background:url(img/background-tonio-carafe.jpg) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+
 }
 
 .header-image2 {
@@ -563,6 +578,7 @@ html, body {
     }
 }
 
+
 .propval {
   text-align: center;
   padding: 10px 0px 5px 0px;
@@ -612,10 +628,6 @@ html, body {
         font-family: 'Amaranth', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
-    }
-
-    h2 {
-        margin-bottom: 50px;
     }
 
     background-color: @color-support-strong;
@@ -695,7 +707,22 @@ html, body {
 // pricing
 
 .panel {
-  border: 0; }
+  border: 0;
+
+      @media (max-width: 768px) {
+        border: 1px solid @color-support-strong;
+        border-radius: 10px;
+
+          .panel-body {
+            background-color: #FFF;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top: 1px solid @color-support-strong;
+          }
+
+      }
+
+}
   .panel .panel-body {
     padding: 20px; }
 
@@ -836,7 +863,7 @@ html, body {
       background-color: #FFF;
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
-      border: 1px solid @color-support-strong;
+      border: 1px solid #FFF;
     }
 }
 /* ---------------- VINIBAR-FEATURE ---------------- */
@@ -901,9 +928,9 @@ section{
   width: 150px;
 }
 
-// .featurette-heading {
-//   font-size: 30px;
-// }
+.featurette-heading {
+  margin-bottom: 50px;
+}
 
 .comment{
   display: inline-block;

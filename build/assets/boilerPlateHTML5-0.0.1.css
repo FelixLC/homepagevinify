@@ -4722,10 +4722,18 @@ body {
   font-size: 1.6em;
 }
 /* ---------------- NAVBAR ---------------- */
-#navbar-first {
+.navbar-splash {
   padding: 5px 5px 5px 6.25px;
   background-color: transparent;
   border-color: transparent;
+}
+.navbar-splash .brand-image {
+  float: left;
+  display: inline-block;
+}
+.navbar-splash .quick-links {
+  float: right;
+  display: inline-block;
 }
 #navbar-second {
   padding: 5px 5px 5px 6.25px;
@@ -4733,6 +4741,11 @@ body {
   border: 0 solid #ebebeb;
   border-bottom-width: 1px;
   border-radius: 0;
+}
+@media (max-width: 768px) {
+  #navbar-second > li > a {
+    display: inline-block;
+  }
 }
 #navbar-second li > a:hover,
 #navbar-second li > a:focus {
@@ -4793,6 +4806,12 @@ body {
   padding-right: 25px;
   margin-left: 15px;
 }
+@media (max-width: 768px) {
+  .headline {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+}
 .headline h2 {
   font-family: 'Amaranth', Helvetica, Arial, sans-serif;
   color: #ffffff;
@@ -4830,25 +4849,19 @@ body {
 .headline .tagline {
   text-transform: uppercase;
 }
-.headline-xs {
-  padding: 10px 0px 10px;
-  margin-bottom: 10px;
-}
-.tagline-xs {
-  color: #fff;
-  margin: 5px;
-  text-align: center;
-  padding-bottom: 20px;
-}
 .scrollable {
   display: inline-block;
-  padding-top: 8px;
   height: 38.5px;
   margin: 0 auto;
   padding: 0;
   position: relative;
   overflow: hidden;
   text-align: right;
+}
+@media (max-width: 768px) {
+  .scrollable {
+    text-align: center;
+  }
 }
 .item {
   height: 38.5px;
@@ -4929,13 +4942,17 @@ body {
 }
 .header-image {
   margin: 0;
-  height: 100%;
-  width: 100%;
   background: url(img/background-tonio-carafe.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+@media (min-width: 768px) {
+  .header-image {
+    height: 100%;
+    width: 100%;
+  }
 }
 .header-image2 {
   margin: 0;
@@ -5034,9 +5051,6 @@ body {
   font-weight: 400;
   font-size: 20px;
 }
-#whatdoiget h2 {
-  margin-bottom: 50px;
-}
 #whatdoiget .v-align-text {
   position: relative;
   top: 130px;
@@ -5093,6 +5107,18 @@ body {
 }
 .panel {
   border: 0;
+}
+@media (max-width: 768px) {
+  .panel {
+    border: 1px solid #006db2;
+    border-radius: 10px;
+  }
+  .panel .panel-body {
+    background-color: #FFF;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: 1px solid #006db2;
+  }
 }
 .panel .panel-body {
   padding: 20px;
@@ -5286,7 +5312,7 @@ body {
   background-color: #FFF;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  border: 1px solid #006db2;
+  border: 1px solid #FFF;
 }
 /* ---------------- VINIBAR-FEATURE ---------------- */
 .vinibar-bandeau {
@@ -5337,6 +5363,9 @@ section {
 }
 .featurette-image {
   width: 150px;
+}
+.featurette-heading {
+  margin-bottom: 50px;
 }
 .comment {
   display: inline-block;

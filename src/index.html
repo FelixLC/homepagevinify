@@ -3,7 +3,7 @@
     <head>
         <title>Vinify | des vins de qualité, adaptés à vos goûts, toujours à portée de main</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <!-- social media tags -->
 
@@ -28,25 +28,23 @@
 
 <body>
 
-  <div class="header-image hidden-xs" id="splashscreen">
+  <div class="header-image" id="splashscreen">
     <div class="overlay">
       <div class="container-fluid">
-          <nav class="navbar" role="navigation" id="navbar-first">
-            <div class="navbar-header">
+          <div class="navbar-splash clearfix">
+            <div class="brand-image">
                <a href="#top"><img alt="" src="assets/img/LogoVinifyCo.png" style="height:45px" id="mf2"/></a>
             </div>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <a href="http://app.vinify.co" class="btn btn-primary-outline btn-outline-white" id="">
-                      <i class="fa fa-user"></i>  Login
-                  </a>
-                </li>
-            </ul>
-          </nav>
+            <div class="quick-links">
+              <a href="http://app.vinify.co" class="btn btn-primary-outline btn-outline-white" id="">
+                  <i class="fa fa-user"></i>  Login
+              </a>
+            </div>
+          </div>
 
           <div class="headline">
-              <div class="row headers">
+              <div class="headers">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <h2 id="tagline" class="centered">
                       <div class="scrollable">
@@ -61,7 +59,7 @@
                     <h3 class="centered"><span id="tagline-caption">Recevez et notez des vins pour découvrir une sélection qui s'adapte à vos goûts.<br> Livrée chez vous, quand vous voulez.</span></h3>
                 </div>
               </div>
-              <div class="row cta">
+              <div class="cta">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <a href="http://eepurl.com/Mgtcb" class="grow btn btn-primary landing-btn-strong">
                      <!--  <i class="fa fa-shopping-cart"></i> --> Démarrer l'aventure
@@ -72,14 +70,14 @@
         </div>
     </div>
 
-    <span class="know-more">
+    <span class=" hidden-xs know-more">
       <a href="#navbar-second">
-        <i class="fa fa-chevron-down"></i>
+        <i class="wobble-vertical fa fa-chevron-down"></i>
       </a>
     </span>
   </div>
 
-    <div class="header-xs visible-xs">
+<!--     <div class="header-xs visible-xs">
       <div class="container">
           <nav class="navbar" role="navigation">
 
@@ -91,23 +89,23 @@
 
             <div class="headline-xs">
               <div class="container">
-                <div class="row">
+                <div class="">
                   <div class="col-xs-12 tagline-xs">
                     <p>des vins de qualité, adaptés à vos goûts, toujours à portée de main</p>
                   </div>
                 </div>
                 <div class="mini-loginbtn-container">
-                  <div class="row miniloginbutton">
+                  <div class="miniloginbutton">
                       <a href="http://vinify.co/inscription.html" class="btn mini-loginbtn"> <i class="fa fa-shopping-cart"></i> Je commande </a>
                   </div>
-                  <div class="row miniloginbutton">
+                  <div class="miniloginbutton">
                       <a href="http://app.vinify.co" class="btn mini-loginbtn" id=""><i class="fa fa-user"></i>  Login</a>
                   </div>
                 </div>
               </div>
             </div>
       </div>
-    </div>
+    </div> -->
 
 <!-- GET STARTED -->
 
@@ -165,16 +163,16 @@
 <div class="content">
        <div class="section getstarted" id="getstarted">
         <div class="container-fluid">
-          <div class="row propval">
+          <div class="propval">
             <div class="col-lg-4 col-md-4 propcontent">
-              <div class="row tnp">
+              <div class="tnp">
                 <img src="assets/logos/magnifyingglass.png" alt="discover">
                 <h3>Je découvre ma sélection <br> à mon rythme</h3>
               </div>
               <p>Grâce à l'application Vinify, j'accède à des conseils de dégustation et de service. Je retrouve tous mes vins et des informations sur les producteurs.</p>
             </div>
             <div class="col-lg-4 col-md-4 propcontent">
-              <div class="row tnp">
+              <div class="tnp">
                   <img src="assets/logos/compose.png" alt="compose">
                  <h3>Je note les vins <br> choisis pour moi</h3>
               </div>
@@ -183,7 +181,7 @@
 
             </div>
             <div class="col-lg-4 col-md-4 propcontent">
-              <div class="row tnp">
+              <div class="tnp">
                   <img src="assets/logos/heart.png" alt="heart">
                   <h3>Ma sélection <br> s'améliore</h3>
               </div>
@@ -197,7 +195,7 @@
       <div class="section" id="whatdoiget">
           <div class="container">
             <h2 class="featurette-heading">Ma première fois: <br> le Vinibar et 9 bouteilles sélectionnées pour moi</h2>
-            <div class="row comment">
+            <div class="comment">
                <div class="col-lg-4 col-md-4 v-align-text hidden-xs hidden-sm">
                   <p>
                     Je démarre mon profil de gouts avec le questionnaire Vinify pour profiter de ma première selection sur mesure <br>
@@ -332,7 +330,7 @@
                   <!-- </div>pricing table -->
                   <div id="pricing-slider" class="pricing-table">
                     <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-                      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+                      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 hidden-xs hidden-sm">
                         <input id="price-slider" class="slider" data-slider-max="3" data-slider-min="1" data-slider-step="1" data-slider-value="2" data-slider-tooltip="hide" type="text">
                       </div>
                       <div class="col-sm-4">
@@ -406,27 +404,23 @@
              </div><!-- container -->
       </div><!-- recharge -->
 
-      <div class="container">
-          <hr class="featurette-divider">
-      </div>
-
       <div class="section" id="selections">
         <div class="container">
-            <div class="row">
+            <div class="">
                <div class="col-lg-5 col-md-5 cell">
                   <img class="img img-responsive wobble-vertical" src="assets/img/jean_michael_deluxe.png" id="img-contact">
               </div>
-               <div class="col-lg-7 col-md-7 hidden-xs hidden-sm" id="selection-text">
+               <div class="col-lg-7 col-md-7" id="selection-text">
                 <h2 class="featurette-heading">Comment sont sélectionnées mes bouteilles&nbsp;?</h2>
-                  <p class="lead-section">Chaque sélection est élaborée avec soin spécialement pour vous.</p>
-                  <p>
-                    Jean Michael, notre Oenologue, parcourt la France à la recherche des meilleurs producteurs indépendants pour constituer notre gamme.
-                  </p>
-                  <p>
-                    La première sélection est faite à partir des réponses à votre questionnaire qui démarre votre profil de goûts.
-                  <p>
-                  <p> En suite, en fonction de vos notes et du résultat de notre algorithme de sélection, il est capable de prédire les bouteilles que vous allez aimer !
-                  <p>
+                    <p class="lead-section">Chaque sélection est élaborée avec soin spécialement pour vous.</p>
+                    <p>
+                      Jean Michael, notre Oenologue, parcourt la France à la recherche des meilleurs producteurs indépendants pour constituer notre gamme.
+                    </p>
+                    <p>
+                      La première sélection est faite à partir des réponses à votre questionnaire qui démarre votre profil de goûts.
+                    <p>
+                    <p> En suite, en fonction de vos notes et du résultat de notre algorithme de sélection, il est capable de prédire les bouteilles que vous allez aimer !
+                    <p>
                </div>
             </div>
         </div><!-- /.container -->
@@ -435,9 +429,9 @@
 
        <div class="section" id="badges">
         <div class="container">
-          <div class="row propval">
+          <div class="propval">
             <div class="col-lg-3 col-md-3 propcontent">
-              <div class="row tnp">
+              <div class="tnp">
                 <svg class="grow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="198.43px" height="198.43px" viewBox="0 0 198.43 198.43" enable-background="new 0 0 198.43 198.43" xml:space="preserve">
                 <g>
@@ -462,7 +456,7 @@
               <p>Le Vinibar, c'est sans engagement ! <br> Je recharge par 3 bouteiles quand j'ai envie, dans la gamme qui me convient, de 29 à 49 euros.</p>
             </div>
             <div class="col-lg-3 col-md-3 propcontent">
-              <div class="row tnp">
+              <div class="tnp">
                 <svg class="grow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="198.43px" height="198.43px" viewBox="0 0 198.43 198.43" enable-background="new 0 0 198.43 198.43" xml:space="preserve">
                 <g>
@@ -489,7 +483,7 @@
 
             </div>
             <div class="col-lg-3 col-md-3 propcontent">
-              <div class="row tnp">
+              <div class="tnp">
                 <svg class="grow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="198.43px" height="198.43px" viewBox="0 0 198.43 198.43" enable-background="new 0 0 198.43 198.43" xml:space="preserve">
                 <g>
@@ -514,7 +508,7 @@
               <p>Sans jargon ni snobisme, je progresse par la dégustation. C'est la seule manière de découvrir mes goûts.</p>
             </div>
             <div class="col-lg-3 col-md-3 propcontent">
-              <div class="row tnp">
+              <div class="tnp">
                 <svg class="grow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="198.43px" height="198.43px" viewBox="0 0 198.43 198.43" enable-background="new 0 0 198.43 198.43" xml:space="preserve">
                 <g>
@@ -554,7 +548,6 @@
     </div>
 
 
-       <hr class="featurette-divider visible-xs" id="lastdivider">
 
 
 
@@ -562,9 +555,9 @@
 
         <div class="container">
 
-          <div class="row social">
+          <div class="social">
 
-              <div class="row">
+              <div class="">
                 <div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2">
                   <div class="line"></div>
                 </div>
@@ -575,7 +568,7 @@
                  <div class="line"></div>
                 </div>
               </div>
-              <div class="row">
+              <div class="">
               <div class="col-lg-2 col-lg-offset-3 col-md-2 col-md-offset-3 socbuttons">
                 <a href="http://facebook.com/vinify.co" class="float" target="_blank"><img alt="" src="assets/img/fb-icon.png"></a>
                 <h3>Facebook</h3><a href="http://facebook.com/vinify.co" "_blank">vinify</a>
@@ -620,33 +613,32 @@
   <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
   <script type="text/javascript" src="<%= file %>"></script><% }); %>
 
-  <script>
-    $('.headline').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.header-image', verticalOffset: '-50px' });
-  </script>
+<!-- vertical Center -->
+<script>
+  $('.headline').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.header-image', verticalOffset: '-50px' });
+  $('#selection-text').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.row'});
+  $('.quick-links').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.navbar-splash'});
+</script>
 
-  <script>
-    $('#selection-text').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.row'});
-  </script>
-
-  <script>
-    $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
+<!-- smoothscroll -->
+<script>
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
         }
-      });
+      }
     });
-  </script>
+  });
+</script>
 
-  <!-- slider -->
-
+<!-- slider -->
 <script>
   (function() {
       $(function() {
@@ -656,47 +648,29 @@
     }).call(this);
 </script>
 
-  <script>
-    $(document).ready(function () {
+<!-- fixnavbar -->
+<script>
+  $(document).ready(function () {
 
-        var menu = $('#navbar-second');
-        var origOffsetY = menu.offset().top;
+      var menu = $('#navbar-second');
+      var origOffsetY = menu.offset().top;
 
-        function scroll() {
-            if ($(window).scrollTop() >= origOffsetY) {
-                $('#navbar-second').addClass('navbar-fixed-top');
-                $('.content').addClass('menu-padding');
-            } else {
-                $('#navbar-second').removeClass('navbar-fixed-top');
-                $('.content').removeClass('menu-padding');
-            }
-
-
-        }
-
-        document.onscroll = scroll;
-
-    });
-  </script>
-
-<!-- SELECTED PANEL -->
-  <script>
-    // $(document).ready(function () {
-    //   console.log($('.slider').val());
-    //   $('.price-slider').change(function(){
-    //     var priceVal = $('.price-slider').val();
-    //     console.log(priceVal);
-    //     if (priceVal == 3)
-    //       {$('#panel-exploration').toggleClass("panel-selected");}
-    //     else if (priceVal == 2)
-    //       {$('#panel-aventure').toggleClass("panel-selected");}
-    //     else if (priceVal == 1)
-    //       {$('#panel-decouverte').toggleClass("panel-selected");}
-    //   });
-    // });
-  </script>
+      function scroll() {
+          if ($(window).scrollTop() >= origOffsetY) {
+              $('#navbar-second').addClass('navbar-fixed-top');
+              $('.content').addClass('menu-padding');
+          } else {
+              $('#navbar-second').removeClass('navbar-fixed-top');
+              $('.content').removeClass('menu-padding');
+          }
 
 
+      }
+
+      document.onscroll = scroll;
+
+  });
+</script>
 
 </body>
 
