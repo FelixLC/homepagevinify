@@ -31,7 +31,7 @@
 @import '../../vendor/bootstrap/less/progress-bars.less';
 @import '../../vendor/bootstrap/less/input-groups.less';
 @import '../../vendor/bootstrap/less/dropdowns.less';
-
+@import '../../vendor/bootstrap/less/tooltip.less';
 
 
 /**
@@ -52,6 +52,9 @@
 
 .right-padded-text {
   padding-right: 50px;
+    @media (max-width: 768px) {
+      padding-right: 0;
+    }
 }
 
 .background-colored-text {
@@ -64,6 +67,9 @@
   overflow: auto;
   height: 100%;
   z-index: 2;
+      @media (max-width: 768px) {
+          background: rgba(0,0,0,0.2);
+      }
 }
 
 // ADD PADDING WHEN NAVBARISHERE
@@ -75,7 +81,7 @@
 }
 
 .highlight {
-  color: #FFFC26;
+  color: @color-highlight;
 }
 // HOVER EFFECT
 
@@ -198,8 +204,47 @@
  */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
-@import url(http://fonts.googleapis.com/css?family=Actor);
-@import url(http://fonts.googleapis.com/css?family=Amaranth:400,700);
+@font-face {
+    font-family: 'amaranthbold';
+    src: url('fonts/amaranth-bold-webfont.eot');
+    src: url('fonts/amaranth-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amaranth-bold-webfont.woff') format('woff'),
+         url('fonts/amaranth-bold-webfont.ttf') format('truetype'),
+         url('fonts/amaranth-bold-webfont.svg#amaranthregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'amaranthregular';
+    src: url('fonts/amaranth-regular-webfont.eot');
+    src: url('fonts/amaranth-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amaranth-regular-webfont.woff') format('woff'),
+         url('fonts/amaranth-regular-webfont.ttf') format('truetype'),
+         url('fonts/amaranth-regular-webfont.svg#amaranthregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'actorregular';
+    src: url('fonts/actor-regular-webfont.eot');
+    src: url('fonts/actor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/actor-regular-webfont.woff') format('woff'),
+         url('fonts/actor-regular-webfont.ttf') format('truetype'),
+         url('fonts/actor-regular-webfont.svg#actorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html, body {
   font-size: 16px;
@@ -213,12 +258,12 @@ html, body {
 
 
 body {
-  font-family: 'Actor', Helvetica, Arial, sans-serif;
+  font-family: 'actorregular', 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
 h1, h2, h3 {
-  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -230,7 +275,7 @@ h1, h2, h3 {
   font-size: 1.2em;
   color: @color-support-strong;
   font-weight: 400;
-  font-family: 'Amaranth';
+  font-family: 'amaranthregular';
 }
 
 .strong {
@@ -243,7 +288,7 @@ html, body {
 
 .btn-primary {
   color: #ffffff;
-  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
   border-color: @color-support-strong;
   background-color: @color-support-strong;
   border-radius: 50px;
@@ -263,7 +308,7 @@ html, body {
 }
 
 .btn-primary-outline {
-  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
   border-radius: 50px;
   background-color: transparent;
 }
@@ -277,8 +322,17 @@ html, body {
       }
 }
 
+.btn-outline-blue {
+  color: @color-support-strong;
+  border-color: @color-support-strong;
+      &:hover {
+        background-color: @color-support-strong;
+        color: #FFFFFF;
+      }
+}
+
 .landing-btn-strong {
-  font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
   color: #ffffff;
   background-color: @color-support-strong;
   border-color: @color-support-strong;
@@ -317,12 +371,25 @@ html, body {
   border-radius: 0;
 }
 
-@media (max-width: 768px) {
-  #navbar-second > li > a {
+@media (max-width: 900px) {
+  .nav > li > a {
     display: inline-block;
+    padding: 10px 5px;
   }
 }
 
+  .navbar-fixed-top .navbar-collapse {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+.navbar-toggle {
+  border-color: #ebebeb;
+
+  .icon-bar {
+    background-color: #ebebeb;
+  }
+}
 
 #navbar-second li > a:hover, #navbar-second li > a:focus {
   cursor: pointer;
@@ -390,10 +457,26 @@ html, body {
   @media (max-width: 768px) {
     margin-top: 50px;
     margin-bottom: 100px;
+    margin-left:  auto;
+    margin-right:  auto;
   }
 
+  @media (max-width: 640px) {
+      margin-left:  0;
+      margin-right:  0;
+      padding-left: 10px;
+      padding-right: 10px;
+}
+
+@media (max-width: 375px) {
+      margin-left:  0;
+      margin-right:  0;
+      padding-left: 5px;
+      padding-right: 5px;
+}
+
   h2 {
-    font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+    font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 35px;
     font-weight: 400;
@@ -405,9 +488,12 @@ html, body {
   }
 
   h3 {
-    font-family: 'Actor', Helvetica, Arial, sans-serif;
+    font-family: 'actorregular', Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 25px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -416,7 +502,7 @@ html, body {
   }
 
     .landing-btn-strong {
-      font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+      font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
       color: #ffffff;
       background-color: @color-support-strong;
       border-color: @color-support-strong;
@@ -460,7 +546,7 @@ html, body {
 }
 .item {
     height: 38.5px;
-    margin: 0 auto;
+    margin: 6px auto;
     display: block;
 }
 .items {
@@ -477,29 +563,29 @@ html, body {
 }
 
 @-webkit-keyframes scroll {
-  0%   { margin-top: 11px; }
-19%  { margin-top: 11px; }
-25%  { margin-top: -27.5px; }
-69% { margin-top: -27.5px; }
-75% { margin-top: -66px; }
-100% { margin-top: -66px; }
+  0%   { margin-top: 1px; }
+19%  { margin-top: 1px; }
+25%  { margin-top: -43.5px; }
+69% { margin-top: -43.5px; }
+75% { margin-top: -88px; }
+100% { margin-top: -88px; }
 }
 @-moz-keyframes scroll {
-  0%   { margin-top: 11px; }
-19%  { margin-top: 11px; }
-25%  { margin-top: -27.5px; }
-69% { margin-top: -27.5px; }
-75% { margin-top: -66px; }
-100% { margin-top: -66px; }
+  0%   { margin-top: 2px; }
+19%  { margin-top: 2px; }
+25%  { margin-top: -42.5px; }
+69% { margin-top: -42.5px; }
+75% { margin-top: -87px; }
+100% { margin-top: -87px; }
 }
 
 @-ms-keyframes scroll {
-  0%   { margin-top: 11px; }
-19%  { margin-top: 11px; }
-25%  { margin-top: -27.5px; }
-69% { margin-top: -27.5px; }
-75% { margin-top: -66px; }
-100% { margin-top: -66px; }
+  0%   { margin-top: 5px; }
+19%  { margin-top: 5px; }
+25%  { margin-top: -39.5px; }
+69% { margin-top: -39.5px; }
+75% { margin-top: -84px; }
+100% { margin-top: -84px; }
 }
 
 .header-image {
@@ -513,7 +599,25 @@ html, body {
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+      @media (max-width: 768px) {
+        background:url(img/background-small.jpg) no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+      }
 
+        /* iPads (landscape) ----------- */
+        @media only screen
+        and (min-device-width : 768px)
+        and (max-device-width : 1024px)
+        and (orientation : landscape) {
+           background:url(img/background-tonio-carafe.jpg) no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
 }
 
 .header-image2 {
@@ -622,10 +726,8 @@ html, body {
 /* ---------------- WHATDOIGET ---------------- */
 #whatdoiget {
 
-    padding-bottom: 20px;
-
     p {
-        font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+        font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
     }
@@ -633,9 +735,8 @@ html, body {
     background-color: @color-support-strong;
     color: #FFF;
     text-align: center;
-    margin: 0;
-    padding-bottom: 70px;
-    padding: 10px;
+    padding-bottom: 80px;
+    padding-top: 80px;
 
     .v-align-text {
       position: relative;
@@ -875,7 +976,7 @@ html, body {
       p {
         font-size: 24px;
         color: #FFF;
-        font-family: 'Amaranth', Helvetica, Arial, sans-serif;
+        font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
         font-weight: 400;
         // text-transform: uppercase;
       }
@@ -1081,21 +1182,6 @@ h3 {
   padding: 0px;
 }
 
-.commentcamarche h2 {
-  text-align: center;
-  font-size: 17px;
-}
-
-#main, #selection, #contact > p {
-  text-align: center;
-  font-size: 16px;
-}
-
-.commentcamarchefin h2 {
-  text-align: center;
-  font-size: 17px;
-}
-
 #selection {
   margin-top: 30px;
 }
@@ -1136,14 +1222,6 @@ h3 {
   border: 0 solid #ebebeb;
   border-bottom-width: 1px;
   border-radius: 0;
-}
-
-.navbar-toggle {
-  border-color: #ebebeb;
-
-  .icon-bar {
-    background-color: #ebebeb;
-  }
 }
 
 #products {

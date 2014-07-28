@@ -32,17 +32,20 @@
         );
       };
 
-      // Call once to set.
-      resizer();
+      // don't do anything for small screens
+      if ($( window ).width() > 768) {
+              // Call once to set.
+              resizer();
 
-      // Call on resize. Opera debounces their resize by default.
-      $(window).resize(function () {
-          clearTimeout(debounce);
-          debounce = setTimeout(resizer, settings.debounceTimeout);
-      });
+              // Call on resize. Opera debounces their resize by default.
+              $(window).resize(function () {
+                  clearTimeout(debounce);
+                  debounce = setTimeout(resizer, settings.debounceTimeout);
+              });
 
-      // Apply a load event to images within the element so it fires again after an image is loaded
-      $this.find('img').load(resizer);
+            // Apply a load event to images within the element so it fires again after an image is loaded
+            $this.find('img').load(resizer);
+      };
 
     });
 
