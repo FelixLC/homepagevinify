@@ -1,10 +1,10 @@
 {
-  "name": "boilerPlate2",
-  "version": "0.0.1",
+  "name": "vinify",
+  "version": "2.0.0",
   "authors": [
     "FelixLC <felix.lechevallier@gmail.com>"
   ],
-  "description": "Kickstart HTML5 dev",
+  "description": "vinify",
   "main": "index.html",
   "license": "MIT",
   "private": true,

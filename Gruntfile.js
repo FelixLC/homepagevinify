@@ -491,6 +491,30 @@ module.exports = function ( grunt ) {
         });
       }
     });
+
+    grunt.file.copy('src/commentcamarche.html', this.data.dir + '/commentcamarche.html', {
+      process: function ( contents, path ) {
+        return grunt.template.process( contents, {
+          data: {
+            scripts: jsFiles,
+            styles: cssFiles,
+            version: grunt.config( 'pkg.version' )
+          }
+        });
+      }
+    });
+
+    grunt.file.copy('src/experience.html', this.data.dir + '/experience.html', {
+      process: function ( contents, path ) {
+        return grunt.template.process( contents, {
+          data: {
+            scripts: jsFiles,
+            styles: cssFiles,
+            version: grunt.config( 'pkg.version' )
+          }
+        });
+      }
+    });
   });
 
 };

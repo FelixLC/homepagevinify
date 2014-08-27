@@ -8,7 +8,7 @@ module.exports = {
    * completely built.
    */
   build_dir: 'build',
-  compile_dir: 'compile',
+  compile_dir: 'dist',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -29,7 +29,7 @@ module.exports = {
     atpl: [ 'src/app/**/*.tpl.html' ],
     ctpl: [ 'src/common/**/*.tpl.html' ],
 
-    html: [ 'src/index.html' ],
+    html: [ 'src/commentcamarche.html', 'src/index.html', 'src/experience.html' ],
     less: 'src/less/main.less'
   },
 
@@ -66,15 +66,12 @@ module.exports = {
       'vendor/bootstrap/js/transition.js',
       'vendor/bootstrap/js/collapse.js',
       'vendor/bootstrap/js/tooltip.js',
-      'vendor/sliders/js/plugin.js',
       'vendor/jQuery-Flex-Vertical-Center.js'
     ],
     css: [
-      'vendor/sliders/css/styles.css'
     ],
     assets: [
       'vendor/bootstrap/fonts/*.*'
-
     ]
   },
 };
