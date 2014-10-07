@@ -4794,6 +4794,9 @@ h3 {
   font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
+p {
+  color: rgba(0, 0, 0, 0.7);
+}
 .title {
   text-align: center;
 }
@@ -5186,7 +5189,7 @@ body {
   height: 45px;
 }
 .getstarted {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
 }
 @media (max-width: 768px) {
@@ -5197,6 +5200,7 @@ body {
 }
 .propval {
   text-align: center;
+  margin-top: 50px;
   padding: 10px 0px 5px 0px;
 }
 .propval p {
@@ -5209,6 +5213,7 @@ body {
 }
 .propval h3 {
   text-transform: uppercase;
+  font-size: 24px;
 }
 .tnp {
   text-align: center;
@@ -5216,13 +5221,73 @@ body {
 }
 .tnp > h3 {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
 }
 .propcontent {
   padding-bottom: 15px;
 }
 .propcontent > h3 {
   text-align: center;
+}
+/* ---------------- WHO WE ARE ---------------- */
+#who-we-are {
+  background-color: #006db2;
+  padding: 50px;
+}
+#who-we-are h3 {
+  color: #FFF;
+}
+/* ---------------- HOW IT WORKS ---------------- */
+#how-it-works > div {
+  display: table;
+}
+#how-it-works > div > div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+#how-it-works div.description {
+  padding: 0 50px;
+}
+#how-it-works div.description-right {
+  text-align: right;
+}
+/* ---------------- TESTIMONIALS ---------------- */
+#testimonials h4 {
+  color: #cb0001;
+}
+#testimonials h3 {
+  color: #3276b1;
+}
+#testimonials > div > div:first-child {
+  text-align: right;
+}
+#testimonials > div > div:last-child > div {
+  display: table;
+  width: 100%;
+}
+#testimonials div.testimonial {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+}
+#testimonials p.signature {
+  text-align: right;
+}
+#testimonials div.testimonial > div {
+  display: inherit;
+  vertical-align: top;
+}
+@media (max-width: 990px) {
+  #testimonials > div > div:first-child {
+    text-align: center;
+  }
+}
+/* ---------------- SOCIAL ---------------- */
+#social {
+  background-color: #ebebeb;
+  padding: 50px;
+  margin: 0;
 }
 /* ---------------- WHATDOIGET ---------------- */
 #whatdoiget {
@@ -5596,8 +5661,8 @@ section {
   padding: 10px;
 }
 .irritant {
-  background-color: #006db2;
-  color: #FFF;
+  background-color: #fff;
+  color: #000;
 }
 /*.line {
   background: #333;
