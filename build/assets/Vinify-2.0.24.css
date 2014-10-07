@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
 /**
  * This is the main application stylesheet. It should include or import all
  * stylesheets used throughout the application as this is the only stylesheet in
@@ -5111,7 +5111,7 @@ body {
 }
 .header-image {
   margin: 0;
-  background: url(img/background-tonio-carafe.jpg) no-repeat center center fixed;
+  background: url(img/background-tonio-carafe.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5248,7 +5248,7 @@ body {
   fill: #47ad68;
 }
 .svg-red {
-  fill: #800000;
+  fill: #cb0001;
 }
 .svg-blue {
   fill: #006db2;
@@ -5671,18 +5671,21 @@ footer {
 #categories {
   text-align: center;
   margin: 0 auto;
+  display: table;
+  width: 100%;
 }
-#categories h2 {
-  margin-bottom: 30px;
-  text-align: left;
-}
-#categories .category {
-  cursor: pointer;
+#categories img {
+  height: 64px;
 }
 @media (max-width: 768px) {
   #categories {
     display: none;
   }
+}
+#categories > div {
+  display: table-cell;
+  cursor: pointer;
+  position: relative;
 }
 #categories-mobile {
   margin-top: 20px;
@@ -5693,8 +5696,10 @@ footer {
     display: none;
   }
 }
-#owl-example {
-  border: 1px solid #2C3E50;
+@media (min-width: 768px) {
+  #owl-example {
+    border-top: none;
+  }
 }
 #owl-example .owl-item div {
   padding: 5px;
@@ -5709,9 +5714,12 @@ footer {
 }
 .arrow {
   display: none;
-  margin: 0 auto;
+  position: absolute;
+  left: 46%;
+  bottom: 0;
   width: 0;
   height: 0;
+  text-align: center;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid black;

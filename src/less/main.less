@@ -203,7 +203,7 @@
  * Typography
  */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
 @font-face {
     font-family: 'amaranthbold';
     src: url('fonts/amaranth-bold-webfont.eot');
@@ -594,7 +594,7 @@ html, body {
         height: 100%;
         width: 100%;
       }
-      background:url(img/background-tonio-carafe.jpg) no-repeat center center fixed;
+      background:url(img/background-tonio-carafe.png) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -1235,20 +1235,23 @@ h3 {
 #categories {
   text-align: center;
   margin: 0 auto;
-  h2 {
-    margin-bottom: 30px;
-    text-align: left;
+  display: table;
+  width: 100%;
+  img {
+    height: 64px;
   }
-
-  .category {
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  #categories {
     display: none;
   }
-
 }
+#categories > div {
+  display: table-cell;
+  cursor: pointer;
+  position: relative;
+}
+
 
 #categories-mobile {
 
@@ -1259,9 +1262,10 @@ h3 {
   }
 
 }
-
-#owl-example {
-  border:1px solid #2C3E50;
+@media (min-width: 768px) {
+  #owl-example {
+    border-top:none;
+  }
 }
 
 #owl-example .owl-item div{
@@ -1278,9 +1282,12 @@ h3 {
 
 .arrow {
   display: none;
-  margin: 0 auto;
+  position: absolute;
+  left: 46%;
+  bottom: 0;
   width: 0;
   height: 0;
+  text-align: center;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid black;
