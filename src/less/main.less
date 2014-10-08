@@ -202,41 +202,8 @@
 /**
  * Typography
  */
-
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
-@font-face {
-    font-family: 'amaranthbold';
-    src: url('fonts/amaranth-bold-webfont.eot');
-    src: url('fonts/amaranth-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/amaranth-bold-webfont.woff') format('woff'),
-         url('fonts/amaranth-bold-webfont.ttf') format('truetype'),
-         url('fonts/amaranth-bold-webfont.svg#amaranthregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'amaranthregular';
-    src: url('fonts/amaranth-regular-webfont.eot');
-    src: url('fonts/amaranth-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/amaranth-regular-webfont.woff') format('woff'),
-         url('fonts/amaranth-regular-webfont.ttf') format('truetype'),
-         url('fonts/amaranth-regular-webfont.svg#amaranthregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'actorregular';
-    src: url('fonts/actor-regular-webfont.eot');
-    src: url('fonts/actor-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/actor-regular-webfont.woff') format('woff'),
-         url('fonts/actor-regular-webfont.ttf') format('truetype'),
-         url('fonts/actor-regular-webfont.svg#actorregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 html, body {
   font-size: 16px;
@@ -250,12 +217,12 @@ html, body {
 
 
 body {
-  font-family: 'actorregular', 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
 h1, h2, h3 {
-  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
+  font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 p {
@@ -269,7 +236,7 @@ p {
   font-size: 1.2em;
   color: @color-support-strong;
   font-weight: 400;
-  font-family: 'amaranthregular';
+  font-family: 'Julius Sans One';
 }
 
 .strong {
@@ -282,10 +249,10 @@ html, body {
 
 .btn-primary {
   color: #ffffff;
-  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
+  font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
   border-color: @color-support-strong;
   background-color: @color-support-strong;
-  border-radius: 50px;
+  border-radius: 5px;
 
       // &:hover {
       //   background-color: transparent;
@@ -302,8 +269,8 @@ html, body {
 }
 
 .btn-primary-outline {
-  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
-  border-radius: 50px;
+  font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
+  border-radius: 5px;
   background-color: transparent;
 }
 
@@ -326,12 +293,12 @@ html, body {
 }
 
 .landing-btn-strong {
-  font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
+  font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
   color: #ffffff;
   background-color: @color-support-strong;
   border-color: @color-support-strong;
   padding: 10px 20px;
-  border-radius: 50px;
+  border-radius: 5px;
   font-size: 1.6em;
     // &:hover {
     //   background-color: transparent;
@@ -356,13 +323,13 @@ html, body {
       display: inline-block;
     }
 }
-
 #navbar-second {
   padding: 5px 5px 5px 6.25px;
   background-color: white;
   border: 0 solid @color-grey;
   border-bottom-width: 1px;
-  border-radius: 0;
+  margin-bottom: 0;
+  border-radius: 5px;
 }
 
 @media (max-width: 900px) {
@@ -390,11 +357,21 @@ html, body {
   text-decoration: none;
   background-color: transparent;
   color: @color-support-strong;
-  .bn-primary {
-    border-color: @color-support-strong;
-  }
 }
-
+#navbar-second .btn-navbar-cta {
+  border: 1px solid @color-support-strong;
+  color: @color-support-strong;
+}
+#navbar-second .btn-navbar-cta:hover,
+#navbar-second .btn-navbar-cta:focus {
+  background-color: @color-support-strong;
+  color: #FFF;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
 #navbar-first li > a:hover, #navbar-first li > a:focus {
   cursor: pointer;
   text-decoration: none;
@@ -419,7 +396,7 @@ html, body {
   color: #800000;
   background-color: #fff;
   border-color: #fff;
-  border-radius: 50px;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 
@@ -430,13 +407,9 @@ html, body {
 .section{
   padding-left: 40px;
   padding-right: 40px;
-  margin-top: 80px;
-  margin-bottom: 80px;
     @media (max-width: 768px) {
       padding-left: 10px;
       padding-right: 10px;
-      margin-top: 40px;
-      margin-bottom: 40px;
     }
 }
 
@@ -470,7 +443,7 @@ html, body {
 }
 
   h2 {
-    font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
+    font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 35px;
     font-weight: 400;
@@ -482,13 +455,13 @@ html, body {
   }
 
   h3 {
-    font-family: 'actorregular', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 22px;
       @media (max-width: 768px) {
         font-size: 20px;
       }
-    font-weight: 400;
+    font-weight: 300;
     margin-top: 15px;
     margin-bottom: 10px;
     line-height: 1.25em;
@@ -496,12 +469,12 @@ html, body {
   }
 
     .landing-btn-strong {
-      font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
+      font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
       color: #ffffff;
       background-color: @color-support-strong;
       border-color: @color-support-strong;
       padding: 10px 20px;
-      border-radius: 50px;
+      border-radius: 5px;
       font-size: 1.6em;
         // &:hover {
         //   background-color: transparent;
@@ -635,7 +608,7 @@ html, body {
   bottom: 0;
   padding-bottom: 20px;
   a {
-    color: @main;
+    color: #FFF;
     font-size: 30px;
   }
 }
@@ -665,18 +638,6 @@ html, body {
   width: 45px;
   height: 45px;
 }
-
-
-.getstarted {
-  margin-top: 50px;
-  margin-bottom: 100px;
-    @media (max-width: 768px) {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-}
-
-
 .propval {
   text-align: center;
   margin-top: 50px;
@@ -697,35 +658,78 @@ html, body {
 
 }
 
-
-
-.tnp{
+/* ---------------- GET STARTED ---------------- */
+#getstarted {
+  padding-top: 50px;
+  background-color: @color-grey;
+  padding-bottom: 100px;
+    @media (max-width: 768px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+}
+#getstarted div.step {
+  background-color: @color-brand;
+  height: 64px;
+  width: 64px;
+  font-size: 32px;
+  line-height: 64px;
+  margin: 0 auto;
+  color: #FFF;
+  border-radius: 32px;
+}
+#getstarted .tnp{
   text-align: center;
   padding: 0px 15px 5px;
 }
-
-.tnp > h3 {
+#getstarted .tnp > h3 {
   text-align: center;
   font-size: 18px;
-  // font-family: 'actorregular';
+  // font-family: 'Roboto';
 }
-
-.propcontent{
+#getstarted .propcontent{
   padding-bottom: 15px;
 }
-
-.propcontent > h3{
+#getstarted .propcontent > h3{
   text-align: center;
 }
 /* ---------------- WHO WE ARE ---------------- */
 #who-we-are {
-  background-color: @color-support-strong;
-  padding: 50px;
+  background-color: #FFF;
+  padding-top: 25px;
+  border-bottom: 1px solid #EEEEEE;
+}
+.horiz-ruler {
+    display: table;
+    width: 100%;
+    border-top: 1px solid #EEEEEE;
+    margin-top: 20px;
+    padding-left: 110px;
+    padding-right: 110px;
+    @media (max-width: 768px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+}
+.horiz-ruler div:first-child {
+  display: table-cell;
+  width: 50%;
+  height: 80px;
+  border-right: 1px solid #EEEEEE;
+}
+.horiz-ruler-last {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-top: none;
+    border-bottom: 1px solid #EEEEEE;
 }
 #who-we-are h3 {
-  color: #FFF;
+  color: @color-support-strong;
 }
 /* ---------------- HOW IT WORKS ---------------- */
+#how-it-works {
+  margin-top: 0;
+}
 #how-it-works > div {
   display: table;
 }
@@ -740,15 +744,26 @@ html, body {
 #how-it-works div.description-right {
   text-align: right;
 }
-
+#how-it-works h3 {
+  color: @color-brand;
+}
 /* ---------------- TESTIMONIALS ---------------- */
 #testimonials h4 {
   color: @color-brand;
+}
+#testimonials {
+  margin-bottom: 40px;
 }
 #testimonials h3 {
   color: @color-blue;
 }
 #testimonials > div > div:first-child {
+  border-top: 1px solid #EEEEEE;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#testimonials > div > div:nth-child(2) {
+  padding-top: 20px;
   text-align: right;
 }
 #testimonials > div > div:last-child > div {
@@ -775,16 +790,18 @@ html, body {
 
 /* ---------------- SOCIAL ---------------- */
 #social {
-  background-color: @color-grey;
+  background-color: #FFF;
   padding: 50px;
   margin: 0;
 }
-
+#social i {
+  color: @color-support-strong;
+}
 /* ---------------- WHATDOIGET ---------------- */
 #whatdoiget {
 
     p {
-        font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
+        font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 20px;
     }
@@ -1033,7 +1050,7 @@ html, body {
       p {
         font-size: 24px;
         color: #FFF;
-        font-family: 'amaranthregular', Helvetica, Arial, sans-serif;
+        font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
         font-weight: 400;
         // text-transform: uppercase;
       }
@@ -1151,8 +1168,14 @@ section{
 }
 
 .irritant{
-  background-color: #fff;
-  color: #000;
+  background-color: @color-support-strong;
+  color: #FFF;
+}
+.irritant * {
+  color: #FFF;
+}
+.irritant *:hover {
+  color: #FFF;
 }
 
 /*.line {
@@ -1278,7 +1301,7 @@ h3 {
   background-color: white;
   border: 0 solid #ebebeb;
   border-bottom-width: 1px;
-  border-radius: 0;
+  border-radius: 5px;
 }
 
 #products {
