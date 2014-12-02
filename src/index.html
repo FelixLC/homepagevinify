@@ -124,28 +124,98 @@
       </a>
     </span>
   </div> -->
-
-  <div class="header" id="splashscreen">
-    <div class="overlay">
-          <div class="headline-container container-fluid">
+  <div class="header">
+    <div id="carousel"  class="owl-carousel owl-theme">
+      <div class="item">
+        <div class="vinibar-terrasse">
+          <div class="overlay"></div><!-- .overlay -->
+          <img src="assets/img/background-tonio-carafe.png" alt="">
+          <div class="container-fluid item-container">
+            <div>
+              <div class="headers">
+                <h2 id="tagline" class="centered">
+                  <div class="tagline_last">Découvrez des vins adaptés à vos goûts</div>
+                </h2>
+                <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
+              </div>
+              <div class="cta">
+                <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
+                  Démarrer l'aventure
+                </a>
+                <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
+                  Offrir un cadeau
+                </a>
+              </div><!-- cta -->
+            </div>
+          </div><!-- .item-container -->
+        </div><!-- .vinibar-terrasse -->
+      </div><!-- .item -->
+      <div class="item">
+        <div class="vinibar-exposed">
+          <div class="overlay"></div><!-- .overlay -->
+          <img src="assets/img/background-vinibar-exposed.png" alt="">
+          <div class="container-fluid item-container">
+            <div>
+              <div class="headers">
+                <h2 id="tagline" class="centered">
+                  <div class="tagline_last">Découvrez des vins adaptés à vos goûts</div>
+                </h2>
+                <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
+              </div>
+              <div class="cta">
+                <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
+                  Démarrer l'aventure
+                </a>
+                <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
+                  Offrir un cadeau
+                </a>
+              </div><!-- cta -->
+            </div>
+          </div><!-- .item-container -->
+        </div><!-- .vinibar-exposed -->
+      </div><!-- .item -->
+    </div><!-- #carousel -->
+  </div><!-- .header -->
+<!--   <div class="header" id="splashscreen">
+    <div id="carousel"  class="owl-carousel owl-theme">
+      <div class="item vinibar-terrasse">
+          <div class="overlay">
+            <div class="headline-container container-fluid">
               <div class="headline">
-                  <div class="headers">
-                        <h2 id="tagline" class="centered">
-                           <div class="tagline_last">Découvrez des vins adaptés à vos goûts</div>
-                        </h2>
-                        <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
-                  </div>
-                  <div class="cta">
-                      <!-- LINK TBD -->
-                        <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
-                         <!--  <i class="fa fa-shopping-cart"></i> --> Démarrer l'aventure
-                        </a>
-                        <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
-                         <!--  <i class="fa fa-shopping-cart"></i> --> Offrir un cadeau
-                        </a>
-                  </div>
+                <div class="headers">
+                      <h2 id="tagline" class="centered">
+                         <div class="tagline_last">Découvrez des vins adaptés à vos goûts</div>
+                      </h2>
+                      <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
+                </div>
+                <div class="cta">
+                      <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
+                      </a>
+                      <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
+                      </a>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="item vinibar-exposed">
+            <div class="headline-container container-fluid">
+                <div class="headline">
+                    <div class="headers">
+                          <h2 id="tagline" class="centered">
+                             <div class="tagline_last">Découvrez des vins adaptés à mes fesses</div>
+                          </h2>
+                          <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
+                    </div>
+                    <div class="cta">
+                          <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
+                          </a>
+                          <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
+                          </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+      </div>
     </div>
 
     <span class=" hidden-xs know-more">
@@ -153,7 +223,7 @@
         <i class="wobble-vertical fa fa-chevron-down"></i>
       </a>
     </span>
-  </div>
+  </div> -->
 
 <!--     <div class="header-xs visible-xs">
       <div class="container">
@@ -553,6 +623,29 @@
   });
 </script>
 
+<!-- carousel -->
+<script type="text/javascript">
+$(document).ready(function () {
+  $("#carousel").owlCarousel({
+      navigation: true, // Show next and prev buttons
+      slideSpeed: 300,
+      paginationSpeed: 400,
+      autoPlay: 5000,
+      rewindNav: false,
+      pagination: false,
+      singleItem: true
+
+      // "singleItem:true" is a shortcut for:
+      // items: 1,
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+  });
+
+});
+</script>
 <!-- slider -->
 <script type="text/javascript">
   (function() {

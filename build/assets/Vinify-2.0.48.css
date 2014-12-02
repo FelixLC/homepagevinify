@@ -1,3 +1,6 @@
+@import '../assets/owl-carousel/owl.carousel.css';
+@import '../assets/owl-carousel/owl.theme.css';
+@import '../assets/owl-carousel/owl.transitions.css';
 @import url(https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
 /**
@@ -4489,104 +4492,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     right: auto;
   }
 }
-.tooltip {
-  position: absolute;
-  z-index: 1030;
-  display: block;
-  visibility: visible;
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.tooltip.in {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-.tooltip.top {
-  margin-top: -3px;
-  padding: 5px 0;
-}
-.tooltip.right {
-  margin-left: 3px;
-  padding: 0 5px;
-}
-.tooltip.bottom {
-  margin-top: 3px;
-  padding: 5px 0;
-}
-.tooltip.left {
-  margin-left: -3px;
-  padding: 0 5px;
-}
-.tooltip-inner {
-  max-width: 200px;
-  padding: 3px 8px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  background-color: #000000;
-  border-radius: 4px;
-}
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-.tooltip.top .tooltip-arrow {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
-}
-.tooltip.top-left .tooltip-arrow {
-  bottom: 0;
-  left: 5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
-}
-.tooltip.top-right .tooltip-arrow {
-  bottom: 0;
-  right: 5px;
-  border-width: 5px 5px 0;
-  border-top-color: #000000;
-}
-.tooltip.right .tooltip-arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-width: 5px 5px 5px 0;
-  border-right-color: #000000;
-}
-.tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #000000;
-}
-.tooltip.bottom .tooltip-arrow {
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
-}
-.tooltip.bottom-left .tooltip-arrow {
-  top: 0;
-  left: 5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
-}
-.tooltip.bottom-right .tooltip-arrow {
-  top: 0;
-  right: 5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #000000;
-}
+/**
+ * carousel css files
+ */
 /**
  * This is our main variables file. It in turn imports the `variables` file from
  * Twitter Bootstrap. We must include it last so we can overwrite any variable
@@ -4930,35 +4838,11 @@ body {
 /* ---------------- HEADER ---------------- */
 .header {
   margin: 0;
-  background: url(img/background-tonio-carafe.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /* iPads (landscape) ----------- */
 }
 @media (min-width: 768px) {
   .header {
     height: 600px;
     width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .header {
-    background: url(img/background-small.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .header {
-    background: url(img/background-tonio-carafe.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
 }
 .headline-container {
@@ -5066,6 +4950,44 @@ body {
 }
 .brand > img {
   height: 45px;
+}
+#carousel .item {
+  height: 600px;
+}
+#carousel .overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 600px;
+}
+.vinibar-exposed img,
+.vinibar-terrasse img {
+  position: absolute;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+}
+.vinibar-exposed,
+.vinibar-terrasse {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+}
+#carousel .item-container {
+  color: #FFF;
+  display: table;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  z-index: 3;
+}
+#carousel .item-container > div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+#carousel .cta {
+  text-align: center;
 }
 /* ---------------- PROPVAL ---------------- */
 .badge-custom {
