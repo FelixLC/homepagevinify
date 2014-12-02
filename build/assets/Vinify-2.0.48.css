@@ -4928,7 +4928,48 @@ body {
   }
 }
 /* ---------------- HEADER ---------------- */
+.header {
+  margin: 0;
+  background: url(img/background-tonio-carafe.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* iPads (landscape) ----------- */
+}
+@media (min-width: 768px) {
+  .header {
+    height: 600px;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    background: url(img/background-small.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .header {
+    background: url(img/background-tonio-carafe.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.headline-container {
+  display: table;
+  width: 100%;
+  height: 600px;
+}
 .headline {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
   padding-left: 25px;
   padding-right: 25px;
   margin-left: 15px;
@@ -4990,12 +5031,14 @@ body {
   border-radius: 5px;
   font-size: 1.2em;
 }
+@media (max-width: 640px) {
+  .headline .landing-btn-strong {
+    font-size: 16px;
+  }
+}
 .headline .landing-btn-strong-red {
   background-color: #cb0001;
   border-color: #cb0001;
-}
-.headline .headers {
-  margin-bottom: 40px;
 }
 .headline .cta {
   text-align: center;
@@ -5003,145 +5046,6 @@ body {
 }
 .headline .tagline {
   text-transform: uppercase;
-}
-@media (max-width: 640px) {
-  .headline .landing-btn-strong {
-    font-size: 16px;
-  }
-}
-.scrollable {
-  display: inline-block;
-  height: 38.5px;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-  text-align: right;
-}
-@media (max-width: 768px) {
-  .scrollable {
-    text-align: center;
-  }
-}
-.item {
-  height: 38.5px;
-  margin: 6px auto;
-  display: block;
-}
-.items {
-  float: left;
-  -webkit-animation: scroll 8s infinite;
-  -moz-animation: scroll 8s infinite;
-  -ms-animation: scroll 8s infinite;
-  -webkit-animation-direction: alternate;
-  /* Safari and Chrome */
-  animation-direction: alternate;
-}
-.tagline_last {
-  display: inline-block;
-}
-@-webkit-keyframes scroll {
-  0% {
-    margin-top: 1px;
-  }
-  19% {
-    margin-top: 1px;
-  }
-  25% {
-    margin-top: -43.5px;
-  }
-  69% {
-    margin-top: -43.5px;
-  }
-  75% {
-    margin-top: -88px;
-  }
-  100% {
-    margin-top: -88px;
-  }
-}
-@-moz-keyframes scroll {
-  0% {
-    margin-top: 2px;
-  }
-  19% {
-    margin-top: 2px;
-  }
-  25% {
-    margin-top: -42.5px;
-  }
-  69% {
-    margin-top: -42.5px;
-  }
-  75% {
-    margin-top: -87px;
-  }
-  100% {
-    margin-top: -87px;
-  }
-}
-@-ms-keyframes scroll {
-  0% {
-    margin-top: 5px;
-  }
-  19% {
-    margin-top: 5px;
-  }
-  25% {
-    margin-top: -39.5px;
-  }
-  69% {
-    margin-top: -39.5px;
-  }
-  75% {
-    margin-top: -84px;
-  }
-  100% {
-    margin-top: -84px;
-  }
-}
-.header-image {
-  margin: 0;
-  background: url(img/background-tonio-carafe.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  /* iPads (landscape) ----------- */
-}
-@media (min-width: 768px) {
-  .header-image {
-    height: 100%;
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .header-image {
-    background: url(img/background-small.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .header-image {
-    background: url(img/background-tonio-carafe.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-.header-image2 {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  background: url(img/background-fraise-vin.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 .know-more {
   position: absolute;

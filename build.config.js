@@ -66,7 +66,8 @@ module.exports = {
       'vendor/bootstrap/js/transition.js',
       'vendor/bootstrap/js/collapse.js',
       'vendor/bootstrap/js/tooltip.js',
-      'vendor/jQuery-Flex-Vertical-Center.js'
+      'vendor/jQuery-Flex-Vertical-Center.js',
+      'src/assets/owl-carousel/owl.carousel.js'
     ],
     css: [
     ],
