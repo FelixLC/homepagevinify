@@ -4962,7 +4962,6 @@ body {
 .vinibar-terrasse img {
   position: absolute;
   z-index: 1;
-  min-width: 100%;
   min-height: 100%;
 }
 .vinibar-exposed,
