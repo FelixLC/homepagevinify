@@ -125,7 +125,7 @@
     </span>
   </div> -->
   <div class="header">
-    <div id="carousel"  class="owl-carousel owl-theme">
+    <div id="carousel"  class="owl-carousel">
       <div class="item">
         <div class="vinibar-terrasse">
           <div class="overlay"></div><!-- .overlay -->
@@ -627,20 +627,19 @@
 <script type="text/javascript">
 $(document).ready(function () {
   $("#carousel").owlCarousel({
-      navigation: true, // Show next and prev buttons
-      slideSpeed: 300,
-      paginationSpeed: 400,
-      autoPlay: 5000,
-      rewindNav: false,
-      pagination: false,
-      singleItem: true
+      // navSpeed: 300,
+      // dotsSpeed: 400,
+      autoplay: false,
+      autoplayTimeout: 6000,
+      loop: true,
+      items: 1
 
-      // "singleItem:true" is a shortcut for:
-      // items: 1,
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
+      // // "singleItem:true" is a shortcut for:
+      // // items: 1,
+      // // itemsDesktop : false,
+      // // itemsDesktopSmall : false,
+      // // itemsTablet: false,
+      // // itemsMobile : false
 
   });
 
