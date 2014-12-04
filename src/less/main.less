@@ -73,7 +73,7 @@
   height: 100%;
   z-index: 2;
       @media (max-width: 768px) {
-          background: rgba(0,0,0,0.2);
+          background: none;
       }
 }
 
@@ -293,6 +293,9 @@ html, body {
 
 /* ---------------- NAVBAR ---------------- */
 
+.navbar-nav .dropdown-menu {
+  border-radius: 2px;
+}
 .navbar-splash {
   padding: 5px 5px 5px 6.25px;
   background-color: transparent;
@@ -364,8 +367,8 @@ html, body {
 }
 
 .navbar-nav > li > .dropdown-menu {
-  margin-top: 5px;
-  border-color: @color-grey;
+  margin-top: 7px;
+  border-color: #FFF;
 }
 
 .loginbtn {
@@ -523,7 +526,59 @@ html, body {
 .brand > img {
   height: 45px;
 }
+  .landing-btn-strong {
+    font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    background-color: @color-support-strong;
+    border-color: @color-support-strong;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+      // &:hover {
+      //   background-color: transparent;
+      //   color: @color-support-strong;
+      // }
+    @media (max-width: 640px) {
+          font-size: 16px;
+    }
+  }
+  .landing-btn-strong-red {
+    background-color: @color-brand;
+    border-color: @color-brand;
+      // &:hover {
+      //   background-color: transparent;
+      //   color: @color-support-strong;
+      // }
+  }
+#carousel {
+  h2 {
+    font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 2px;
+    text-transform: uppercase;
+    // text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
+  }
 
+  h3 {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    font-weight: 300;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    line-height: 1.25em;
+    // text-shadow: 0 -1px 1px rgba(0,0,0,0.6);
+  }
+}
 #carousel .item {
   height: 600px;
 }
@@ -537,7 +592,11 @@ html, body {
 .vinibar-terrasse img {
   position: absolute;
   z-index: 1;
-  min-height: 100%;
+  margin-top: -100px;
+  @media (max-width: 900px) {
+    margin-top: 0px;
+  }
+  // min-height: 100%;
 }
 .vinibar-exposed,
 .vinibar-terrasse {
@@ -562,39 +621,41 @@ html, body {
   text-align: center;
 }
 
-// .vinibar-exposed {
+// .vinibar-exposed-bckg {
   // background:url(img/background-vinibar-exposed.png) no-repeat center center fixed;
   //       -webkit-background-size: cover;
   //       -moz-background-size: cover;
   //       -o-background-size: cover;
   //       background-size: cover;
 // }
-// .vinibar-terrasse {
-//   background:url(img/background-tonio-carafe.png) no-repeat center center fixed;
-//         -webkit-background-size: cover;
-//         -moz-background-size: cover;
-//         -o-background-size: cover;
-//         background-size: cover;
-//   @media (max-width: 768px) {
-//     background:url(img/background-small.jpg) no-repeat center center;
-//         -webkit-background-size: cover;
-//         -moz-background-size: cover;
-//         -o-background-size: cover;
-//         background-size: cover;
-//   }
+.header-image {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background:url(img/background-tonio-carafe.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  @media (max-width: 768px) {
+    background:url(img/background-small.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  }
 
-//     /* iPads (landscape) ----------- */
-//     @media only screen
-//     and (min-device-width : 768px)
-//     and (max-device-width : 1024px)
-//     and (orientation : landscape) {
-//        background:url(img/background-tonio-carafe.jpg) no-repeat center center;
-//         -webkit-background-size: cover;
-//         -moz-background-size: cover;
-//         -o-background-size: cover;
-//         background-size: cover;
-//     }
-// }
+    /* iPads (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+       background:url(img/background-tonio-carafe.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
 /* ---------------- PROPVAL ---------------- */
 .badge-custom {
   display: inline-block;

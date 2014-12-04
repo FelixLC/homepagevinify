@@ -24,7 +24,7 @@
         <link rel="icon" type="image/png" href="assets/img/favicon.png" />
         <link rel="stylesheet" type="text/css" href="assets/sliders/css/styles.css" />
         <!-- compiled CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.48.css" />
+        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.49.css" />
 
              <!-- start Mixpanel -->
             <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
@@ -63,11 +63,17 @@
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <a href="https://start.vinify.co/#/cadeau/vinibar/formule" id="home-navbar-second-gift" class="btn-navbar-second">
-                      Cadeau
-                  </a>
-                </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadeau <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://start.vinify.co/#/cadeau/vinibar/formule" id="home-navbar-second-gift" class="btn-navbar-second">
+                      Offrir
+                  </a></li>
+                <li><a href="https://start.vinify.co/#/recevoir" id="home-navbar-second-gift" class="btn-navbar-second">
+                      Recevoir
+                  </a></li>
+              </ul>
+              </li>
                 <li>
                   <a href="#getstarted" id="home-navbar-second-faq" class="btn-navbar-second">
                       Comment ça marche ?
@@ -92,7 +98,7 @@
           </div>
         </div>
       </nav>
-<!--   <div class="header-image" id="splashscreen">
+  <div class="visible-xs header-image" id="splashscreen">
     <div class="overlay">
       <div class="container-fluid">
           <div class="headline">
@@ -106,10 +112,10 @@
               </div>
               <div class="cta">
                   <div class="col-lg-12 col-md-12 col-sm-12">
-                    <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
+                    <a id="home-start-firs" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
                       Démarrer l'aventure
                     </a>
-                    <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
+                    <a id="home-gift-first" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
                       Offrir un cadeau
                     </a>
                   </div>
@@ -123,13 +129,13 @@
         <i class="wobble-vertical fa fa-chevron-down"></i>
       </a>
     </span>
-  </div> -->
-  <div class="header">
+  </div>
+  <div class="header hidden-xs">
     <div id="carousel"  class="owl-carousel">
       <div class="item">
-        <div class="vinibar-terrasse">
+        <div id="vinibar-terrasse" class="vinibar-terrasse">
           <div class="overlay"></div><!-- .overlay -->
-          <img src="assets/img/background-tonio-carafe.png" alt="">
+          <img src="assets/img/background-tonio-carafe-sized.jpg" alt="">
           <div class="container-fluid item-container">
             <div>
               <div class="headers">
@@ -139,10 +145,10 @@
                 <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
               </div>
               <div class="cta">
-                <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
+                <a id="home-start-second" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
                   Démarrer l'aventure
                 </a>
-                <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
+                <a id="home-gift-second" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
                   Offrir un cadeau
                 </a>
               </div><!-- cta -->
@@ -151,16 +157,15 @@
         </div><!-- .vinibar-terrasse -->
       </div><!-- .item -->
       <div class="item">
-        <div class="vinibar-exposed">
-          <div class="overlay"></div><!-- .overlay -->
+        <div id="vinibar-exposed" class="vinibar-exposed">
           <img src="assets/img/background-vinibar-exposed.png" alt="">
           <div class="container-fluid item-container">
             <div>
               <div class="headers">
                 <h2 id="tagline" class="centered">
-                  <div class="tagline_last">Découvrez des vins adaptés à vos goûts</div>
+                  <div class="tagline_last">Du bon vin. Enfin.</div>
                 </h2>
-                <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
+                <h3 class="centered"><span id="tagline-caption">Vinify, c'est un caviste qui vous connaît <br> et des sélections sur mesure, quand vous voulez.</span></h3>
               </div>
               <div class="cta">
                 <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
@@ -360,7 +365,7 @@
           <div>
             <div class="testimonial">
               <div>
-                <img src="assets/img/bottle.jpg" alt="bottle-heart">
+                <img src="assets/img/wines/MLJ04BRGE93.jpg" alt="bottle-heart">
               </div>
               <div>
                 <h3>Château des Jacques</h3>
@@ -371,7 +376,7 @@
             </div>
             <div class="testimonial">
               <div>
-                <img src="assets/img/bottle.jpg" alt="bottle-heart">
+                <img src="assets/img/wines/DDV06BRGE21.jpg" alt="bottle-heart">
               </div>
               <div>
                 <h3>Domaine de Vénus</h3>
@@ -384,7 +389,7 @@
           <div>
             <div class="testimonial">
               <div>
-                <img src="assets/img/bottle.jpg" alt="bottle-heart">
+                <img src="assets/img/wines/KOE11BBLC58.jpg" alt="bottle-heart">
               </div>
               <div>
                 <h3>Gewurztraminer Gloeckelberg</h3>
@@ -395,7 +400,7 @@
             </div>
             <div class="testimonial">
               <div>
-                <img src="assets/img/bottle.jpg" alt="bottle-heart">
+                <img src="assets/img/wines/LOR11BRGE67.jpg" alt="bottle-heart">
               </div>
               <div>
                 <h3>Château de Ciffre</h3>
@@ -638,7 +643,6 @@ $(document).ready(function () {
       autoplay: true,
       // autoplayTimeout: 6000,
       loop: true,
-      nav: true,
       items: 1
 
       // // "singleItem:true" is a shortcut for:
@@ -666,7 +670,8 @@ $(document).ready(function () {
 <script type="text/javascript">
         mixpanel.track_links("#home-logo-brand", 'Clicked on home/logo-brand');
         mixpanel.track_links("#home-login", 'Clicked on home/login');
-        mixpanel.track_links("#home-start", 'Clicked on home/start');
+        mixpanel.track_links("#home-start-first", 'Clicked on home/start/first');
+        mixpanel.track_links("#home-start-second", 'Clicked on home/start-second');
         mixpanel.track_links("#home-chevron-down", 'Clicked on home/chevron-down');
         mixpanel.track_links("#home-logo-brand-second", 'Clicked on home/logo-brand-second');
         mixpanel.track_links("#home-navbar-second-experience", 'Clicked on home/navbar-second-experience');
@@ -681,7 +686,8 @@ $(document).ready(function () {
         mixpanel.track_links("#apple-store", 'Clicked on apple-store');
         mixpanel.track_links("#home-social-mail", 'Clicked on home/social-mail');
         mixpanel.track_links("#home-social-mail", 'Clicked on home/social-mail');
-        mixpanel.track_links("#home-gift", 'Clicked on home/gift');
+        mixpanel.track_links("#home-gift-first", 'Clicked on home/gift/first');
+        mixpanel.track_links("#home-gift-second", 'Clicked on home/gift-second');
         mixpanel.track_links("#home-navbar-second-gift", 'Clicked on home/navbar-gift');
         mixpanel.track('page viewed', {
             'page name' : 'landing',
