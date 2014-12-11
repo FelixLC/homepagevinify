@@ -25,7 +25,7 @@
 
 
         <!-- compiled CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.49.css" />
+        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.54.css" />
         <link rel="stylesheet" type="text/css" href="assets/owl-carousel/owl.carousel.css" />
         <link rel="stylesheet" type="text/css" href="assets/owl-carousel/owl.theme.css" />
 
@@ -51,8 +51,7 @@
 
 
 <!-- GET STARTED -->
-
-      <nav class="navbar navbar-nomargin navbar-faq" role="navigation">
+      <nav class="navbar" role="navigation" id="navbar-second">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -61,42 +60,40 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-             <a id="faq-to-home" href="http://vinify.co"><img alt="" src="assets/logos/logo.png" style="height:45px" id="mf2"/></a>
+             <a href="index.html" id="home-logo-brand-second"><img alt="" src="assets/logos/logo.png" style="height:45px" id="mf2"/></a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadeau <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://start.vinify.co/#/cadeau/vinibar/formule" id="home-navbar-second-gift" class="btn-navbar-second">
+                      Offrir
+                  </a></li>
+                <li><a href="https://start.vinify.co/#/recevoir" id="home-navbar-second-gift" class="btn-navbar-second">
+                      Recevoir
+                  </a></li>
+              </ul>
+              </li>
                 <li>
-                  <a id="faq-experience" href="experience.html" class="btn-navbar-second">
-                      L'expérience Vinibar
-                  </a>
-                </li>
-
-                <li>
-<!--                   <a id="faq-experience" href="#" class="btn-navbar-second">
-                      Comment ça marche&nbsp;?
-                  </a> -->
-                </li>
-<!--                 <li class="dropdown">
-                      <a class="btn-navbar-second dropdown-toggle" data-toggle="dropdown">
-                        Cadeau
-                        <span class="caret"></span>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Offrir</a></li>
-                        <li><a href="#">Recevoir</a></li>
-                      </ul>
-                </li>
-                <li> -->
-                <li class="tooltip-enabled" data-toggle="tooltip" data-placement="bottom" title="prochainement">
-                <!-- LINK TBD -->
-                  <a id="faq-to-discover" href="https://start.vinify.co/" class="btn-navbar-second">
-                      Offre Découverte
+                  <a href="#getstarted" id="home-navbar-second-faq" class="btn-navbar-second">
+                      Comment ça marche ?
                   </a>
                 </li>
                 <li>
-                  <a id="faq-navbar-start" href="https://start.vinify.co/" class="btn-navbar-second btn-primary">
-                     Démarrer l'aventure
+                  <a href="#how-it-works" id="home-navbar-second-experience" class="btn-navbar-second">
+                      L'expérience Vinify
+                  </a>
+                </li>
+                <li>
+                  <a href="http://blog.vinify.co" id="home-navbar-second-contact" class="btn-navbar-second">
+                     Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="https://start.vinify.co/" id="home-navbar-second-start" class="btn-navbar-second btn-navbar-cta">
+                     Démarrer
                   </a>
                 </li>
             </ul>
@@ -131,7 +128,7 @@
                   <img class="img img-responsive pull-right dessins" src="assets/img/vinify-tailleur.png" id="img-contact">
               </div>
             </div>
-            <h2 class="featurette-heading">J'ai une question !</h2>
+            <h2 class="featurette-heading centered">J'ai une question !</h2>
             <div id="categories" class="clearfix">
               <div id="1" class="category">
                 <img src="assets/logos/vinify.png" alt="Livraison">
@@ -636,10 +633,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/owl-carousel/owl.carousel.min.js"></script>
   <!-- compiled JavaScript -->
-  <script type="text/javascript" src="vendor/bootstrap/js/dropdown.js"></script>
-  <script type="text/javascript" src="vendor/bootstrap/js/transition.js"></script>
-  <script type="text/javascript" src="vendor/bootstrap/js/collapse.js"></script>
-  <script type="text/javascript" src="vendor/bootstrap/js/tooltip.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="vendor/jQuery-Flex-Vertical-Center.js"></script>
   <script type="text/javascript" src="src/assets/owl-carousel/owl.carousel.js"></script>
   <script type="text/javascript" src="src/assets/owl-carousel/owl.carousel.js"></script>
@@ -693,53 +687,59 @@
 
   <!-- CAROUSEL -->
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
       $("#1").children('div.arrow').css('display', 'inherit');
 
       var owl = $("#owl-example");
 
       owl.owlCarousel({
-        singleItem:true,
+        items: 1,
         pagination: false,
-        afterMove: function(){
+        dotsClass: 'displayNone',
+        afterMove: function () {
           var currentItem = owl.data('owlCarousel').currentItem + 1;
-          $('#'+currentItem).children('div.arrow').css('display', 'inherit');
-          $('#'+currentItem).siblings('div').children('div.arrow').css('display', 'none');
+          $('#' + currentItem).children('div.arrow').css('display', 'inherit');
+          $('#' + currentItem).siblings('div').children('div.arrow').css('display', 'none');
         }
         // autoHeight : true
         // transitionStyle:"fade"
       });
 
-      $('#categories-selector').on('change', function (e) {
+      owl.on('changed.owl.carousel', function (event) {
+        var currentItem = event.item.index + 1;
+        $('#' + currentItem).children('div.arrow').css('display', 'inherit');
+        $('#' + currentItem).siblings('div').children('div.arrow').css('display', 'none');
+      });
 
-           owl.data('owlCarousel').goTo(this.value);
+      $('#categories-selector').on('change', function (e) {
+        owl.data('owlCarousel').goTo(this.value);
       });
 
       $("#categories-selector").val();
 
       // Custom Navigation Events
-      $("#1").click(function(){
-        owl.data('owlCarousel').goTo(0);
+      $("#1").click(function () {
+        owl.trigger('to.owl.carousel', [ 0 ]);
 
       });
-      $("#2").click(function(){
-        owl.data('owlCarousel').goTo(1);
+      $("#2").click(function () {
+        owl.trigger('to.owl.carousel', [ 1 ]);
       });
-      $("#3").click(function(){
-        owl.data('owlCarousel').goTo(2);
+      $("#3").click(function () {
+        owl.trigger('to.owl.carousel', [ 2 ]);
       });
-      $("#4").click(function(){
-        owl.data('owlCarousel').goTo(3);
+      $("#4").click(function () {
+        owl.trigger('to.owl.carousel', [ 3 ]);
       });
-      $("#5").click(function(){
-        owl.data('owlCarousel').goTo(4);
+      $("#5").click(function () {
+        owl.trigger('to.owl.carousel', [ 4 ]);
       });
-      $("#6").click(function(){
-        owl.data('owlCarousel').goTo(5);
+      $("#6").click(function () {
+        owl.trigger('to.owl.carousel', [ 5 ]);
       });
-      $("#7").click(function(){
-        owl.data('owlCarousel').goTo(6);
+      $("#7").click(function () {
+        owl.trigger('to.owl.carousel', [ 6 ]);
       });
 
     });

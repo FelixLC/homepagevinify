@@ -62,10 +62,7 @@ module.exports = {
    */
   vendor_files: {
     js: [
-      'vendor/bootstrap/js/dropdown.js',
-      'vendor/bootstrap/js/transition.js',
-      'vendor/bootstrap/js/collapse.js',
-      'vendor/bootstrap/js/tooltip.js',
+      'vendor/bootstrap/dist/js/bootstrap.min.js',
       'vendor/jQuery-Flex-Vertical-Center.js',
       'src/assets/owl-carousel/owl.carousel.js'
     ],

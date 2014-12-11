@@ -85,8 +85,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#social" id="home-navbar-second-contact" class="btn-navbar-second">
-                     Contact
+                  <a href="http://blog.vinify.co" id="home-navbar-second-contact" class="btn-navbar-second">
+                     Blog
                   </a>
                 </li>
                 <li>
@@ -107,7 +107,7 @@
                     <h2 id="tagline" class="centered">
                        <div class="tagline_last">Découvrez des vins adaptés à vos goûts</div>
                     </h2>
-                    <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
+                    <h3 class="centered"><span id="tagline-caption">Vinify, le caviste qui vous connaît, toujours à portée de main.</span></h3>
                 </div>
               </div>
               <div class="cta">
@@ -131,18 +131,22 @@
     </span>
   </div>
   <div class="header hidden-xs">
+    <div id="prev-slide"><i class="fa fa-chevron-left"></i></div>
+    <div id="next-slide"><i class="fa fa-chevron-right"></i></div>
     <div id="carousel"  class="owl-carousel">
       <div class="item">
         <div id="vinibar-terrasse" class="vinibar-terrasse">
           <div class="overlay"></div><!-- .overlay -->
-          <img src="assets/img/background-tonio-carafe-sized.jpg" alt="">
+          <img class="visible-sm" src="assets/img/bckg/vinibar-terrasse-768.jpg" alt="">
+          <img class="visible-md" src="assets/img/bckg/vinibar-terrasse-992.jpg" alt="">
+          <img class="visible-lg" src="assets/img/bckg/vinibar-terrasse-1200.jpg" alt="">
           <div class="container-fluid item-container">
             <div>
               <div class="headers">
                 <h2 id="tagline" class="centered">
                   <div class="tagline_last">Découvrez des vins adaptés à vos goûts</div>
                 </h2>
-                <h3 class="centered"><span id="tagline-caption">Vinify, le bar à vin sur mesure, livré chez vous</span></h3>
+                <h3 class="centered"><span id="tagline-caption">Vinify, le caviste qui vous connaît, toujours à portée de main.</span></h3>
               </div>
               <div class="cta">
                 <a id="home-start-second" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
@@ -158,14 +162,16 @@
       </div><!-- .item -->
       <div class="item">
         <div id="vinibar-exposed" class="vinibar-exposed">
-          <img src="assets/img/background-vinibar-exposed.png" alt="">
+          <img class="visible-sm" src="assets/img/bckg/alternate/vinibar-exposed-768.jpg" alt="">
+          <img class="visible-md" src="assets/img/bckg/alternate/vinibar-exposed-992.jpg" alt="">
+          <img class="visible-lg" src="assets/img/bckg/alternate/vinibar-exposed-1200.jpg" alt="">
           <div class="container-fluid item-container">
             <div>
               <div class="headers">
                 <h2 id="tagline" class="centered">
                   <div class="tagline_last">Du bon vin. Enfin.</div>
                 </h2>
-                <h3 class="centered"><span id="tagline-caption">Vinify, c'est un caviste qui vous connaît <br> et des sélections sur mesure, quand vous voulez.</span></h3>
+                <h3 class="centered"><span id="tagline-caption">Vinify, le caviste qui vous connaît <br> toujours à portée de main.</span></h3>
               </div>
               <div class="cta">
                 <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
@@ -356,60 +362,122 @@
       <div class="container-fluid">
         <div id="testimonial-title">
           <h3>Coups de coeur de nos clients</h3>
+          <p>Notre promesse est de vous proposer uniquement des vins de grande qualité</p>
+<!--           <p> Pour cela, notre oenologue part régulièrement à la rencontre de producteurs indépendants passionnés pour créer une gamme de vins unique, au plus proche de vos goûts.</p> -->
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-            <p>Notre promesse est de vous proposer uniquement des vins de grande qualité</p>
-            <p> Pour cela, notre oenologue part régulièrement à la rencontre de producteurs indépendants passionnés pour créer une gamme de vins unique, au plus proche de vos goûts.</p>
-        </div>
-        <div  class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-          <div>
-            <div class="testimonial">
+        <div class="testimonial-carousel-container">
+          <div id="prev-wines"><i class="fa fa-chevron-left"></i></div>
+          <div id="next-wines"><i class="fa fa-chevron-right"></i></div>
+          <div id="testimonial-carousel">
+            <div id="testimonial-page-1">
               <div>
-                <img src="assets/img/wines/MLJ04BRGE93.jpg" alt="bottle-heart">
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/MLJ04BRGE93.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>Château des Jacques</h3>
+                    <h4>Moulin-à-vent</h4>
+                    <p class="quote">"Vin au nez de fruits rouges, encore souple et velouté en bouche. Très agréable."</p>
+                    <p class="signature">Jérôme L.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#MLJ04BRGE93">En savoir plus</a></p>
+                  </div>
+                </div>
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/DDV06BRGE21.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>Domaine de Vénus</h3>
+                    <h4>Côtes du Roussillon</h4>
+                    <p class="quote">"Une avalanche de fruits, parfait pour un apéro. Comment ça elle est déjà vide ?"</p>
+                    <p class="signature">Aurelien C.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#DDV06BRGE21">En savoir plus</a></p>
+                  </div>
+                </div>
               </div>
               <div>
-                <h3>Château des Jacques</h3>
-                <h4>Moulin-à-vent</h4>
-                <p class="quote">"Vin au nez de fruits rouges, encore souple et velouté en bouche. Très agréable."</p>
-                <p class="signature">Jérôme L.</p>
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/KOE11BBLC58.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>Gewurztraminer Gloeckelberg</h3>
+                    <h4>Alsace Grand Cru</h4>
+                    <p class="quote">"Un gewurztraminer comme ils devraient tous l'être. Sans trop de sucre, super acidité. Dégusté avec un curry rouge de poisson... au top !"</p>
+                    <p class="signature">Quentin L.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#KOE11BBLC58">En savoir plus</a></p>
+                  </div>
+                </div>
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/LOR11BRGE67.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>Château de Ciffre</h3>
+                    <h4>Faugères</h4>
+                    <p class="quote">"Belle attaque en bouche, du caractère mais également beaucoup de finesse, une grande puissance alliée à un bouquet agréable."</p>
+                    <p class="signature">Dominique L.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#LOR11BRGE67">En savoir plus</a></p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="testimonial">
+            <div id="testimonial-page-2">
               <div>
-                <img src="assets/img/wines/DDV06BRGE21.jpg" alt="bottle-heart">
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/THE11BRGE122.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>Les Renardes Domaine Thevenot & Fils</h3>
+                    <h4>Hautes Côtes de Nuits</h4>
+                    <p class="quote">Tout divenement exquis. Robe claire et fluide, la touche d'acidité qui va. Un fruit savoureux, printanier, léger mais qui réchauffe. Un régal.  </p>
+                    <p class="signature">Maxime H.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#THE11BRGE122">En savoir plus</a></p>
+                  </div>
+                </div>
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/FEV12BBLC45.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>L'Excellence Vieilles Vignes</h3>
+                    <h4>Muscadet-Sèvre-Et-Maine</h4>
+                    <p class="quote">Intense et frais. Parfait pour entamer un repas entre amis !</p>
+                    <p class="signature">Mathilde M.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#FEV12BBLC45">En savoir plus</a></p>
+                  </div>
+                </div>
               </div>
               <div>
-                <h3>Domaine de Vénus</h3>
-                <h4>Côtes du Roussillon</h4>
-                <p class="quote">"Une avalanche de fruits, parfait pour un apéro. Comment ça elle est déjà vide ?"</p>
-                <p class="signature">Aurelien C.</p>
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/DSA12BRGE39.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>Paul Domaine Saladin</h3>
+                    <h4>Côtes-Du-Rhône</h4>
+                    <p class="quote">"Superbe, sombre, et surprenant! Épicé, poivré, mais fin malgré tout : comme j'aime. Vous avez visé très-très juste!"</p>
+                    <p class="signature">Pierre-Emmanuel B.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#DSA12BRGE39">En savoir plus</a></p>
+                  </div>
+                </div>
+                <div class="testimonial">
+                  <div>
+                    <img class="img-testimonial" src="assets/img/wines/RCA10BRGE115.jpg" alt="bottle-heart">
+                  </div>
+                  <div>
+                    <h3>Clos Castelot</h3>
+                    <h4>Saint-Émilion</h4>
+                    <p class="quote">"Belle attaque en bouche, du caractère mais également beaucoup de finesse, une grande puissance alliée à un bouquet agréable."</p>
+                    <p class="signature">Aurélien C.</p>
+                    <p class="signature"><a href="" data-toggle="modal" data-target="#RCA10BRGE115">En savoir plus</a></p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <div class="testimonial">
-              <div>
-                <img src="assets/img/wines/KOE11BBLC58.jpg" alt="bottle-heart">
-              </div>
-              <div>
-                <h3>Gewurztraminer Gloeckelberg</h3>
-                <h4>Alsace Grand Cru</h4>
-                <p class="quote">"Un gewurztraminer comme ils devraient tous l'être. Sans trop de sucre, super acidité. Dégusté avec un curry rouge de poisson... au top !"</p>
-                <p class="signature">Quentin L.</p>
-              </div>
-            </div>
-            <div class="testimonial">
-              <div>
-                <img src="assets/img/wines/LOR11BRGE67.jpg" alt="bottle-heart">
-              </div>
-              <div>
-                <h3>Château de Ciffre</h3>
-                <h4>Faugères</h4>
-                <p class="quote">"Belle attaque en bouche, du caractère mais également beaucoup de finesse, une grande puissance alliée à un bouquet agréable."</p>
-                <p class="signature">Dominique L.</p>
-              </div>
-            </div>
-          </div>
+          </div><!-- testimonial carousel -->
         </div>
       </div>
     </div>
@@ -533,9 +601,9 @@
       <!-- </div> --><!-- /.section -->
       <!-- /badges -->
 
-          <div id="footer-cta" class="visible-xs centered">
-            <a id="home-end-start-mobile" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">Démarrer l'aventure</a>
-          </div>
+      <div id="footer-cta" class="visible-xs centered">
+        <a id="home-end-start-mobile" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">Démarrer l'aventure</a>
+      </div>
 
 
       <div class="section" id="social">
@@ -582,7 +650,10 @@
         <!-- FOOTER -->
         <footer>
           <p>Vinify, c'est un bar à vin sur mesure. Livré chez vous, selon vos goûts.</p>
-          <p><a href="commentcamarche.html">FAQ</a> &middot; <a href="http://vinify.co/docs/cgv.pdf">CGV</a></p>
+          <p>
+            <a href="commentcamarche.html">FAQ</a> &middot;
+            <a href="http://vinify.co/docs/cgv.pdf">CGV</a>
+          </p>
           <p>
             Copyright &copy; Vinify 2014 &middot; L'abus d'alcool est dangereux pour la santé, à consommer avec modération.
           </p>
@@ -591,6 +662,411 @@
   </div>
 </div><!-- /CONTENT -->
 
+  <!-- Modal Jacques-->
+  <div class="modal fade" id="MLJ04BRGE93" tabindex="-1" role="dialog" aria-labelledby="MLJ04BRGE93Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="MLJ04BRGE93Label">Château des Jacques Louis Jadot</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Moulin-à-vent, Beaujolais</h4>
+              <p>Rouge - 2004 - Gamay</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>La Maison Louis Jadot est installée dans le Beaujolais depuis 1996. Le Château des Jacques est situé à Romanèche Thorins, au Sud de la Bourgogne. Ce nom provient d'un antique moulin planté sur la colline de Romanèche. Ce vin est sans doute le plus bourguignon des crus du Beaujolais.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>Ce millésime fait ressortir le fruité du Gamay et dégage des arômes d'iris, de roses fanées, et d'épices qui arrivent aujourd'hui à parfaite maturité. Sa palette d'accords avec la gastronomie est particulièrement large, la douceur des tanins accompagnera idéalement les viandes blanches comme les fromages de la région.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Cuisine française et italienne</p>
+              <p>Tapas, Charcuteries, Gibier à plumes mijoté, Viande blanche en sauce, Fromages frais ou à pâte molle et croûte fleurie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Jacques-->
+
+  <!-- Modal Venus-->
+  <div class="modal fade" id="DDV06BRGE21" tabindex="-1" role="dialog" aria-labelledby="DDV06BRGE21Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="DDV06BRGE21Label">Domaine de Venus Rouge</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Côtes-Du-Roussillon - Languedoc-Roussillon</h4>
+              <p>Rouge - 2006 - Grenache noir, Syrah, Carignan</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>Une bande d’amis passionnés de vins se sont regroupés il y a quelques années pour donner vie à ce beau terroir perdu sur les hauteurs de la vallée de l’Agly. L’altitude des côteaux les plus élevés des Côtes du Rousillon, sur les contreforts du massif des corbières, voit les vents marins tempérer la chaleur de l’été et donner au vin une fraîcheur équilibrant sa puissance.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>Grenache noir, Syrah et Carignan s’assemblent pour produire des arômes intenses de fruits frais rouges et noirs, comme la mûre et la cerise. La robe est d’un rouge intense, et la bouche présente un bel équilibre entre douceur et tanins délicats.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Cuisine méditerranéenne (produits de Méditerranée, huile d'olive, tomate, poivron, condiments, herbes de Provence).</p>
+              <p>Un poisson noble, à chair ferme, de mer ou d'eau douce (sole, bar, saint-pierre, cabillaud, saumon, omble chevalier, truite), Une viande blanche (volaille, veau, ris de veau), Une viande rouge de goût, aux saveurs puissantes (agneau, pigeon, autruche, mouton) , Un gibier à plumes ou à poils, Des fromages de caractère, affinés et aux arômes puissants.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Venus-->
+
+  <!-- Modal Gewurtz-->
+  <div class="modal fade" id="KOE11BBLC58" tabindex="-1" role="dialog" aria-labelledby="KOE11BBLC58Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="KOE11BBLC58Label">Gewurztraminer Gloeckelberg Koehly</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Alsace Grand Cru - Alsace</h4>
+              <p>Blanc - 2011 - Gewurztraminer</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>Familiale, voici le maître mot de l'exploitation, nichée au cœur de Kintzheim, dans le Bas-Rhin alsacien, et au pied du Château du Haut-Koenigsbourg. Le Gewurztraminer , littéralement "Traminer épicé", constitue une sélection particulièrement aromatique d'un vieux cépage connu de tout temps en Alsace, le Traminer rose qui a trouvé ici son terroir de prédilection. Ses grains sont assez petits, de couleur rose brun, et la pellicule renferme des constituants aux saveurs très corsées.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>Paré d'une robe jaune or soutenue, ce Gewurztraminer présente au nez des arômes intenses de fruits exotiques tel que l'ananas ou la mangue. Légèrement poivrées, ses saveurs de pétale de rose laissent entrevoir une matière riche en bouche, d'autant plus onctueuse que sa longueur amplit votre palais d'une douceur et d'une légèreté de miel et de fruit sec.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Ce vin accompagnera à souhait vos apéritifs et desserts, un foie gras, ou même un fromage à pâte molle et à croûte lavée comme le Munster, le Pont-l'évêque ou l'Epoisses. Il saura également agrémenter à ravir des plats exotiques, sucrés-salés ou encore finement épicés.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Gewurtz-->
+
+  <!-- Modal Ciffre-->
+  <div class="modal fade" id="LOR11BRGE67" tabindex="-1" role="dialog" aria-labelledby="LOR11BRGE67Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="LOR11BRGE67Label">Château de Ciffre</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Faugères - Languedoc-Roussillon</h4>
+              <p>Rouge - 2011 - Syrah, Grenache noir, Mourvèdre</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>Ce site pittoresque à 25 km au Nord Ouest de Béziers, totalement vierge et isolé, entre garrigues, oliviers, vignes et montagnes est une ancienne dépendance de la Villa Romaine de Coujan. Les terroirs de schistes s’accrochent au Piémont du Pic de la Coquillade qui culmine à 650m, l’altitude apporte la fraicheur nocturne et permet une maturation tout en douceur et l’expression la plus élégante des arômes.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>Un vin dense au nez puissant et intense, dominé par la cerise noire compotée, avec des notes de torréfaction, havane et cacao, soutenues par un trait de poivre blanc. En bouche le vin se révèle charnu, aux tanins veloutés, et dévoile une très longue finale.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Cuisine méditérranéenne.</p>
+              <p>Charcuteries, Magrets de canard, Grillades de volailles et de boeuf, Gibiers et Viandes rouges rôties, Fromages de caractère.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Ciffre-->
+
+  <!-- Modal Renardes-->
+  <div class="modal fade" id="THE11BRGE122" tabindex="-1" role="dialog" aria-labelledby="THE11BRGE122Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="THE11BRGE122Label">Les Renardes Domaine Thevenot & Fils</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Hautes Côtes de Nuits - Bourgogne</h4>
+              <p>Rouge - 2011 - Pinot noir</p>
+              <p></p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>Le lieu dit des Renardes se trouve au coeur des Hautes Côtes de Nuits, sur les hauteurs de Nuits Saint Georges, dans la partie la plus pentue du coteau orienté plein sud face à la commune de Marey les Fussey. Ce terroir bien ensoleillé permet à la vigne de s'épanouir et de donner des raisins de grande qualité. Cette parcelle de 25 ans est actuellement au meilleur de sa production. La bonne connaissance des terroirs permet au vigneron de pratiquer un agriculture raisonnée au plus juste.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>La dégustation révèle des notes de fruits noirs, cassis et mûre, alliées à un côté épicé. Déjà bien ouvert au nez, avec des tanins fondus en bouche, ce pinot noir exprime une belle finesse et offre une longue finale.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Ce vin sera l’allié de nombreux plats cuisinés, il est idéal sur des viandes rouges comme sur du gibier de volailles en cuisson rôtie ou braisée. Il accompagnera aussi délicieusement un buffet de charcuteries ou une cuisine authentique tel un filet de canard au cassis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Renardes-->
+
+  <!-- Modal Excellence-->
+  <div class="modal fade" id="FEV12BBLC45" tabindex="-1" role="dialog" aria-labelledby="FEV12BBLC45Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="FEV12BBLC45Label">L'Excellence Vieilles Vignes</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Muscadet-Sèvre-Et-Maine - Vallée de La Loire</h4>
+              <p>Blanc - 2012 - Muscadet</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>"L’Excellence" est une cuvée issue de très vieilles vignes agées de 50 à 90 ans et plantées sur les meilleurs terroirs du domaine. Les sols peu profonds forcent la vigne à puiser ses ressources plus en profondeur, près de la roche mère, riche en minéraux.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>Son nez floral et musqué, distille des arômes de citron et de pamplemousse. Sec et légèrement perlant, il développe des arômes minéraux et de pêche blanche avec une attaque tendue d'une grande intensité aromatique.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Cuisine marine et végétarienne.</p>
+              <p>Apéritifs, Coquillages & fruits de mers, Terrines de poissons ou Fromage de chèvre.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Excellence-->
+
+  <!-- Modal Paul-->
+  <div class="modal fade" id="DSA12BRGE39" tabindex="-1" role="dialog" aria-labelledby="DSA12BRGE39Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="DSA12BRGE39Label">Paul Domaine Saladin</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Côtes-Du-Rhône - Vallée du Rhône</h4>
+              <p>Rouge - 2012 - Grenache noir, Clairette rosé</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>Le Domaine Saladin, c’est avant tout une histoire de famille, où plus de 21 générations de sont succédées. Actuellement tenu par deux sœurs Marie-Laurence et Elisabeth, elles nous font voyager dans le temps ; les vendanges sont manuelles, et les pesticides proscrits.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>Avec cette cuvée Paul, vous retrouverez un vin naturel et bio, et élevé 9 mois en cuve. A dominante Grenache, on rélèvera en bouche une première attaque très souple sur les petits fruits.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Ce vin sera l’allié convivial et spontané de nombreux plats cuisinés, il accompagnera à merveille vos volailles rôties, ou viandes blanches braisées, une sauce moutarde et des fromages de caractère, voire même un dessert de fruits au vin rouge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Paul-->
+
+  <!-- Modal Castelot-->
+  <div class="modal fade" id="RCA10BRGE115" tabindex="-1" role="dialog" aria-labelledby="RCA10BRGE115Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title centered" id="RCA10BRGE115Label">Château des Castelot Louis Jadot</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_france.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Saint-Émilion - Bordeaux</h4>
+              <p>Rouge - 2010 - Merlot, Cabernet Franc, Cabernet Sauvignon, Malbec</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_grapes.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Producteur</h4>
+              <p>Clos Castelot est le second vin du Grand cru Château Guillemin La Gaffelière. Le travail du vigneron s'effectue selon la méthode traditionnelle, avec une culture sans désherbage chimique (labour), un effeuillage manuel et une vendange verte.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_glass.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Description</h4>
+              <p>Ce vin au nez fin et complexe présente des notes de fruits mûrs, d'épices et de noisette. On découvre en bouche les saveurs boisées d'un vin généreux, charnu, et persistant avec une finale fraiche et de caractère. Un vin de plaisir, charmeur en toutes occasions.</p>
+            </div>
+          </div>
+          <div class="modal-table-container">
+            <div class="logo">
+              <img src="assets/img/logo_forks.png" alt="">
+            </div>
+            <div class="info">
+              <h4>Accords Mets-Vins</h4>
+              <p>Cuisine française et italienne</p>
+              <p>Tapas, Charcuteries, Gibier à plumes mijoté, Viande blanche en sauce, Fromages frais ou à pâte molle et croûte fleurie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- Modal Castelot-->
 
   <!-- javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -632,10 +1108,10 @@
 <script type="text/javascript">
 $(document).ready(function () {
   $("#carousel").owlCarousel({
-      // navSpeed: 300,
       // dotsSpeed: 400,
       autoplay: true,
-      // autoplayTimeout: 6000,
+      autoplayTimeout: 6000,
+      autoplaySpeed: 2300,
       loop: true,
       items: 1
 
@@ -648,6 +1124,34 @@ $(document).ready(function () {
 
   });
 
+  $("#next-slide").click(function () {
+    $("#carousel").trigger('next.owl.carousel');
+  });
+  $("#prev-slide").click(function () {
+    $("#carousel").trigger('prev.owl.carousel');
+  });
+
+  $("#testimonial-carousel").owlCarousel({
+      // dotsSpeed: 400,
+      items: 1,
+      loop: true,
+      itemClass: 'testimonial-item'
+
+      // // "singleItem:true" is a shortcut for:
+      // // items: 1,
+      // // itemsDesktop : false,
+      // // itemsDesktopSmall : false,
+      // // itemsTablet: false,
+      // // itemsMobile : false
+
+  });
+
+  $("#next-wines").click(function () {
+    $("#testimonial-carousel").trigger('next.owl.carousel');
+  });
+  $("#prev-wines").click(function () {
+    $("#testimonial-carousel").trigger('prev.owl.carousel');
+  });
 });
 </script>
 <!-- slider -->
