@@ -24,7 +24,7 @@
         <link rel="icon" type="image/png" href="assets/img/favicon.png" />
         <link rel="stylesheet" type="text/css" href="assets/sliders/css/styles.css" />
         <!-- compiled CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.54.css" />
+        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.60.css" />
 
              <!-- start Mixpanel -->
             <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
@@ -49,7 +49,7 @@
 </head>
 
 <body>
-      <nav class="navbar" role="navigation" id="navbar-second">
+      <nav class="navbar navbar-fixed-top" role="navigation" id="navbar-second">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -133,6 +133,14 @@
   <div class="header hidden-xs">
     <div id="prev-slide"><i class="fa fa-chevron-left"></i></div>
     <div id="next-slide"><i class="fa fa-chevron-right"></i></div>
+    <div class="splash-cta">
+      <a id="home-start" href="https://start.vinify.co/" class="btn btn-block-primary landing-btn-strong">
+        Démarrer l'aventure
+      </a>
+      <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="btn btn-block-primary landing-btn-strong landing-btn-strong-red">
+        Offrir un cadeau
+      </a>
+    </div><!-- splash-cta -->
     <div id="carousel"  class="owl-carousel">
       <div class="item">
         <div id="vinibar-terrasse" class="vinibar-terrasse">
@@ -148,14 +156,6 @@
                 </h2>
                 <h3 class="centered"><span id="tagline-caption">Vinify, le caviste qui vous connaît, toujours à portée de main.</span></h3>
               </div>
-              <div class="cta">
-                <a id="home-start-second" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
-                  Démarrer l'aventure
-                </a>
-                <a id="home-gift-second" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
-                  Offrir un cadeau
-                </a>
-              </div><!-- cta -->
             </div>
           </div><!-- .item-container -->
         </div><!-- .vinibar-terrasse -->
@@ -171,16 +171,8 @@
                 <h2 id="tagline" class="centered">
                   <div class="tagline_last">Du bon vin. Enfin.</div>
                 </h2>
-                <h3 class="centered"><span id="tagline-caption">Vinify, le caviste qui vous connaît <br> toujours à portée de main.</span></h3>
+                <h3 class="centered"><span id="tagline-caption">Vinify, le caviste qui vous connaît toujours à portée de main.</span></h3>
               </div>
-              <div class="cta">
-                <a id="home-start" href="https://start.vinify.co/" class="grow btn btn-primary landing-btn-strong">
-                  Démarrer l'aventure
-                </a>
-                <a id="home-gift" href="https://start.vinify.co/#/cadeau/vinibar/formule" class="grow btn btn-primary landing-btn-strong landing-btn-strong-red">
-                  Offrir un cadeau
-                </a>
-              </div><!-- cta -->
             </div>
           </div><!-- .item-container -->
         </div><!-- .vinibar-exposed -->
@@ -370,7 +362,7 @@
           <div id="next-wines"><i class="fa fa-chevron-right"></i></div>
           <div id="testimonial-carousel">
             <div id="testimonial-page-1">
-              <div>
+              <div>.
                 <div class="testimonial">
                   <div>
                     <img class="img-testimonial" src="assets/img/wines/MLJ04BRGE93.jpg" alt="bottle-heart">
@@ -1112,7 +1104,7 @@
 $(document).ready(function () {
   $("#carousel").owlCarousel({
       // dotsSpeed: 400,
-      autoplay: true,
+      autoplay: false,
       autoplayTimeout: 6000,
       autoplaySpeed: 2300,
       loop: true,
@@ -1138,6 +1130,7 @@ $(document).ready(function () {
       // dotsSpeed: 400,
       items: 1,
       loop: true,
+      dots: false,
       itemClass: 'testimonial-item'
 
       // // "singleItem:true" is a shortcut for:
