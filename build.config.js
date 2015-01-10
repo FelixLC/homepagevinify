@@ -23,13 +23,10 @@ module.exports = {
     js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
     jsunit: [ 'src/**/*.spec.js' ],
 
-    coffee: [ 'src/**/*.coffee', '!src/**/*.spec.coffee' ],
-    coffeeunit: [ 'src/**/*.spec.coffee' ],
-
     atpl: [ 'src/app/**/*.tpl.html' ],
     ctpl: [ 'src/common/**/*.tpl.html' ],
 
-    html: [ 'src/commentcamarche.html', 'src/index.html', 'src/experience.html' ],
+    html: [ 'src/commentcamarche.html', 'src/index.html', 'src/experience.html', 'src/press.html', 'src/about.html'  ],
     less: 'src/less/main.less'
   },
 

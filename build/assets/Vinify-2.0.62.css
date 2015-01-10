@@ -1176,3 +1176,326 @@ footer {
 .selected {
   color: #0367a3;
 }
+#press #how-it-works > div {
+  display: block;
+}
+#press #how-it-works div.description-right {
+  text-align: right;
+  border-right: none;
+  border-left: 0;
+}
+#press .getstarted {
+  padding-top: 150px;
+}
+#press #getstarted #how-it-works > div > div {
+  display: table-cell;
+  vertical-align: top;
+  width: 75%;
+}
+#press #getstarted #how-it-works > div > div.hidden-xs {
+  display: inline-block;
+  vertical-align: top;
+  width: 10%;
+}
+#press #getstarted #how-it-works h3 {
+  margin-top: 0px;
+  margin-bottom: 0;
+  color: #cb0001;
+  font-size: 24px;
+}
+#press #getstarted #how-it-works p {
+  margin: 30px 0 0px;
+}
+#press #who-we-are,
+#press #who-we-are > div {
+  padding: 0;
+}
+#press .brand-image .img-responsive {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+#press h1.centered {
+  font-size: 2em;
+  color: #0073A5;
+}
+#press .description h1.centered {
+  text-align: left;
+}
+#press #testimonials div.testimonial,
+#press .testimonial {
+  width: 30%;
+  display: table-cell;
+  padding: 10px;
+}
+#press .testimonial .img {
+  width: 35%;
+  display: inline-block;
+}
+#press .testimonial img {
+  width: 100%;
+}
+#press #how-it-works img {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+#press .testimonial .info {
+  display: inline-block;
+  padding: 0 0 0 15px;
+  width: 63%;
+}
+.numb {
+  color: #FF0000;
+}
+#press #how-it-works.to {
+  margin-top: 100px;
+}
+#press #carousel h2 {
+  font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
+  color: #D00000;
+  font-size: 18px;
+  font-weight: 800;
+  /* margin-top: -10px; */
+  margin-bottom: 10px;
+  /* padding: 84px; */
+  text-transform: uppercase;
+  width: 38%;
+  text-align: left;
+  float: right;
+}
+#press .header {
+  background: #F5F5F5;
+}
+#press img.img.img-responsive:hover {
+  opacity: 0.8;
+}
+#press .owl-carousel .owl-item img {
+  display: block;
+  margin: 63px 0 0 0;
+  width: 60%;
+  height: 86%;
+  /* max-width: 100%; */
+  -webkit-transform-style: preserve-3d;
+}
+#press #carousel .item-container {
+  color: #FFF;
+  display: table;
+  width: 100%;
+  height: 425px;
+  position: absolute;
+  z-index: 3;
+}
+#press .vinibar-exposed,
+#press .vinibar-terrasse {
+  position: absolute;
+  width: 100%;
+  height: 425px;
+}
+#press #carousel .item {
+  height: 425px;
+}
+#press #prev-slide,
+#press #next-slide,
+#press #prev-wines,
+#press #next-wines {
+  font-size: 24px;
+  position: absolute;
+  top: 223px;
+  z-index: 9999;
+}
+#press .pdf a,
+#press .pdf img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+#press .horiz-ruler-last {
+  margin-top: 65px;
+  margin-bottom: 20px;
+  border-top: 0;
+  border-bottom: 1px solid #EEE;
+}
+#press #social {
+  background-color: #FFF;
+  padding: 49px 0 0 0;
+  margin: 0;
+}
+#press footer {
+  margin: 50px 0;
+  text-align: center;
+  padding: 10px 0 5px;
+}
+#press #testimonials div.testimonial > div {
+  padding-right: 12px;
+  display: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+#press #getstarted .step {
+  background-color: inherit;
+  height: auto;
+  width: auto;
+  font-size: 25px;
+  line-height: 50px;
+  margin: 0 auto;
+  color: #FFF;
+  border-radius: 0;
+}
+#press #getstarted.colw {
+  padding-top: 50px;
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+#press .img-stats-goodies {
+  max-height: 100px;
+  max-width: 100px;
+}
+#press .quote {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+@media (min-width: 768px) {
+  #press .header {
+    height: 425px;
+    width: 100%;
+  }
+}
+/* about page */
+#about .header {
+  background: #fff;
+}
+#about .wrap-img {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto 0 auto;
+}
+#about img.img-team {
+  width: 100%;
+  margin: 65px auto 0 auto;
+  display: block;
+}
+#about #price-desc {
+  margin-top: 80px;
+}
+#about h2 {
+  float: left;
+  width: 170px;
+}
+#about .popup {
+  display: none;
+  position: absolute;
+  /* top: 0; */
+  /* float: left; */
+  width: 400px;
+  background: rgba(203, 0, 1, 0.5);
+  padding: 10px;
+  border-radius: 6px;
+  color: #FFF;
+  /* position: relative; */
+  /* font-size: 12px; */
+  /* line-height: 20px; */
+}
+#about .popup:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid rgba(203, 0, 1, 0.7);
+  position: absolute;
+  top: 16px;
+  left: -12px;
+}
+#about .popup.dialog3:before,
+#about .popup.dialog4:before {
+  left: initial;
+  border-right: none;
+  right: -12px;
+  border-left: 12px solid rgba(203, 0, 1, 0.7);
+}
+#about .popup.dialog1 {
+  top: 43%;
+  left: 19%;
+}
+#about .popup.dialog2 {
+  top: 49%;
+  left: 48%;
+}
+#about .popup.dialog3 {
+  top: 25%;
+  left: 9%;
+}
+#about .popup.dialog4 {
+  top: 23%;
+  left: 42%;
+}
+#about .hover {
+  z-index: 10;
+  height: 100%;
+  top: 0;
+  width: 150px;
+  position: absolute;
+}
+#about .hover.persone1 {
+  left: 32px;
+}
+#about .hover.persone2 {
+  left: 265px;
+}
+#about .hover.persone3 {
+  left: 430px;
+}
+#about .hover.persone4 {
+  right: 20px;
+}
+#about .hover.persone1:hover + div + div + div + img + .popup.dialog1 {
+  display: block;
+}
+#about .hover.persone2:hover + div + div + img + div + .popup.dialog2 {
+  display: block;
+}
+#about .hover.persone3:hover + div + img + div + div + .popup.dialog3 {
+  display: block;
+}
+#about .hover.persone4:hover + img + div + div + div + .popup.dialog4 {
+  display: block;
+}
+/*
+.hover.persone1:hover + div + div + div + img.img-team {opacity: .4;}
+.hover.persone2:hover + div + div +   img.img-team {opacity: .4;}
+.hover.persone3:hover+ div +  img.img-team {opacity: .4;}}
+.hover.persone4:hover  + img.img-team {opacity: .4;}
+*/
+#about #how-it-works > div > div {
+  padding: 3%;
+  display: table-cell;
+  vertical-align: top;
+  width: 80%;
+}
+#about .horiz-ruler div:first-child {
+  display: table-cell;
+  width: 50%;
+  height: 80px;
+  border-right: none;
+}
+#about #how-it-works div.description-right {
+  padding: 3%;
+  text-align: right;
+  border-right: none;
+  border-left: 0;
+}
+#about #getstarted #how-it-works > div > div {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+#about #getstarted #how-it-works > div > div.hidden-xs {
+  display: table-cell;
+  vertical-align: top;
+  width: 20%;
+}
+#about img.imgteam {
+  width: 100%;
+}

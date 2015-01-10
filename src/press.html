@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vinify | des vins de qualité, adaptés à vos goûts, toujours à portée de main</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- social media tags -->
+
+    <meta name="description" content="Ayez toujours à portée de main du vin sélectionné pour vous, selon vos goûts et votre budget">
+    <link rel="publisher" href="https://plus.google.com/100061614021617374779">
+    <meta property="og:title" content="Vinify, le bar à vin sur mesure. Livré chez vous, selon vos goûts.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.vinify.co/assets/img/background-tonio-carafe2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="og:description" content="1/ Je commande mon vinibar. 2/ Je déguste et je note ma sélection. 3/ Je recharge avec des vins plus proches de mes goûts. Avec Vinify, je ne suis plus jamais déçu par une bouteille de vin ! Sans abonnement et entièrement sur mesure, Vinify s'adapte totalement à mes goûts et à mon budget.">
+    <meta name="twitter:title" content="Vinify, le bar à vin sur mesure. Livré chez vous, selon vos goûts.">
+    <meta name="twitter:description" content="1/ Je commande mon vinibar. 2/ Je déguste et je note ma sélection. 3/ Je recharge avec des vins plus proches de mes goûts. Avec Vinify, je ne suis plus jamais déçu par une bouteille de vin ! Sans abonnement et entièrement sur mesure, Vinify s'adapte totalement à mes goûts et à mon budget.">
+    <meta name="twitter:image" content="http://vinify.co/img/logo_white.png">
+    <meta name="keywords" content="vin, goût, goûts, petit ballon, box, abonnement, cadeau">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="assets/sliders/css/styles.css">
+
+        <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+        <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min31.css">
+    <!-- start Mixpanel -->
+    <script type="text/javascript" async="" src="//static.affilae.com/ae-v3.2.js"></script>
+    <script async="" charset="utf-8" src="//v2.zopim.com/?2cMZv3tttiNZ7nrmNbi9MyUsJlltchf8" type="text/javascript"></script>
+    <script async="" src="http://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="http://cdn.mxpnl.com/libs/mixpanel-2.2.min.js"></script>
+    <script type="text/javascript" async="" src="//static.affilae.com/ae-v3.2.js"></script>
+    <script async="" charset="utf-8" src="//v2.zopim.com/?2cMZv3tttiNZ7nrmNbi9MyUsJlltchf8" type="text/javascript"></script>
+    <script async="" src="http://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="http://cdn.mxpnl.com/libs/mixpanel-2.2.min.js"></script>
+    <script type="text/javascript">(function (f, b) {
+        if (!b.__SV) {
+            var a, e, i, g;
+            window.mixpanel = b;
+            b._i = [];
+            b.init = function (a, e, d) {
+                function f(b, h) {
+                    var a = h.split(".");
+                    2 == a.length && (b = b[a[0]], h = a[1]);
+                    b[h] = function () {
+                        b.push([h].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }
+
+                var c = b;
+                "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel";
+                c.people = c.people || [];
+                c.toString = function (b) {
+                    var a = "mixpanel";
+                    "mixpanel" !== d && (a += "." + d);
+                    b || (a += " (stub)");
+                    return a
+                };
+                c.people.toString = function () {
+                    return c.toString(1) + ".people (stub)"
+                };
+                i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+                for (g = 0; g < i.length; g++)f(c, i[g]);
+                b._i.push([a, e, d])
+            };
+            b.__SV = 1.2;
+            a = f.createElement("script");
+            a.type = "text/javascript";
+            a.async = !0;
+            a.src = "http://cdn.mxpnl.com/libs/mixpanel-2.2.min.js";
+            e = f.getElementsByTagName("script")[0];
+            e.parentNode.insertBefore(a, e)
+        }
+    })(document, window.mixpanel || []);
+    mixpanel.init("f6bd53dd567cdbc693bebdc18e1a4995");</script>
+    <!-- end Mixpanel -->
+
+    <!-- Optimizely -->
+    <script src="http://cdn.optimizely.com/js/1675500718.js"></script>
+    <!--/ Optimizely -->
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'http://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-53542916-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <style type="text/css"></style>
+</head>
+
+<body id="press">
+<nav class="navbar navbar-fixed-top" role="navigation" id="navbar-second">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#splashscreen" id="home-logo-brand-second"><img alt="" src="assets/logos/logo.png" style="height:45px" id="mf2" /></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadeau
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="https://start.vinify.co/#/cadeau/vinibar/formule" id="home-navbar-second-gift" class="btn-navbar-second">
+                                Offrir
+                            </a></li>
+                        <li>
+                            <a href="https://start.vinify.co/#/recevoir" id="home-navbar-second-gift" class="btn-navbar-second">
+                                Recevoir
+                            </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#getstarted" id="home-navbar-second-faq" class="btn-navbar-second">
+                        Comment ça marche ?
+                    </a>
+                </li>
+                <li>
+                    <a href="#how-it-works" id="home-navbar-second-experience" class="btn-navbar-second">
+                        L'expérience Vinify
+                    </a>
+                </li>
+                <li>
+                    <a href="http://blog.vinify.co" id="home-navbar-second-contact" class="btn-navbar-second">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="https://start.vinify.co/" id="home-navbar-second-start" class="btn-navbar-second btn-navbar-cta">
+                        Démarrer
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- <div class="header hidden-xs">
+    <div id="prev-slide"><i class="fa fa-chevron-left"></i></div>
+    <div id="next-slide"><i class="fa fa-chevron-right"></i></div>
+
+    <div id="carousel" class="owl-carousel">
+        <div class="item">
+            <div id="vinibar-terrasse" class="vinibar-terrasse">
+                <img class="visible-sm" src="assets/img/101-768.jpg" alt="">
+                <img class="visible-md" src="assets/img/101-992.jpg" alt="">
+                <img class="visible-lg" src="assets/img/101-1200.jpg" alt="">
+
+                <div class="container-fluid item-container">
+                    <div>
+                        <div class="headers">
+                            <h2 id="tagline" class="centered">
+                                <div class="tagline_last">« Slide 1 Vinify c’est l’innovation,
+                                    c’est top, c’est mieux que le
+                                    premier homme qui a marché sur la
+                                    lune. »
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div id="vinibar-exposed" class="vinibar-exposed">
+                <img class="visible-sm" src="assets/img/101-768.jpg" alt="">
+                <img class="visible-md" src="assets/img/101-992.jpg" alt="">
+                <img class="visible-lg" src="assets/img/101-1200.jpg" alt="">
+
+                <div class="container-fluid item-container">
+                    <div>
+                        <div class="headers">
+                            <h2 id="tagline" class="centered">
+                                <div class="tagline_last">« Slide 2 Vinify c’est l’innovation,
+                                    c’est top, c’est mieux que le
+                                    premier homme qui a marché sur la
+                                    lune. »
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+
+<div class="content">
+<div class="section getstarted" id="getstarted">
+    <div class="container-fluid">
+        <div class="section" id="how-it-works">
+            <div class="container-fluid">
+                <div class="description">
+                    <h1 class="centered">Aux dernières nouvelles </h1>
+
+                    <p>Communiqué de presse | 15.11.2014 </p>
+
+                    <h3>Lancement public de Vinify</h3>
+
+                    <div class="btn-link">
+                        <a href="##">PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+<!-- /GET STARTED -->
+
+
+<div class="section getstarted colw" id="getstarted">
+    <div class="container-fluid">
+        <div id="who-we-are">
+            <div>
+                <h3 class="centered">Ils parlent de nous</h3>
+            </div>
+        </div>
+        <div class="propval">
+            <div class="col-lg-3 col-md-3 propcontent">
+                <div class="tnp">
+                    <a class="step" target="_blank" href="http://www.rudebaguette.com/2014/11/13/vinify-seeks-take-hassle-complexity-wine-experience/"><img class="img-testimonial" src="assets/logos/brand/rude_baguette.jpg" alt="bottle-heart"></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 propcontent">
+                <div class="tnp">
+                    <a class="step" href="###"><img class="img-testimonial" src="assets/logos/brand/merci_alfred.jpg" alt="bottle-heart"></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 propcontent">
+                <div class="tnp">
+                    <a class="step" target="_blank" href="http://www.paulette-magazine.com/fr/delices/article/gagnez-un-repas-d-exception-dans-votre-salon/5047"><img class="img-testimonial" src="assets/logos/brand/paulette.jpg" alt="bottle-heart"></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 propcontent">
+                <div class="tnp">
+                    <a class="step" href="###"><img class="img-testimonial" src="assets/logos/brand/french_tech.jpg" alt="bottle-heart"></a>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+
+
+<div class="section getstarted" id="getstarted">
+    <div class="container-fluid">
+        <div id="who-we-are">
+            <div>
+                <h3 class="centered">Stats et goodies</h3>
+            </div>
+        </div>
+        <div class="">
+            <div class="col-lg-6 col-md-6 ">
+                <div class="tnp">
+                    <!-- <img src="assets/logos/magnifyingglass_v2.png" alt="discover"> -->
+                    <div class="step"><img class="img-stats-goodies" src="assets/logos/brand/logo_mini.png" alt="bottle-heart"></div>
+                    <h3><p>
+                        <span class="numb"> 2,5 milliards</span> Vinibars
+                        possibles<br>
+                        <span class="numb"> 10 000</span> dégustations par an<br>
+                        <span class="numb"> 100+</span> références
+                    </p></h3>
+                </div>
+                <!--               <p>Grâce à l'application Vinify, j'accède à des conseils de dégustation et de service. Je retrouve tous mes vins et des informations sur les producteurs.</p> -->
+            </div>
+            <div class="col-lg-6 col-md-6 ">
+                <div class="tnp">
+                    <!-- <img src="assets/logos/compose.png" alt="compose"> -->
+                    <div class="step"><img class="img-stats-goodies" src="assets/logos/ink.png" alt="bottle-heart"></div>
+                    <h3><a class="numb" href="###">Télécharger le Kit de Presse</a></h3>
+                </div>
+                <!--
+                              <p>A chaque dégustation, je donne une note et un commentaire pour ne plus oublier les vins que j'ai aimés. Plus je note, plus Vinify connaît mes goûts !</p> -->
+
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.section -->
+<!-- </div> --><!-- /.row -->
+<!-- </div> --><!-- /.container -->
+<!-- </div> --><!-- /.section -->
+<!-- /badges -->
+
+
+<div class="section" id="social">
+
+    <div class="container">
+        <div class="social">
+
+            <div class="col-lg-2 col-lg-offset-3 col-md-2 col-md-offset-3 col-sm-2 col-sm-offset-3 col-xs-2 col-xs-offset-3 socbuttons">
+                <a href="http://facebook.com/vinify.co" class="float" target="_blank" id="home-social-facebook"><i class="fa fa-2x fa-facebook"></i></a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 socbuttons">
+                <a href="http://twitter.com/vinifyco" class="float" target="_blank" id="home-social-twitter"><i class="fa fa-2x fa-twitter"></i></a>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 socbuttons">
+                <a href="mailto:founders@vinify.co" class="float" target="_blank" id="home-social-mail"><i class="fa fa-2x fa-envelope"></i></a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <div class="appstore row">
+
+            <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 socbuttons">
+                <a id="android-store" href="https://play.google.com/store/apps/details?id=com.vinify.viniapp.android">
+                    <img alt="Get it on Google Play"
+                         src="assets/logos/brand/android.png" />
+                </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 socbuttons">
+                <a id="apple-store" href="https://itunes.apple.com/us/app/vinify/id912757586?mt=8">
+                    <img alt="Get it on App store" src="assets/logos/brand/apple.svg" />
+                </a>
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+
+
+<div id="footer">
+    <div class="container">
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Vinify, c'est un bar à vin sur mesure. Livré chez vous, selon vos goûts.</p>
+
+            <p>
+                <a href="commentcamarche.html">FAQ</a> &middot;
+                <a href="http://vinify.co/docs/cgv.pdf">CGV</a>
+            </p>
+
+            <p>
+                Copyright &copy; Vinify 2014 &middot; L'abus d'alcool est dangereux pour la santé, à consommer avec modération.
+            </p>
+        </footer>
+        <!-- /END OF FOOTER -->
+    </div>
+    <!-- /container -->
+</div>
+</div>
+<!-- /CONTENT -->
+
+
+<!-- javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/sliders/js/plugin.js"></script>
+  <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+  <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+<!-- vertical Center -->
+<script type="text/javascript">
+    // $('.headline').flexVerticalCenter({});
+    $('#selection-text').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.container'});
+    $('.quick-links').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.navbar-splash'});
+</script>
+
+<!-- tooltip -->
+<script type="text/javascript">
+    $('.tooltip-enabled').tooltip();
+</script>
+
+<!-- smoothscroll -->
+<script type="text/javascript">
+    $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+
+<!-- carousel -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#carousel").owlCarousel({
+            // dotsSpeed: 400,
+            autoplay       : false,
+            autoplayTimeout: 6000,
+            autoplaySpeed  : 2300,
+            loop           : true,
+            items          : 1
+
+            // // "singleItem:true" is a shortcut for:
+            // // items: 1,
+            // // itemsDesktop : false,
+            // // itemsDesktopSmall : false,
+            // // itemsTablet: false,
+            // // itemsMobile : false
+
+        });
+
+        $("#next-slide").click(function () {
+            $("#carousel").trigger('next.owl.carousel');
+        });
+        $("#prev-slide").click(function () {
+            $("#carousel").trigger('prev.owl.carousel');
+        });
+
+        $("#testimonial-carousel").owlCarousel({
+            // dotsSpeed: 400,
+            items    : 1,
+            loop     : true,
+            dots     : false,
+            itemClass: 'testimonial-item'
+
+            // // "singleItem:true" is a shortcut for:
+            // // items: 1,
+            // // itemsDesktop : false,
+            // // itemsDesktopSmall : false,
+            // // itemsTablet: false,
+            // // itemsMobile : false
+
+        });
+
+        $("#next-wines").click(function () {
+            $("#testimonial-carousel").trigger('next.owl.carousel');
+        });
+        $("#prev-wines").click(function () {
+            $("#testimonial-carousel").trigger('prev.owl.carousel');
+        });
+    });
+</script>
+<!-- slider -->
+<script type="text/javascript">
+    (function () {
+        $(function () {
+            return $('.slider').slider();
+        });
+
+    }).call(this);
+</script>
+
+<!-- Mixpanel -->
+<script type="text/javascript">
+    mixpanel.track_links("#home-logo-brand", 'Clicked on home/logo-brand');
+    mixpanel.track_links("#home-login", 'Clicked on home/login');
+    mixpanel.track_links("#home-start-first", 'Clicked on home/start/first');
+    mixpanel.track_links("#home-start-second", 'Clicked on home/start-second');
+    mixpanel.track_links("#home-chevron-down", 'Clicked on home/chevron-down');
+    mixpanel.track_links("#home-logo-brand-second", 'Clicked on home/logo-brand-second');
+    mixpanel.track_links("#home-navbar-second-experience", 'Clicked on home/navbar-second-experience');
+    mixpanel.track_links("#home-navbar-second-faq", 'Clicked on home/navbar-second-faq');
+    mixpanel.track_links("#home-navbar-second-discover", 'Clicked on home/navbar-second-discover');
+    mixpanel.track_links("#home-navbar-second-start", 'Clicked on home/navbar-second-start');
+    mixpanel.track_links("#home-end-start", 'Clicked on home/end-start');
+    mixpanel.track_links("#home-end-start-mobile", 'Clicked on home/end-start-mobile');
+    mixpanel.track_links("#home-social-facebook", 'Clicked on home/social-facebook');
+    mixpanel.track_links("#home-social-twitter", 'Clicked on home/social-twitter');
+    mixpanel.track_links("#android-store", 'Clicked on android-store');
+    mixpanel.track_links("#apple-store", 'Clicked on apple-store');
+    mixpanel.track_links("#home-social-mail", 'Clicked on home/social-mail');
+    mixpanel.track_links("#home-social-mail", 'Clicked on home/social-mail');
+    mixpanel.track_links("#home-gift-first", 'Clicked on home/gift/first');
+    mixpanel.track_links("#home-gift-second", 'Clicked on home/gift-second');
+    mixpanel.track_links("#home-navbar-second-gift", 'Clicked on home/navbar-gift');
+    mixpanel.track('page viewed', {
+        'page name': 'landing',
+        'url'      : window.location.pathname
+    });
+</script>
+
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+    window.$zopim || (function (d, s) {
+        var z = $zopim = function (c) {
+            z._.push(c)
+        }, $ = z.s =
+                d.createElement(s), e = d.getElementsByTagName(s)[0];
+        z.set = function (o) {
+            z.set.
+                    _.push(o)
+        };
+        z._ = [];
+        z.set._ = [];
+        $.async = !0;
+        $.setAttribute('charset', 'utf-8');
+        $.src = 'https://v2.zopim.com/?2cMZv3tttiNZ7nrmNbi9MyUsJlltchf8';
+        z.t = +new Date;
+        $.
+                type = 'text/javascript';
+        e.parentNode.insertBefore($, e)
+    })(document, 'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+<!--Start of affiliae Script-->
+<script type="text/javascript">
+    var _ae = {
+        'pid'            : '546b6ea723b944df498b4e23',
+        'advertiserFirst': 21600, // 15 days in mins
+        'allowSiteUnder' : false,
+        'allowIframing'  : false,
+        'host'           : 'https://lb.affilae.com'
+    };
+
+    (function () {
+        var element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.async = true;
+        element.src = 'https://static.affilae.com/ae-v3.2.js';
+        var scr = document.getElementsByTagName('script')[0];
+        scr.parentNode.insertBefore(element, scr);
+    })();
+</script>
+<!--Start of affiliae Script-->
+</body>
+</html>
