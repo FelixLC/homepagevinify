@@ -7,15 +7,15 @@
 
         <!-- social media tags -->
 
-        <meta name="description" content="Ayez toujours à portée de main du vin sélectionné pour vous, selon vos goûts et votre budget">
+        <meta name="description" content="Vinify, le caviste qui vous connaît, toujours à portée de main">
         <link rel="publisher" href="https://plus.google.com/100061614021617374779"/>
-        <meta property="og:title" content="Vinify, le bar à vin sur mesure. Livré chez vous, selon vos goûts."/>
+        <meta property="og:title" content="Vinify, le caviste qui vous connaît, toujours à portée de main"/>
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://www.vinify.co/assets/img/background-tonio-carafe2.jpg"/>
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="800" />
         <meta property="og:description" content="1/ Je commande mon vinibar. 2/ Je déguste et je note ma sélection. 3/ Je recharge avec des vins plus proches de mes goûts. Avec Vinify, je ne suis plus jamais déçu par une bouteille de vin ! Sans abonnement et entièrement sur mesure, Vinify s'adapte totalement à mes goûts et à mon budget."/>
-        <meta name="twitter:title" content="Vinify, le bar à vin sur mesure. Livré chez vous, selon vos goûts.">
+        <meta name="twitter:title" content="Vinify, le caviste qui vous connaît, toujours à portée de main">
         <meta name="twitter:description" content="1/ Je commande mon vinibar. 2/ Je déguste et je note ma sélection. 3/ Je recharge avec des vins plus proches de mes goûts. Avec Vinify, je ne suis plus jamais déçu par une bouteille de vin ! Sans abonnement et entièrement sur mesure, Vinify s'adapte totalement à mes goûts et à mon budget.">
         <meta name="twitter:image" content="http://vinify.co/img/logo_white.png">
         <meta name="keywords" content="vin, goût, goûts, petit ballon, box, abonnement, cadeau">
@@ -24,7 +24,7 @@
         <link rel="icon" type="image/png" href="assets/img/favicon.png" />
         <link rel="stylesheet" type="text/css" href="assets/sliders/css/styles.css" />
         <!-- compiled CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.62.css" />
+        <link rel="stylesheet" type="text/css" href="assets/Vinify-2.0.65.css" />
 
              <!-- start Mixpanel -->
             <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
@@ -86,8 +86,13 @@
                   </a>
                 </li>
                 <li>
-                  <a href="http://blog.vinify.co" id="home-navbar-second-contact" class="btn-navbar-second">
+                  <a href="http://blog.vinify.co" id="home-navbar-second-blog" class="btn-navbar-second">
                      Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="https://api.vinify.co/s/client/build/index.html#/" id="home-navbar-second-login" class="btn-navbar-second">
+                     <i class="fa fa-user"></i> Login
                   </a>
                 </li>
                 <li>
@@ -643,7 +648,7 @@
 
         <!-- FOOTER -->
         <footer>
-          <p>Vinify, c'est un bar à vin sur mesure. Livré chez vous, selon vos goûts.</p>
+          <p>Vinify, le caviste qui vous connaît, toujours à portée de main</p>
           <p>
             <a href="commentcamarche.html">FAQ</a> &middot;
             <a href="http://vinify.co/docs/cgv.pdf">CGV</a>
@@ -1172,6 +1177,8 @@ $(document).ready(function () {
         mixpanel.track_links("#home-logo-brand-second", 'Clicked on home/logo-brand-second');
         mixpanel.track_links("#home-navbar-second-experience", 'Clicked on home/navbar-second-experience');
         mixpanel.track_links("#home-navbar-second-faq", 'Clicked on home/navbar-second-faq');
+        mixpanel.track_links("#home-navbar-second-blog", 'Clicked on home/navbar-second-blog');
+        mixpanel.track_links("#home-navbar-second-login", 'Clicked on home/navbar-second-login');
         mixpanel.track_links("#home-navbar-second-discover", 'Clicked on home/navbar-second-discover');
         mixpanel.track_links("#home-navbar-second-start", 'Clicked on home/navbar-second-start');
         mixpanel.track_links("#home-end-start", 'Clicked on home/end-start');
