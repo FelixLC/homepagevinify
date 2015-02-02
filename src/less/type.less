@@ -1,0 +1,95 @@
+/*
+ * Typography
+ */
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:300,400,700);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
+
+html, body {
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  html, body { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html, body { font-size: 14px; }
+}
+
+
+body {
+  font-family: 'Roboto', 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+p {
+  color: rgba(0,0,0,0.7);
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?31975242');
+  src: url('fonts/fontello.eot?31975242#iefix') format('embedded-opentype'),
+       url('fonts/fontello.woff?31975242') format('woff'),
+       url('fonts/fontello.ttf?31975242') format('truetype'),
+       url('fonts/fontello.svg?31975242#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?99254821#fontello') format('svg');
+  }
+}
+*/
+
+ .icon-2x:before, .icon-2x:before {
+  /* you can be more comfortable with increased icons size */
+  font-size: 200%;
+}
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-angle-right:before { content: '\e800'; }
+.icon-angle-left:before { content: '\e801'; }
+.icon-mail:before { content: '\e802'; }
+.icon-facebook:before { content: '\e803'; }
+.icon-twitter:before { content: '\e804'; }
+.icon-instagram:before { content: '\e805'; }
+.icon-gift:before { content: '\e806'; }
+.icon-user:before { content: '\e807'; }

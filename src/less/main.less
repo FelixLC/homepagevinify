@@ -10,37 +10,49 @@
  * project should be imported as the rest are just wasting space.
  */
 
-// @import '../../vendor/bootstrap/less/mixins.less';
-// @import '../../vendor/bootstrap/less/utilities.less';
-// @import '../../vendor/bootstrap/less/scaffolding.less';
-// @import '../../vendor/bootstrap/less/normalize.less';
-// @import '../../vendor/bootstrap/less/type.less';
-// @import '../../vendor/bootstrap/less/grid.less';
-// @import '../../vendor/bootstrap/less/carousel.less';
-// @import '../../vendor/bootstrap/less/forms.less';
-// @import '../../vendor/bootstrap/less/navs.less';
-// @import '../../vendor/bootstrap/less/modals.less';
-// @import '../../vendor/bootstrap/less/tables.less';
-// @import '../../vendor/bootstrap/less/glyphicons.less';
-// @import '../../vendor/bootstrap/less/badges.less';
-// @import '../../vendor/bootstrap/less/navbar.less';
-// @import '../../vendor/bootstrap/less/buttons.less';
-// @import '../../vendor/bootstrap/less/wells.less';
-// @import '../../vendor/bootstrap/less/button-groups.less';
-// @import '../../vendor/bootstrap/less/responsive-utilities.less';
-// @import '../../vendor/bootstrap/less/component-animations.less';
-// @import '../../vendor/bootstrap/less/progress-bars.less';
-// @import '../../vendor/bootstrap/less/input-groups.less';
-// @import '../../vendor/bootstrap/less/dropdowns.less';
+// Core variables and mixins
+@import "../../vendor/bootstrap/less/variables.less";
+@import "../../vendor/bootstrap/less/mixins.less";
+
+// Reset
+@import "../../vendor/bootstrap/less/normalize.less";
+@import "../../vendor/bootstrap/less/print.less";
+
+// Core CSS
+@import "../../vendor/bootstrap/less/scaffolding.less";
+@import "../../vendor/bootstrap/less/type.less";
+@import "../../vendor/bootstrap/less/grid.less";
+@import "../../vendor/bootstrap/less/forms.less";
+@import "../../vendor/bootstrap/less/buttons.less";
+
+// Components
+@import "../../vendor/bootstrap/less/component-animations.less";
+@import "../../vendor/bootstrap/less/dropdowns.less";
+@import "../../vendor/bootstrap/less/navs.less";
+@import "../../vendor/bootstrap/less/navbar.less";
+@import "../../vendor/bootstrap/less/media.less";
+@import "../../vendor/bootstrap/less/close.less";
+
+// Components w/ JavaScript
+@import "../../vendor/bootstrap/less/modals.less";
+@import "../../vendor/bootstrap/less/tooltip.less";
+@import "../../vendor/bootstrap/less/popovers.less";
+
+// Utility classes
+@import "../../vendor/bootstrap/less/utilities.less";
+@import "../../vendor/bootstrap/less/responsive-utilities.less";
 
 
-@import '../assets/bootstrap.min.css';
-
+// @import '../assets/bootstrap.min.css';
+@import 'type.less';
 
 /**
  * carousel css files
  */
 @import '../assets/owl-carousel/owl.carousel.css';
+
+@import 'wines.less';
+@import 'sprites.less';
 
 
 /**
@@ -205,35 +217,6 @@
 }
 
 
-/**
- * Typography
- */
-@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Montserrat:700,400);
-
-html, body {
-  font-size: 16px;
-}
-@media (max-width: 900px) {
-  html, body { font-size: 15px; }
-}
-@media (max-width: 400px) {
-  html, body { font-size: 14px; }
-}
-
-
-body {
-  font-family: 'Roboto', 'Open Sans', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
-h1, h2, h3 {
-  font-family: 'Julius Sans One', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-p {
-  color: rgba(0,0,0,0.7);
-}
 .title{
   text-align: center;
 }
@@ -641,7 +624,7 @@ html, body {
   font-size: 24px;
   position: absolute;
   top: 300px;
-  z-index: 9999;
+  z-index: 2;
   @media (max-width: 992px) {
     // display: none !important;
   }

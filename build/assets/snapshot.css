@@ -1,0 +1,117 @@
+.wine-table-container {
+  margin-top: 25px;
+  display: table;
+  width: 100%;
+}
+.wine-table-container p {
+  font-size: 16px;
+}
+.wine-table-container .logo {
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  width: 78px;
+}
+.wine-table-container .info {
+  display: table-cell;
+  padding-left: 20px;
+}
+.wine-table-container .info h4 {
+  font-weight: 400;
+  color: #cb0001;
+  margin-top: 0;
+}
+#wines h3 {
+  color: #cb0001;
+}
+#wines .wine-content {
+  margin-top: 100px;
+}
+#wines .testimonial {
+  font-size: 16px;
+  text-transform: italic;
+}
+#wines .signature {
+  font-size: 16px;
+  text-align: right;
+}
+#wines .strong {
+  font-weight: 400;
+}
+#wines .navbar-nav .dropdown-menu {
+  border-radius: 2px;
+}
+#wines .navbar-splash {
+  padding: 0px 0px 5px 0px;
+  background-color: transparent;
+  border-color: transparent;
+}
+#wines .navbar-splash .brand-image {
+  float: left;
+  display: inline-block;
+}
+#wines .navbar-splash .quick-links {
+  float: right;
+  display: inline-block;
+}
+#wines #navbar-second {
+  padding: 5px 0px 5px 0px;
+  background-color: #fff;
+  border: 0 solid ;
+  border-bottom-width: 1px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+#wines .navbar-nav > li > a {
+  line-height: 45px;
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  #wines .nav > li > a {
+    display: inline-block;
+    padding: 10px 5px;
+  }
+}
+#wines .navbar-fixed-top .navbar-collapse {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#wines .navbar-toggle {
+  border-color: #ebebeb;
+}
+#wines .navbar-toggle .icon-bar {
+  background-color: #ebebeb;
+}
+#wines #navbar-second li > a:hover,
+#wines #navbar-second li > a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  color: #006DB2;
+}
+#wines #navbar-second .btn-navbar-cta {
+  border: 1px solid #006DB2;
+  color: #006DB2;
+}
+#wines #navbar-second .btn-navbar-cta:hover,
+#wines #navbar-second .btn-navbar-cta:focus {
+  background-color: #006DB2;
+  color: #FFF;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+#wines #navbar-first li > a:hover,
+#wines #navbar-first li > a:focus {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #006DB2;
+  border-color: #006DB2;
+  color: #FFF;
+}
+#wines .navbar-nav > li > .dropdown-menu {
+  margin-top: 7px;
+  border-color: #FFF;
+}

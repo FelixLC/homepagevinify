@@ -17,3 +17,4 @@ vendor
 dist
 
 grunt-aws.json
+aws-keys.json

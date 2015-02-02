@@ -20,14 +20,11 @@
     <meta name="twitter:image" content="http://vinify.co/img/logo_white.png">
     <meta name="keywords" content="vin, goût, goûts, petit ballon, box, abonnement, cadeau">
 
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="assets/sliders/css/styles.css">
 
-        <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
-        <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
 
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min31.css">
     <!-- start Mixpanel -->
     <script type="text/javascript" async="" src="//static.affilae.com/ae-v3.2.js"></script>
     <script async="" charset="utf-8" src="//v2.zopim.com/?2cMZv3tttiNZ7nrmNbi9MyUsJlltchf8" type="text/javascript"></script>
@@ -76,7 +73,7 @@
             e.parentNode.insertBefore(a, e)
         }
     })(document, window.mixpanel || []);
-    mixpanel.init("f6bd53dd567cdbc693bebdc18e1a4995");</script>
+    mixpanel.init("61669544c576e6ddf06711e2af137c1a");</script>
     <!-- end Mixpanel -->
 
     <!-- Optimizely -->
@@ -113,7 +110,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#splashscreen" id="home-logo-brand-second"><img alt="" src="assets/logos/logo.png" style="height:45px" id="mf2" /></a>
+            <a href="http://www.vinify.co/" id="home-logo-brand-second"><img alt="" src="assets/logos/logo.png" style="height:45px" id="mf2" /></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -158,8 +155,8 @@
 </nav>
 
 <!-- <div class="header hidden-xs">
-    <div id="prev-slide"><i class="fa fa-chevron-left"></i></div>
-    <div id="next-slide"><i class="fa fa-chevron-right"></i></div>
+    <div id="prev-slide"><i class="fa icon-angle-left"></i></div>
+    <div id="next-slide"><i class="fa icon-angle-right"></i></div>
 
     <div id="carousel" class="owl-carousel">
         <div class="item">
@@ -221,7 +218,7 @@
                     <h3>Lancement public de Vinify</h3>
 
                     <div class="btn-link">
-                        <a href="##">PDF</a>
+                        <a href="assets/vy_communique_presse.pdf">PDF</a>
                     </div>
                 </div>
             </div>
@@ -307,7 +304,7 @@
                 <div class="tnp">
                     <!-- <img src="assets/logos/compose.png" alt="compose"> -->
                     <div class="step"><img class="img-stats-goodies" src="assets/logos/ink.png" alt="bottle-heart"></div>
-                    <h3><a class="numb" href="###">Télécharger le Kit de Presse</a></h3>
+                    <h3><a class="numb" href="http://cl.ly/1N0t2f1J2835">Télécharger le Kit de Presse</a></h3>
                 </div>
                 <!--
                               <p>A chaque dégustation, je donne une note et un commentaire pour ne plus oublier les vins que j'ai aimés. Plus je note, plus Vinify connaît mes goûts !</p> -->
@@ -331,19 +328,19 @@
         <div class="social">
 
             <div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-2 col-xs-2 col-xs-offset-2 socbuttons">
-                <a href="http://facebook.com/vinify.co" class="float" target="_blank" id="home-social-facebook"><i class="fa fa-2x fa-facebook"></i></a>
+                <a href="http://facebook.com/vinify.co" class="float" target="_blank" id="home-social-facebook"><i class="fa icon-2x icon-facebook"></i></a>
             </div>
 
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 socbuttons">
-                <a href="http://twitter.com/vinifyco" class="float" target="_blank" id="home-social-twitter"><i class="fa fa-2x fa-twitter"></i></a>
+                <a href="http://twitter.com/vinifyco" class="float" target="_blank" id="home-social-twitter"><i class="fa icon-2x icon-twitter"></i></a>
             </div>
 
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 socbuttons">
-                <a href="mailto:founders@vinify.co" class="float" target="_blank" id="home-social-mail"><i class="fa fa-2x fa-envelope"></i></a>
+                <a href="mailto:founders@vinify.co" class="float" target="_blank" id="home-social-mail"><i class="fa icon-2x icon-mail"></i></a>
             </div>
 
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 socbuttons">
-                <a href="http://instagram.com/vinify.co/" class="float" target="_blank" id="home-social-instagram"><i class="fa fa-2x fa-instagram"></i></a>
+                <a href="http://instagram.com/vinify.co/" class="float" target="_blank" id="home-social-instagram"><i class="fa icon-2x icon-instagram"></i></a>
             </div>
 
         </div>
@@ -382,7 +379,7 @@
             </p>
 
             <p>
-                Copyright &copy; Vinify 2014 &middot; L'abus d'alcool est dangereux pour la santé, à consommer avec modération.
+                Copyright &copy; Vinify 2015 &middot; L'abus d'alcool est dangereux pour la santé, à consommer avec modération.
             </p>
         </footer>
         <!-- /END OF FOOTER -->
@@ -395,21 +392,8 @@
 
 <!-- javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/sliders/js/plugin.js"></script>
   <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
   <script type="text/javascript" src="<%= file %>"></script><% }); %>
-
-<!-- vertical Center -->
-<script type="text/javascript">
-    // $('.headline').flexVerticalCenter({});
-    $('#selection-text').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.container'});
-    $('.quick-links').flexVerticalCenter({ cssAttribute: 'padding-top', parentSelector: '.navbar-splash'});
-</script>
-
-<!-- tooltip -->
-<script type="text/javascript">
-    $('.tooltip-enabled').tooltip();
-</script>
 
 <!-- smoothscroll -->
 <script type="text/javascript">
@@ -427,67 +411,6 @@
             }
         });
     });
-</script>
-
-<!-- carousel -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#carousel").owlCarousel({
-            // dotsSpeed: 400,
-            autoplay       : false,
-            autoplayTimeout: 6000,
-            autoplaySpeed  : 2300,
-            loop           : true,
-            items          : 1
-
-            // // "singleItem:true" is a shortcut for:
-            // // items: 1,
-            // // itemsDesktop : false,
-            // // itemsDesktopSmall : false,
-            // // itemsTablet: false,
-            // // itemsMobile : false
-
-        });
-
-        $("#next-slide").click(function () {
-            $("#carousel").trigger('next.owl.carousel');
-        });
-        $("#prev-slide").click(function () {
-            $("#carousel").trigger('prev.owl.carousel');
-        });
-
-        $("#testimonial-carousel").owlCarousel({
-            // dotsSpeed: 400,
-            items    : 1,
-            loop     : true,
-            dots     : false,
-            itemClass: 'testimonial-item'
-
-            // // "singleItem:true" is a shortcut for:
-            // // items: 1,
-            // // itemsDesktop : false,
-            // // itemsDesktopSmall : false,
-            // // itemsTablet: false,
-            // // itemsMobile : false
-
-        });
-
-        $("#next-wines").click(function () {
-            $("#testimonial-carousel").trigger('next.owl.carousel');
-        });
-        $("#prev-wines").click(function () {
-            $("#testimonial-carousel").trigger('prev.owl.carousel');
-        });
-    });
-</script>
-<!-- slider -->
-<script type="text/javascript">
-    (function () {
-        $(function () {
-            return $('.slider').slider();
-        });
-
-    }).call(this);
 </script>
 
 <!-- Mixpanel -->

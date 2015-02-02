@@ -26,7 +26,14 @@ module.exports = {
     atpl: [ 'src/app/**/*.tpl.html' ],
     ctpl: [ 'src/common/**/*.tpl.html' ],
 
-    html: [ 'src/commentcamarche.html', 'src/index.html', 'src/experience.html', 'src/press.html', 'src/about.html'  ],
+    html: [ 'src/commentcamarche.html',
+                  'src/index.html',
+                  'src/experience.html',
+                  'src/press.html',
+                  'src/jobs.html',
+                  'src/about.html',
+                  'src/vin/*.html'
+                ],
     less: 'src/less/main.less'
   },
 
@@ -59,8 +66,8 @@ module.exports = {
    */
   vendor_files: {
     js: [
-      'vendor/bootstrap/dist/js/bootstrap.min.js',
-      'vendor/jQuery-Flex-Vertical-Center.js',
+      'vendor/bootstrap/js/dropdown.js',
+      'vendor/bootstrap/js/modal.js',
       'src/assets/owl-carousel/owl.carousel.js'
     ],
     css: [
@@ -68,5 +75,5 @@ module.exports = {
     assets: [
       'vendor/bootstrap/fonts/*.*'
     ]
-  },
+  }
 };
