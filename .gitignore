@@ -15,6 +15,7 @@ npm-debug.log
 node_modules
 vendor
 dist
+bin
 
 grunt-aws.json
 aws-keys.json
