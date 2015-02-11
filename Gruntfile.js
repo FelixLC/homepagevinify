@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 
     sitemap: {
       dist: {
-        pattern: ['./dist/*.html', '!**/google*.html'], // this will exclude 'google*.html'
+        pattern: ['./dist/**/*.html', '!**/google*.html'], // this will exclude 'google*.html'
         siteRoot: './dist/'
       }
     },
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
         },
         files: [
           {dest: 'assets/', 'action': 'delete', cwd: 'bin/assets/'},
-          {expand: true, cwd: 'bin/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=0', ContentType: 'text/html; charset=utf-8'}},
+          {expand: true, cwd: 'bin/', src: ['**/*.html'], dest: '', params: {CacheControl: 'max-age=0', ContentType: 'text/html; charset=utf-8'}},
           {expand: true, cwd: 'bin/assets/', src: ['**/*'], exclude: ["**/*.js", "**/*.css"], dest: 'assets/'},
           {expand: true, cwd: 'dist/assets/',  src: ['**/*.js'], dest: 'assets/', params: {ContentType: 'application/javascript; charset=utf-8', ContentEncoding: 'gzip'}},
           {expand: true, cwd: 'dist/assets/',  src: ['**/*.css'], dest: 'assets/', params: {ContentType: 'text/css; charset=utf-8', ContentEncoding: 'gzip'}}
@@ -76,11 +76,11 @@ module.exports = function (grunt) {
         },
         files: [
           {dest: 'assets/', 'action': 'delete', cwd: 'bin/assets/', differential: 'true'},
-          {expand: true, cwd: 'dist/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=0', ContentType: 'text/html; charset=utf-8'}},
+          {expand: true, cwd: 'bin/', src: ['**/*.html'], dest: '', params: {CacheControl: 'max-age=0', ContentType: 'text/html; charset=utf-8', ContentEncoding: 'gzip'}, differential: true},
           {expand: true, cwd: 'dist/', src: ['sitemap.xml'], dest: '', params: {CacheControl: 'max-age=0', ContentType: 'application/xml; charset=utf-8'}},
           {expand: true, cwd: 'dist/assets/', src: ['**/*'], exclude: ["**/*.js", "**/*.css"], dest: 'assets/', differential: 'true'},
-          {expand: true, cwd: 'bin/assets/',  src: ['**/*js'], dest: 'assets/', params: {ContentType: 'application/javascript; charset=utf-8', ContentEncoding: 'gzip'}, differential: 'true'},
-          {expand: true, cwd: 'bin/assets/',  src: ['**/*css'], dest: 'assets/', params: {ContentType: 'text/css; charset=utf-8', ContentEncoding: 'gzip'}, differential: 'true'}
+          {expand: true, cwd: 'bin/assets/',  src: ['**/*js'], dest: 'assets/', params: {CacheControl: 'max-age=2678400', ContentType: 'application/javascript; charset=utf-8', ContentEncoding: 'gzip'}, differential: 'true'},
+          {expand: true, cwd: 'bin/assets/',  src: ['**/*css'], dest: 'assets/', params: {CacheControl: 'max-age=2678400', ContentType: 'text/css; charset=utf-8', ContentEncoding: 'gzip'}, differential: 'true'}
         ]
       },
       sitemap: {
@@ -277,7 +277,8 @@ module.exports = function (grunt) {
         },
         files: [
           { expand: true, cwd: 'dist/assets', src: [ '**/*.css' ], dest: 'bin/assets/' },
-          { expand: true, cwd: 'dist/assets', src: [ '**/*.js' ], dest: 'bin/assets/' }
+          { expand: true, cwd: 'dist/assets', src: [ '**/*.js' ], dest: 'bin/assets/' },
+          {expand: true, cwd: 'dist/', src: ['**/*.html'], dest: 'bin/'}
         ]
       }
     },
@@ -335,8 +336,7 @@ module.exports = function (grunt) {
     uglify: {
       compile: {
         options: {
-          banner: '<%= meta.banner %>',
-          report: 'gzip'
+          banner: '<%= meta.banner %>'
         },
         files: {
           '<%= concat.compile_js.dest %>': '<%= concat.compile_js.dest %>'
@@ -554,15 +554,15 @@ module.exports = function (grunt) {
       'string-replace': {
         inline: {
           files: {
-            'src/vin/': 'src/vin/*.html'
+            'src/vin/': 'src/vin/**/*.html'
           },
           options: {
             replacements: [
               // place files inline example
               {
-                pattern: '<link rel="stylesheet" type="text/css" href="assets/Vinify-0.0.224.css">',
+                pattern: '<link rel="stylesheet" type="text/css" href="assets/Vinify-0.0.225.css">',
                 replacement: function() {
-                  return "<% styles.forEach( function ( file ) { %><link rel=\"stylesheet\" type=\"text/css\" href=\"<%= file %>\" /><% }); %>";
+                  return "<% styles.forEach( function ( file ) { %><link rel=\"stylesheet\" type=\"text/css\" href=\"../../../<%= file %>\" /><% }); %>";
                 }
               },
               {
@@ -574,11 +574,23 @@ module.exports = function (grunt) {
                 replacement: 'href="https://vinify.co/index.html#'
               },
               {
+                pattern: '="assets',
+                replacement: '="../../../assets'
+              },
+              {
                 pattern: '<!-- start Mixpanel --><!-- end Mixpanel -->',
                 replacement: '<!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);mixpanel.init("61669544c576e6ddf06711e2af137c1a");</script><!-- end Mixpanel -->'
               },
               {
-                pattern: /<iframe name="stripeXDM_default\w+_provider" id="stripeXDM_default\w+_provider" style="position: absolute; top: -2000px; left: 0px; " src="https:\/\/js\.stripe\.com\/v2\/channel\.html\?xdm_e=https%3A%2F%2Fstart\.vinify\.co&amp;xdm_c=default\w+&amp;xdm_p=1#__stripe_transport__" frameborder="0"><\/iframe>/g,
+                pattern: /<iframe name="stripeXDM_default\w+_provider" id="stripeXDM_default\w+_provider" style="position: absolute; top: -2000px; left: 0px; " src="https:\/\/js\.stripe\.com\/v2\/channel\.html\?xdm_e=http%3A%2F%2F0.0.0.0%3A9001&amp;xdm_c=default\w+&amp;xdm_p=1#__stripe_transport__" frameborder="0"><\/iframe>/g,
+                replacement: ''
+              },
+              {
+                pattern: /<div style="position: absolute; visibility: hidden; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; height: 0px; width: 0px; " class="zopim" __jx__id="___\$_1"><\/div>/g,
+                replacement: ''
+              },
+              {
+                pattern: /<style media="print" class="jx_ui_StyleSheet" __jx__id="___\$_2" type="text\/css">.zopim { display: none !important }<\/style>/g,
                 replacement: ''
               }
             ]
@@ -613,16 +625,16 @@ module.exports = function (grunt) {
                 //that's the path where the snapshots should be placed
                 //it's empty by default which means they will go into the directory
                 //where your Gruntfile.js is placed
-                snapshotPath: 'src/vin/',
+                snapshotPath: 'src/',
                 fileNamePrefix: '',
                 //This should be either the base path to your index.html file
                 //or your base URL. Currently the task does not use it's own
                 //webserver. So if your site needs a webserver to be fully
                 //functional configure it here.
-                sitePath: 'https://start.vinify.co/index.html',
+                sitePath: 'http://0.0.0.0:9001/index.html',
                 removeScripts: true,
                 sanitize: function(requestUri) {
-                  return requestUri.replace(/#|\/|\!/g, '').replace('vin', 'vin-');
+                  return requestUri.replace(/#\//g, '');
                 },
                 replaceStrings:[
                     // {'<link rel="stylesheet" type="text/css" href="../assets/snapshot.css">': '<% forEach( function ( file ) { %><link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>'},
@@ -631,106 +643,106 @@ module.exports = function (grunt) {
                 ],
                 //here goes the list of all urls that should be fetched
                 urls: [
-                  "#/vin/pouilly-fume-vieilles-vignes-jp-bailly-2011",
-                  "#/vin/chateau-baret-2002",
-                  "#/vin/chateau-baret-2003",
-                  "#/vin/marquis-de-montmelas-rouge-2007",
-                  "#/vin/montmelas-cuvee-speciale-1566-2010",
-                  "#/vin/marquis-de-montmelas-blanc-2011",
-                  "#/vin/montmains-domaine-chevallier-2012",
-                  "#/vin/cuvee-prestige-domaine-chevallier-2012",
-                  "#/vin/montmains-domaine-chevallier-2013",
-                  "#/vin/cuvee-prestige-domaine-chevallier-2013",
-                  "#/vin/chateau-la-trochoire-2008",
-                  "#/vin/chateau-la-trochoire-2010",
-                  "#/vin/fleurie-cuvee-jules-appert-2011",
-                  "#/vin/riesling-rittersberg-bernhard-et-reibel-2011",
-                  "#/vin/pinot-noir-domaine-bernhard-et-reibel-2012",
-                  "#/vin/anjou-rouge-domaine-la-croix-2011",
-                  "#/vin/anjou-rouge-domaine-la-croix-2013",
-                  "#/vin/domaine-de-venus-rouge-2004",
-                  "#/vin/domaine-de-venus-rouge-2006",
-                  "#/vin/leffrontee-de-venus-2009",
-                  "#/vin/domaine-de-venus-rose-2012",
-                  "#/vin/chateau-de-chamirey-2008",
-                  "#/vin/le-renard-2011",
-                  "#/vin/cotes-dauxerre-domaine-felix-fils-2012",
-                  "#/vin/loi-domaine-saladin-2010",
-                  "#/vin/paul-domaine-saladin-2012",
-                  "#/vin/tralala-2013",
-                  "#/vin/le-clos-des-joubert-2010",
-                  "#/vin/lexcellence-vieilles-vignes-2012",
-                  "#/vin/lexcellence-vieilles-vignes-2013",
-                  "#/vin/terroir-les-gras-moutons-2013",
-                  "#/vin/gewurztraminer-pierre-frick-2009",
-                  "#/vin/riesling-gd-cru-steinert-pierre-frick-2009",
-                  "#/vin/pinot-noir-pierre-frick-2010",
-                  "#/vin/cuvee-florence-domaine-les-goubert-2006",
-                  "#/vin/beaumes-de-venise-domaine-les-goubert-2010",
-                  "#/vin/sablet-rouge-domaine-les-goubert-2011",
-                  "#/vin/les-favoris-domaine-les-goubert-2012",
-                  "#/vin/sablet-blanc-domaine-les-goubert-2012",
-                  "#/vin/beaumes-de-venise-domaine-les-goubert-2012",
-                  "#/vin/gewurztraminer-gloeckelberg-koehly-2011",
-                  "#/vin/riesling-hahnenberg-koehly-2011",
-                  "#/vin/gewurztraminer-gloeckelberg-koehly-2012",
-                  "#/vin/gewurztraminer-hannenberg-koehly-2012",
-                  "#/vin/pinot-noir-koehly-2012",
-                  "#/vin/saumur-domaine-lavigne-2012",
-                  "#/vin/marquis-de-pennautier-2011",
-                  "#/vin/chateau-de-ciffre-2011",
-                  "#/vin/chateau-la-veille-cure-2006",
-                  "#/vin/chateau-la-veille-cure-2011",
-                  "#/vin/les-grains-merlot-2011",
-                  "#/vin/orca-2011",
-                  "#/vin/doria-2012",
-                  "#/vin/grand-marrenon-blanc-2012",
-                  "#/vin/private-gallery-rouge-2012",
-                  "#/vin/grand-marrenon-rouge-2012",
-                  "#/vin/les-grains-syrah-2012",
-                  "#/vin/les-grains-chardonnay-2013",
-                  "#/vin/les-grains-vermentino-2013",
-                  "#/vin/doria-2013",
-                  "#/vin/private-gallery-blanc-2013",
-                  "#/vin/les-grains-viognier-2013",
-                  "#/vin/petula-2013",
-                  "#/vin/rosefine-2013",
-                  "#/vin/cuvee-m-2013",
-                  "#/vin/alliance-des-generations-2005",
-                  "#/vin/boa-le-rouge-2009",
-                  "#/vin/cent-visages-2010",
-                  "#/vin/la-rosee-2012",
-                  "#/vin/laurus-2011",
-                  "#/vin/laurus-2012",
-                  "#/vin/laurus-blanc-2013",
-                  "#/vin/terre-de-galets-blanc-2013",
-                  "#/vin/chateau-de-tresques-2013",
-                  "#/vin/plan-de-dieu-saint-mapalis-2013",
-                  "#/vin/gm-gabriel-meffre-2013",
-                  "#/vin/chateau-des-jacques-louis-jadot-2004",
-                  "#/vin/expression-domaine-de-lebeaupin-2007",
-                  "#/vin/confidence-domaine-de-lebeaupin-2010",
-                  "#/vin/malbec-domaine-de-lebeaupin-2011",
-                  "#/vin/tentation-domaine-de-lebeaupin-2012",
-                  "#/vin/elegance-domaine-de-lebeaupin-2012",
-                  "#/vin/elegance-domaine-de-lebeaupin-2013",
-                  "#/vin/st-lambert-domaine-de-paimpare-2011",
-                  "#/vin/clos-de-bretonneau-domaine-de-paimpare-2011",
-                  "#/vin/cuvee-floriane-domaine-de-paimpare-2011",
-                  "#/vin/vielles-vignes-domaine-de-paimpare-2013",
-                  "#/vin/cremant-de-loire-rose-sec-domaine-de-paimpare-2013",
-                  "#/vin/clos-castelot-2010",
-                  "#/vin/chateau-sipian-2010",
-                  "#/vin/chateau-moya-2011",
-                  "#/vin/clos-des-lunes-lune-dargent-2012",
-                  "#/vin/r-cru-classe-2013",
-                  "#/vin/chateau-boutisse-2009",
-                  "#/vin/recougne-terra-recognita-2010",
-                  "#/vin/burkes-of-bordeaux-blanc-2012",
-                  "#/vin/les-renardes-domaine-thevenot-fils-2011",
-                  "#/vin/pinot-beurot-domaine-thevenot-le-brun-fils-2012",
-                  "#/vin/les-renardes-domaine-thevenot-fils-2012",
-                  "#/vin/pinot-beurot-domaine-thevenot-le-brun-fils-2013"
+                  "#/vin/vallee-de-la-loire/pouilly-fume/pouilly-fume-vieilles-vignes-jp-bailly-2011",
+                  "#/vin/bordeaux/pessac-leognan/chateau-baret-2002",
+                  "#/vin/bordeaux/pessac-leognan/chateau-baret-2003",
+                  "#/vin/beaujolais/beaujolais-villages/marquis-de-montmelas-rouge-2007",
+                  "#/vin/beaujolais/beaujolais/montmelas-cuvee-speciale-1566-2010",
+                  "#/vin/beaujolais/beaujolais-villages/marquis-de-montmelas-blanc-2011",
+                  "#/vin/bourgogne/chablis-premier-cru/montmains-domaine-chevallier-2012",
+                  "#/vin/bourgogne/chablis/cuvee-prestige-domaine-chevallier-2012",
+                  "#/vin/bourgogne/chablis-premier-cru/montmains-domaine-chevallier-2013",
+                  "#/vin/bourgogne/chablis/cuvee-prestige-domaine-chevallier-2013",
+                  "#/vin/vallee-de-la-loire/touraine/chateau-la-trochoire-2008",
+                  "#/vin/vallee-de-la-loire/touraine/chateau-la-trochoire-2010",
+                  "#/vin/beaujolais/fleurie/fleurie-cuvee-jules-appert-2011",
+                  "#/vin/alsace/alsace/riesling-rittersberg-bernhard-et-reibel-2011",
+                  "#/vin/alsace/alsace/pinot-noir-domaine-bernhard-et-reibel-2012",
+                  "#/vin/vallee-de-la-loire/anjou/anjou-rouge-domaine-la-croix-2011",
+                  "#/vin/vallee-de-la-loire/anjou/anjou-rouge-domaine-la-croix-2013",
+                  "#/vin/languedoc-roussillon/cotes-du-roussillon/domaine-de-venus-rouge-2004",
+                  "#/vin/languedoc-roussillon/cotes-du-roussillon/domaine-de-venus-rouge-2006",
+                  "#/vin/languedoc-roussillon/cotes-du-roussillon/leffrontee-de-venus-2009",
+                  "#/vin/languedoc-roussillon/cotes-du-roussillon/domaine-de-venus-rose-2012",
+                  "#/vin/bourgogne/mercurey/chateau-de-chamirey-2008",
+                  "#/vin/bourgogne/givry/le-renard-2011",
+                  "#/vin/bourgogne/cotes-dauxerre/cotes-dauxerre-domaine-felix-fils-2012",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone/loi-domaine-saladin-2010",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone/paul-domaine-saladin-2012",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone/tralala-2013",
+                  "#/vin/vallee-de-la-loire/muscadet-sevre-et-maine/le-clos-des-joubert-2010",
+                  "#/vin/vallee-de-la-loire/muscadet-sevre-et-maine/lexcellence-vieilles-vignes-2012",
+                  "#/vin/vallee-de-la-loire/muscadet-sevre-et-maine/lexcellence-vieilles-vignes-2013",
+                  "#/vin/vallee-de-la-loire/muscadet-sevre-et-maine/terroir-les-gras-moutons-2013",
+                  "#/vin/alsace/alsace/gewurztraminer-pierre-frick-2009",
+                  "#/vin/alsace/alsace-grand-cru/riesling-gd-cru-steinert-pierre-frick-2009",
+                  "#/vin/alsace/alsace/pinot-noir-pierre-frick-2010",
+                  "#/vin/vallee-du-rhone/gigondas/cuvee-florence-domaine-les-goubert-2006",
+                  "#/vin/vallee-du-rhone/beaumes-de-venise/beaumes-de-venise-domaine-les-goubert-2010",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone-villages/sablet-rouge-domaine-les-goubert-2011",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone/les-favoris-domaine-les-goubert-2012",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone-villages/sablet-blanc-domaine-les-goubert-2012",
+                  "#/vin/vallee-du-rhone/beaumes-de-venise/beaumes-de-venise-domaine-les-goubert-2012",
+                  "#/vin/alsace/alsace-grand-cru/gewurztraminer-gloeckelberg-koehly-2011",
+                  "#/vin/alsace/alsace/riesling-hahnenberg-koehly-2011",
+                  "#/vin/alsace/alsace-grand-cru/gewurztraminer-gloeckelberg-koehly-2012",
+                  "#/vin/alsace/alsace/gewurztraminer-hannenberg-koehly-2012",
+                  "#/vin/alsace/alsace/pinot-noir-koehly-2012",
+                  "#/vin/vallee-de-la-loire/saumur/saumur-domaine-lavigne-2012",
+                  "#/vin/languedoc-roussillon/pays-doc/marquis-de-pennautier-2011",
+                  "#/vin/languedoc-roussillon/faugeres/chateau-de-ciffre-2011",
+                  "#/vin/bordeaux/fronsac/chateau-la-veille-cure-2006",
+                  "#/vin/bordeaux/fronsac/chateau-la-veille-cure-2011",
+                  "#/vin/vallee-du-rhone/mediterranee/les-grains-merlot-2011",
+                  "#/vin/vallee-du-rhone/ventoux/orca-2011",
+                  "#/vin/vallee-du-rhone/luberon/doria-2012",
+                  "#/vin/vallee-du-rhone/luberon/grand-marrenon-blanc-2012",
+                  "#/vin/vallee-du-rhone/mediterranee/private-gallery-rouge-2012",
+                  "#/vin/vallee-du-rhone/luberon/grand-marrenon-rouge-2012",
+                  "#/vin/vallee-du-rhone/mediterranee/les-grains-syrah-2012",
+                  "#/vin/vallee-du-rhone/mediterranee/les-grains-chardonnay-2013",
+                  "#/vin/vallee-du-rhone/mediterranee/les-grains-vermentino-2013",
+                  "#/vin/vallee-du-rhone/luberon/doria-2013",
+                  "#/vin/vallee-du-rhone/mediterranee/private-gallery-blanc-2013",
+                  "#/vin/vallee-du-rhone/mediterranee/les-grains-viognier-2013",
+                  "#/vin/vallee-du-rhone/luberon/petula-2013",
+                  "#/vin/vallee-du-rhone/mediterranee/rosefine-2013",
+                  "#/vin/vallee-du-rhone/mediterranee/cuvee-m-2013",
+                  "#/vin/vallee-de-la-loire/touraine/alliance-des-generations-2005",
+                  "#/vin/vallee-de-la-loire/touraine/boa-le-rouge-2009",
+                  "#/vin/vallee-de-la-loire/touraine/cent-visages-2010",
+                  "#/vin/vallee-de-la-loire/touraine/la-rosee-2012",
+                  "#/vin/vallee-du-rhone/crozes-hermitage/laurus-2011",
+                  "#/vin/vallee-du-rhone/crozes-hermitage/laurus-2012",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone-villages/laurus-blanc-2013",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone/terre-de-galets-blanc-2013",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone/chateau-de-tresques-2013",
+                  "#/vin/vallee-du-rhone/cotes-du-rhone-villages/plan-de-dieu-saint-mapalis-2013",
+                  "#/vin/provence/cotes-de-provence/gm-gabriel-meffre-2013",
+                  "#/vin/beaujolais/moulin-a-vent/chateau-des-jacques-louis-jadot-2004",
+                  "#/vin/vallee-de-la-loire/touraine/expression-domaine-de-lebeaupin-2007",
+                  "#/vin/vallee-de-la-loire/touraine/confidence-domaine-de-lebeaupin-2010",
+                  "#/vin/vallee-de-la-loire/touraine/malbec-domaine-de-lebeaupin-2011",
+                  "#/vin/vallee-de-la-loire/touraine/tentation-domaine-de-lebeaupin-2012",
+                  "#/vin/vallee-de-la-loire/touraine/elegance-domaine-de-lebeaupin-2012",
+                  "#/vin/vallee-de-la-loire/touraine/elegance-domaine-de-lebeaupin-2013",
+                  "#/vin/vallee-de-la-loire/coteaux-du-layon/st-lambert-domaine-de-paimpare-2011",
+                  "#/vin/vallee-de-la-loire/anjou/clos-de-bretonneau-domaine-de-paimpare-2011",
+                  "#/vin/vallee-de-la-loire/anjou-villages/cuvee-floriane-domaine-de-paimpare-2011",
+                  "#/vin/vallee-de-la-loire/coteaux-du-layon/vielles-vignes-domaine-de-paimpare-2013",
+                  "#/vin/vallee-de-la-loire/cremant-de-loire/cremant-de-loire-rose-sec-domaine-de-paimpare-2013",
+                  "#/vin/bordeaux/saint-emilion/clos-castelot-2010",
+                  "#/vin/bordeaux/medoc/chateau-sipian-2010",
+                  "#/vin/bordeaux/castillon/chateau-moya-2011",
+                  "#/vin/bordeaux/bordeaux/clos-des-lunes-lune-dargent-2012",
+                  "#/vin/provence/cotes-de-provence/r-cru-classe-2013",
+                  "#/vin/bordeaux/saint-emilion-grand-cru/chateau-boutisse-2009",
+                  "#/vin/bordeaux/bordeaux-superieur/recougne-terra-recognita-2010",
+                  "#/vin/bordeaux/bordeaux/burkes-of-bordeaux-blanc-2012",
+                  "#/vin/bourgogne/hautes-cotes-de-nuits/les-renardes-domaine-thevenot-fils-2011",
+                  "#/vin/bourgogne/hautes-cotes-de-nuits/pinot-beurot-domaine-thevenot-le-brun-fils-2012",
+                  "#/vin/bourgogne/hautes-cotes-de-nuits/les-renardes-domaine-thevenot-fils-2012",
+                  "#/vin/bourgogne/hautes-cotes-de-nuits/pinot-beurot-domaine-thevenot-le-brun-fils-2013"
                 ]
               }
             }
@@ -901,10 +913,11 @@ module.exports = function (grunt) {
       }
     });
 
-    var winePath = grunt.file.expand('src/vin/*.html');
+    // wines
+    var winePath = grunt.file.expand('src/vin/**/*.html');
     var wineFiles = new Array(winePath.length);
     for (var i = winePath.length - 1; i >= 0; i--) {
-      wineFiles[i] = winePath[i].split('/vin/')[1];
+      wineFiles[i] = winePath[i].split('src/')[1];
     }
 
     var process = function (contents, path) {
@@ -920,6 +933,20 @@ module.exports = function (grunt) {
     grunt.file.mkdir(this.data.dir + '/vin');
     for (var j = winePath.length - 1; j >= 0; j--) {
       grunt.file.copy(winePath[j], this.data.dir + '/' + wineFiles[j], {
+        process: process
+      });
+    }
+
+    // thanks
+    var thanksPath = grunt.file.expand('src/remerciement/*.html');
+    var thanksFiles = new Array(thanksPath.length);
+    for (var k = thanksPath.length - 1; k >= 0; k--) {
+      thanksFiles[k] = thanksPath[k].split('src/')[1];
+    }
+
+    grunt.file.mkdir(this.data.dir + '/remerciement');
+    for (var l = thanksPath.length - 1; l >= 0; l--) {
+      grunt.file.copy(thanksPath[l], this.data.dir + '/' + thanksFiles[l], {
         process: process
       });
     }

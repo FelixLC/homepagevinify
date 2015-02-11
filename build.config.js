@@ -32,7 +32,8 @@ module.exports = {
                   'src/press.html',
                   'src/jobs.html',
                   'src/about.html',
-                  'src/vin/*.html'
+                  'src/vin/**/*.html',
+                  'src/remerciement/*.html'
                 ],
     less: 'src/less/main.less'
   },
