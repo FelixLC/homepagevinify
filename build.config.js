@@ -69,6 +69,7 @@ module.exports = {
     js: [
       'vendor/bootstrap/js/dropdown.js',
       'vendor/bootstrap/js/modal.js',
+      'vendor/youtube-modal.js',
       'src/assets/owl-carousel/owl.carousel.js'
     ],
     css: [

@@ -75,12 +75,12 @@ module.exports = function (grunt) {
           bucket: 'www.vinify.co'
         },
         files: [
-          {dest: 'assets/', 'action': 'delete', cwd: 'bin/assets/', differential: 'true'},
+          {dest: 'assets/', 'action': 'delete', cwd: 'bin/assets/', differential: true},
           {expand: true, cwd: 'bin/', src: ['**/*.html'], dest: '', params: {CacheControl: 'max-age=0', ContentType: 'text/html; charset=utf-8', ContentEncoding: 'gzip'}, differential: true},
           {expand: true, cwd: 'dist/', src: ['sitemap.xml'], dest: '', params: {CacheControl: 'max-age=0', ContentType: 'application/xml; charset=utf-8'}},
-          {expand: true, cwd: 'dist/assets/', src: ['**/*'], exclude: ["**/*.js", "**/*.css"], dest: 'assets/', differential: 'true'},
-          {expand: true, cwd: 'bin/assets/',  src: ['**/*js'], dest: 'assets/', params: {CacheControl: 'max-age=2678400', ContentType: 'application/javascript; charset=utf-8', ContentEncoding: 'gzip'}, differential: 'true'},
-          {expand: true, cwd: 'bin/assets/',  src: ['**/*css'], dest: 'assets/', params: {CacheControl: 'max-age=2678400', ContentType: 'text/css; charset=utf-8', ContentEncoding: 'gzip'}, differential: 'true'}
+          {expand: true, cwd: 'dist/assets/', src: ['**/*'], exclude: ["**/*.js", "**/*.css"], dest: 'assets/', differential: true},
+          {expand: true, cwd: 'bin/assets/',  src: ['**/*js'], dest: 'assets/', params: {CacheControl: 'max-age=2678400', ContentType: 'application/javascript; charset=utf-8', ContentEncoding: 'gzip'}, differential: true},
+          {expand: true, cwd: 'bin/assets/',  src: ['**/*css'], dest: 'assets/', params: {CacheControl: 'max-age=2678400', ContentType: 'text/css; charset=utf-8', ContentEncoding: 'gzip'}, differential: true}
         ]
       },
       sitemap: {
